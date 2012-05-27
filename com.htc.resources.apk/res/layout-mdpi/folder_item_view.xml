@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="10.0px" android:gravity="left|center" android:id="@id/folder_item" android:background="@drawable/section_divider_middle" android:layout_width="fill_parent" android:layout_height="15.0px" android:singleLine="true" style="@style/darklist_secondary_m"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

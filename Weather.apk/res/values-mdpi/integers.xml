@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="anim_scale">75</integer>
+    <integer name="demo_width">240</integer>
+    <integer name="demo_height">300</integer>
+    <integer name="demo_offsetx">0</integer>
+    <integer name="demo_offsety">0</integer>
+    <integer name="glance_width">240</integer>
+    <integer name="glance_height">300</integer>
+    <integer name="glance_offsetx">0</integer>
+    <integer name="glance_offsety">0</integer>
+</resources>

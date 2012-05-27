@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/rl_calibration_title" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/calibration_title" layout="@com.htc:layout/title_1" />
+    <RelativeLayout android:id="@id/roundview" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <RelativeLayout android:id="@id/white_screen_calibration" android:background="@com.htc:drawable/fill_full_round" android:layout_width="fill_parent" android:layout_height="235.0px" android:layout_below="@id/calibration_title"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="15.0px" android:textColor="@color/black" android:gravity="left" android:id="@id/tv_calibration_prompt" android:layout_width="fill_parent" android:layout_height="37.0px" android:layout_marginLeft="10.0px" android:layout_marginTop="5.0px" android:text="@string/calibration_prompt" android:layout_alignParentTop="true" />
+        <RelativeLayout android:id="@id/rl_calibration" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_calibration_prompt">
+            <ImageView android:id="@id/img_cylinder_h" android:layout_width="150.0px" android:layout_height="40.0px" android:layout_marginLeft="20.0px" android:layout_marginBottom="15.0px" android:src="@drawable/wo_level_001" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_blk_lines_left" android:layout_width="15.0px" android:layout_height="40.0px" android:layout_marginLeft="65.0px" android:layout_marginBottom="15.0px" android:src="@drawable/blacklines_left" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_bubble_h" android:layout_width="25.0px" android:layout_height="54.0px" android:layout_marginLeft="88.0px" android:layout_marginBottom="10.0px" android:src="@drawable/bubble_95_h" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_blk_lines_right" android:layout_width="15.0px" android:layout_height="40.0px" android:layout_marginLeft="120.0px" android:layout_marginBottom="15.0px" android:src="@drawable/blacklines_right" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_cylinder_v" android:layout_width="40.0px" android:layout_height="150.0px" android:layout_marginLeft="10.0px" android:layout_marginBottom="10.0px" android:src="@drawable/wo_level_002" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_blk_lines_btm" android:layout_width="40.0px" android:layout_height="15.0px" android:layout_marginLeft="10.0px" android:layout_marginBottom="53.0px" android:src="@drawable/blacklines_bottom" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_bubble_v" android:layout_width="54.0px" android:layout_height="25.0px" android:layout_marginLeft="7.0px" android:layout_marginBottom="75.0px" android:src="@drawable/bubble_v" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/img_blk_lines_top" android:layout_width="40.0px" android:layout_height="15.0px" android:layout_marginLeft="10.0px" android:layout_marginBottom="107.0px" android:src="@drawable/blacklines_top" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include android:layout_below="@id/white_screen_calibration" android:layout_alignParentBottom="true" layout="@com.htc:layout/cmd_bar_1" />
+    </LinearLayout>
+</RelativeLayout>

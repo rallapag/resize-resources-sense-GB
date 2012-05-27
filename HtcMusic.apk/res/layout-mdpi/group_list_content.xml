@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@com.htc:layout/title_1" />
+    <include android:visibility="gone" layout="@com.htc:layout/title_15" />
+    <com.htc.widget.SearchBoxView android:id="@id/search_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="43.0px" android:layout_marginTop="3.0px" />
+    <ViewStub android:id="@id/nomusic_stub_import" android:layout="@layout/no_music" android:inflatedId="@id/nomusic_import" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/nosd_error_stub_import" android:layout="@layout/sd_error" android:inflatedId="@id/nosd_error_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.htc.music.widget.GroupListView android:id="@android:id/list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:layout_weight="1.0" style="@style/HtcListStyle" />
+    <include layout="@com.htc:layout/cmd_bar_2" />
+</LinearLayout>

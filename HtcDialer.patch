@@ -1,0 +1,238 @@
+diff -rupN ../original-apks/HtcDialer.apk/res/values/styles.xml HtcDialer.apk/res/values/styles.xml
+--- ../original-apks/HtcDialer.apk/res/values/styles.xml	2012-05-26 10:16:47.000000000 +0100
++++ HtcDialer.apk/res/values/styles.xml	2012-05-26 10:08:10.000000000 +0100
+@@ -22,14 +22,77 @@
+     <style name="image_style_dialer_button_symbol_plus" parent="@style/image_style_phone_button_symbol_plus" />
+     <style name="image_style_dialer_button_symbol_voicemail" parent="@style/image_style_phone_button_symbol_voicemail" />
+     <style name="image_style_dialer_button_symbol_ip" parent="@style/image_style_dialer_button_symbol_plus" />
+-    <style name="image_style_phone_button" />
+-    <style name="text_style_phone_button_number" />
+-    <style name="text_style_phone_button_phonetic_alphabet" />
+-    <style name="text_style_phone_button_alphabet" />
+-    <style name="text_style_phone_button_zero_number" />
+-    <style name="image_style_phone_button_symbol" />
+-    <style name="image_style_phone_button_symbol_plus" />
+-    <style name="image_style_phone_button_symbol_voicemail" />
++    <style name="image_style_phone_button">
++        <item name="android:background">@drawable/phone_keypad_btn</item>
++        <item name="android:layout_width">68.0px</item>
++        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_marginLeft">0.0px</item>
++        <item name="android:layout_marginTop">0.0px</item>
++        <item name="android:layout_marginRight">0.0px</item>
++        <item name="android:layout_marginBottom">0.0px</item>
++    </style>
++    <style name="text_style_phone_button_number">
++        <item name="android:textSize">27.0sp</item>
++        <item name="android:textColor">#ff000000</item>
++        <item name="android:layout_gravity">center_horizontal</item>
++        <item name="android:layout_width">wrap_content</item>
++        <item name="android:layout_height">wrap_content</item>
++        <item name="android:shadowColor">#ffffffff</item>
++        <item name="android:shadowDx">1.0</item>
++        <item name="android:shadowDy">1.0</item>
++        <item name="android:shadowRadius">1.0</item>
++    </style>
++    <style name="text_style_phone_button_phonetic_alphabet">
++        <item name="android:visibility">gone</item>
++        <item name="android:layout_width">0.0px</item>
++        <item name="android:layout_height">0.0px</item>
++    </style>
++    <style name="text_style_phone_button_alphabet">
++        <item name="android:textSize">14.0sp</item>
++        <item name="android:textColor">#ff707070</item>
++        <item name="android:layout_gravity">center_horizontal</item>
++        <item name="android:layout_width">wrap_content</item>
++        <item name="android:layout_height">wrap_content</item>
++        <item name="android:layout_marginTop">18.0px</item>
++    </style>
++    <style name="text_style_phone_button_zero_number">
++        <item name="android:textSize">27.0sp</item>
++        <item name="android:textColor">#ff000000</item>
++        <item name="android:layout_gravity">center</item>
++        <item name="android:layout_width">wrap_content</item>
++        <item name="android:layout_height">wrap_content</item>
++        <item name="android:shadowColor">#ffffffff</item>
++        <item name="android:shadowDx">2.0</item>
++        <item name="android:shadowDy">2.0</item>
++        <item name="android:shadowRadius">1.0</item>
++    </style>
++    <style name="image_style_phone_button_symbol">
++        <item name="android:layout_gravity">center</item>
++        <item name="android:layout_width">14.0px</item>
++        <item name="android:layout_height">14.0px</item>
++    </style>
++    <style name="image_style_phone_button_symbol_plus">
++        <item name="android:layout_gravity">center_vertical</item>
++        <item name="android:layout_width">14.0px</item>
++        <item name="android:layout_height">14.0px</item>
++        <item name="android:layout_marginLeft">40.0px</item>
++    </style>
++    <style name="image_style_phone_button_symbol_voicemail">
++        <item name="android:layout_gravity">center_horizontal</item>
++        <item name="android:layout_width">14.0px</item>
++        <item name="android:layout_height">14.0px</item>
++        <item name="android:layout_marginTop">18.0px</item>
++    </style>
++    <style name="layout_style_phone_keypad">
++        <item name="android:orientation">vertical</item>
++        <item name="android:background">@com.htc:drawable/phone_keypad_background</item>
++        <item name="android:paddingLeft">4.0px</item>
++        <item name="android:paddingTop">4.0px</item>
++        <item name="android:paddingRight">4.0px</item>
++        <item name="android:paddingBottom">1.0px</item>
++        <item name="android:layout_width">fill_parent</item>
++        <item name="android:layout_height">wrap_content</item>
++    </style>
+     <style name="HTCSkin">
+         <item name="android:windowNoTitle">true</item>
+         <item name="android:windowContentOverlay">@null</item>
+diff -rupN ../original-apks/HtcDialer.apk/res/values-mdpi/dimens.xml HtcDialer.apk/res/values-mdpi/dimens.xml
+--- ../original-apks/HtcDialer.apk/res/values-mdpi/dimens.xml	2012-05-26 10:16:47.000000000 +0100
++++ HtcDialer.apk/res/values-mdpi/dimens.xml	2012-05-26 10:08:10.000000000 +0100
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <dimen name="dial_pad_width">-1.0px</dimen>
+-    <dimen name="accumulator_height">50.0px</dimen>
++    <dimen name="accumulator_height">37.0px</dimen>
+     <dimen name="list_height_shrinked">100.0px</dimen>
+-    <dimen name="list_height_expanded">390.0px</dimen>
++    <dimen name="list_height_expanded">230.0px</dimen>
+     <dimen name="list_height_shinked_landscape">150.0px</dimen>
+     <dimen name="list_height_expanded_landscape">165.0px</dimen>
+     <dimen name="sn_photo_width">96.0px</dimen>
+@@ -15,33 +15,33 @@
+     <dimen name="dialer_input_height">60.0px</dimen>
+     <dimen name="dial_button_width">96.0px</dimen>
+     <dimen name="dial_button_height">76.0px</dimen>
+-    <dimen name="list_dialer_item_width">62.0px</dimen>
+-    <dimen name="dialer_background_height_lotus">218.0px</dimen>
+-    <dimen name="dialer_background_height_lotus_fullscreen">349.0px</dimen>
+-    <dimen name="dialer_content_height">399.0px</dimen>
+-    <dimen name="dialer_content_shrink_height">173.0px</dimen>
+-    <dimen name="dialer_input_text_size">28.0sp</dimen>
+-    <dimen name="dialer_margin_indicator_top">13.0px</dimen>
+-    <dimen name="dialer_margin_indicator_left">38.0px</dimen>
+-    <dimen name="htc_keypad_top_bottom_margin">4.0px</dimen>
++    <dimen name="list_dialer_item_width">48.0px</dimen>
++    <dimen name="dialer_background_height_lotus">143.0px</dimen>
++    <dimen name="dialer_background_height_lotus_fullscreen">224.0px</dimen>
++    <dimen name="dialer_content_height">261.0px</dimen>
++    <dimen name="dialer_content_shrink_height">123.0px</dimen>
++    <dimen name="dialer_input_text_size">21.0px</dimen>
++    <dimen name="dialer_margin_indicator_top">12.0px</dimen>
++    <dimen name="dialer_margin_indicator_left">32.0px</dimen>
++    <dimen name="htc_keypad_top_bottom_margin">2.0px</dimen>
+     <dimen name="htc_keypad_left_right_margin">3.0px</dimen>
+-    <dimen name="save_contacts_button_font_size">18.0sp</dimen>
+-    <dimen name="accumulator_text_width">275.0px</dimen>
+-    <dimen name="fontSizs_accumulator_hint">20.0px</dimen>
+-    <dimen name="fontSizs_accumulator_hint1">13.0px</dimen>
++    <dimen name="save_contacts_button_font_size">14.0px</dimen>
++    <dimen name="accumulator_text_width">200.0px</dimen>
++    <dimen name="fontSizs_accumulator_hint">14.0px</dimen>
++    <dimen name="fontSizs_accumulator_hint1">11.0px</dimen>
+     <dimen name="htc_dialer_list_item_margin_right">4.0px</dimen>
+     <dimen name="phone_btn_backspace_margin_right">8.0px</dimen>
+-    <dimen name="dialer_save_btn_marginTop">0.0px</dimen>
+-    <dimen name="dialer_save_btn_marginRight">0.0px</dimen>
+-    <dimen name="dialer_save_btn_marginLeft">0.0px</dimen>
++    <dimen name="dialer_save_btn_marginTop">5.0px</dimen>
++    <dimen name="dialer_save_btn_marginRight">5.0px</dimen>
++    <dimen name="dialer_save_btn_marginLeft">5.0px</dimen>
+     <dimen name="dialer_backspace_padding_top">0.0px</dimen>
+     <dimen name="dialer_default_hint_marginTop">0.0px</dimen>
+     <dimen name="dialer_default_hint1_marginTop">25.0px</dimen>
+     <dimen name="browse_title_height">35.0px</dimen>
+     <dimen name="list_item_row_height">40.0px</dimen>
+-    <dimen name="text_size_primary">@com.htc:dimen/text_size_primary</dimen>
+-    <dimen name="text_size_secondary">@com.htc:dimen/text_size_secondary</dimen>
+-    <dimen name="text_size_tertiary">@com.htc:dimen/text_size_tertiary</dimen>
++    <dimen name="text_size_primary">18.0px</dimen>
++    <dimen name="text_size_secondary">14.0px</dimen>
++    <dimen name="text_size_tertiary">12.0px</dimen>
+     <dimen name="text_size_title_browse">14.0px</dimen>
+     <dimen name="photo_frame_width">62.0px</dimen>
+     <dimen name="notification_ball_dimen">24.0px</dimen>
+@@ -153,7 +153,7 @@
+     <dimen name="margin_normal">10.0px</dimen>
+     <dimen name="margin_smaller">7.0px</dimen>
+     <dimen name="margin_small">4.0px</dimen>
+-    <dimen name="list_item_length_normal">@com.htc:dimen/htc_list_item_height</dimen>
++    <dimen name="list_item_length_normal">40.0px</dimen>
+     <dimen name="padding_medium">12.0px</dimen>
+     <dimen name="padding_xsmall">4.0px</dimen>
+     <dimen name="contact_pickr_taskbar_height">45.0px</dimen>
+@@ -210,7 +210,7 @@
+     <dimen name="hor_list_item_height">99.0px</dimen>
+     <dimen name="hor_list_item_width">89.0px</dimen>
+     <dimen name="hor_list_item_photo_height">78.0px</dimen>
+-    <dimen name="hor_list_item__photo_width">@com.htc:dimen/htc_list_item_height</dimen>
++    <dimen name="hor_list_item__photo_width">72.0px</dimen>
+     <dimen name="carhome_extra_margin_for_qhd">0.0px</dimen>
+     <dimen name="carhome_make_a_call_padding">12.0px</dimen>
+     <dimen name="carhome_make_a_call_font_size">10.0px</dimen>
+@@ -270,10 +270,10 @@
+     <dimen name="contact_recent_calls_size">22.0px</dimen>
+     <dimen name="contact_recent_calls_marginTop">52.0px</dimen>
+     <dimen name="contact_recent_calls_marginLeft">17.0px</dimen>
+-    <dimen name="dialog_margin">10.0px</dimen>
+-    <dimen name="save_contact_button_height">54.0px</dimen>
+-    <dimen name="list_item_delete_icon_padding_right">14.0px</dimen>
+-    <dimen name="list_item_delete_icon_width">41.0px</dimen>
++    <dimen name="dialog_margin">0.0px</dimen>
++    <dimen name="save_contact_button_height">40.0px</dimen>
++    <dimen name="list_item_delete_icon_padding_right">11.0px</dimen>
++    <dimen name="list_item_delete_icon_width">31.0px</dimen>
+     <dimen name="keypad_4th_row_top">119.0px</dimen>
+     <dimen name="keypad_3rd_row_top">81.0px</dimen>
+     <dimen name="keypad_2nd_row_top">43.0px</dimen>
+@@ -283,34 +283,34 @@
+     <dimen name="keypad_3rd_column_left">159.0px</dimen>
+     <dimen name="accumulator_backspace_control_width">35.0px</dimen>
+     <dimen name="accumulator_backspace_control_height">35.0px</dimen>
+-    <dimen name="dialer_list_item_info_marginLeft">-10.0px</dimen>
+-    <dimen name="dialer_list_item_name_marginLeft">9.0px</dimen>
++    <dimen name="dialer_list_item_info_marginLeft">-8.0px</dimen>
++    <dimen name="dialer_list_item_name_marginLeft">7.0px</dimen>
+     <dimen name="dialer_save_dialog_bottom_item_height">65.0px</dimen>
+     <dimen name="dialer_save_dialog_bottom_item_marginTop">10.0px</dimen>
+-    <dimen name="task_bar_height">56.0px</dimen>
+-    <dimen name="dialer_taskbar_center_text_size">25.199982sp</dimen>
++    <dimen name="task_bar_height">40.0px</dimen>
++    <dimen name="dialer_taskbar_center_text_size">18.0px</dimen>
+     <dimen name="task_bar_left_right_padding">5.0px</dimen>
+-    <dimen name="task_bar_center_top_padding">0.0px</dimen>
++    <dimen name="task_bar_center_top_padding">1.0px</dimen>
+     <dimen name="task_bar_center_bottom_padding">1.0px</dimen>
+     <dimen name="task_bar_center_left_right_padding">1.0px</dimen>
+-    <dimen name="task_bar_left_right_button_width">66.0px</dimen>
+-    <dimen name="dead_zoom_height">10.0px</dimen>
++    <dimen name="task_bar_left_right_button_width">45.0px</dimen>
++    <dimen name="dead_zoom_height">7.0px</dimen>
+     <dimen name="tip_top_panel_min_height">54.0px</dimen>
+-    <dimen name="tip_common_marginLeft">10.0px</dimen>
+-    <dimen name="tip_common_marginRight">10.0px</dimen>
++    <dimen name="tip_common_marginLeft">8.0px</dimen>
++    <dimen name="tip_common_marginRight">8.0px</dimen>
+     <dimen name="tip_title_template_marginTop">6.0px</dimen>
+     <dimen name="tip_title_template_marginBottom">9.0px</dimen>
+-    <dimen name="tip_icon_paddingRight">10.0px</dimen>
++    <dimen name="tip_icon_paddingRight">9.0px</dimen>
+     <dimen name="tip_titleDivider_height">1.0px</dimen>
+     <dimen name="tip_scrollView_min_height">54.0px</dimen>
+-    <dimen name="tip_scrollView_paddingBottom">10.0px</dimen>
+-    <dimen name="tip_hint_font_size">16.0px</dimen>
++    <dimen name="tip_scrollView_paddingBottom">8.0px</dimen>
++    <dimen name="tip_hint_font_size">13.0px</dimen>
+     <dimen name="tip_hint1_paddingTop">2.0px</dimen>
+     <dimen name="tip_hint1_paddingBottom">10.0px</dimen>
+     <dimen name="tip_hint1_paddingLeft">10.0px</dimen>
+     <dimen name="tip_hint1_paddingRight">10.0px</dimen>
+     <dimen name="tip_hint2_paddingTop">10.0px</dimen>
+-    <dimen name="tip_hint2_paddingBottom">2.0px</dimen>
++    <dimen name="tip_hint2_paddingBottom">10.0px</dimen>
+     <dimen name="tip_tutorial_marginRight">5.0px</dimen>
+     <dimen name="tip_button_layout_marginTop">0.0px</dimen>
+ </resources>

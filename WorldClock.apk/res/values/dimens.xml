@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_item_list_height">40.0px</dimen>
+</resources>

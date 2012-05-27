@@ -1,0 +1,285 @@
+Binary files ../original-apks/Settings.apk/res/drawable/indicator_code_lock_point_area_default_s.png and Settings.apk/res/drawable/indicator_code_lock_point_area_default_s.png differ
+Binary files ../original-apks/Settings.apk/res/drawable/indicator_code_lock_point_area_green_s.png and Settings.apk/res/drawable/indicator_code_lock_point_area_green_s.png differ
+Binary files ../original-apks/Settings.apk/res/drawable/indicator_code_lock_point_area_red_s.png and Settings.apk/res/drawable/indicator_code_lock_point_area_red_s.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/indicator_code_lock_point_area_default_s.png and Settings.apk/res/drawable-mdpi/indicator_code_lock_point_area_default_s.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/indicator_code_lock_point_area_green_s.png and Settings.apk/res/drawable-mdpi/indicator_code_lock_point_area_green_s.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/indicator_code_lock_point_area_red_s.png and Settings.apk/res/drawable-mdpi/indicator_code_lock_point_area_red_s.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_00.png and Settings.apk/res/drawable-mdpi/lock_anim_00.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_02.png and Settings.apk/res/drawable-mdpi/lock_anim_02.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_04.png and Settings.apk/res/drawable-mdpi/lock_anim_04.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_06.png and Settings.apk/res/drawable-mdpi/lock_anim_06.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_08.png and Settings.apk/res/drawable-mdpi/lock_anim_08.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_10.png and Settings.apk/res/drawable-mdpi/lock_anim_10.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_12.png and Settings.apk/res/drawable-mdpi/lock_anim_12.png differ
+Binary files ../original-apks/Settings.apk/res/drawable-mdpi/lock_anim_14.png and Settings.apk/res/drawable-mdpi/lock_anim_14.png differ
+diff -rupN ../original-apks/Settings.apk/res/layout/choose_lock_password.xml Settings.apk/res/layout/choose_lock_password.xml
+--- ../original-apks/Settings.apk/res/layout/choose_lock_password.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout/choose_lock_password.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@android:color/background_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="56.0dip" android:lines="2" style="@style/lock_title_s_text_appearance" />
+-    <EditText android:textSize="@com.htc:dimen/input_default_xl" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/password_entry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:layout_marginTop="@dimen/lock_password_margin_top" android:layout_marginRight="11.0dip" android:password="true" android:singleLine="true" android:inputType="textPassword" />
++    <TextView android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="2" style="@style/lock_title_s_text_appearance" />
++    <EditText android:textSize="@com.htc:dimen/input_default_xl" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/password_entry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="@dimen/lock_password_margin_top" android:layout_marginRight="30.0dip" android:password="true" android:singleLine="true" android:inputType="textPassword" />
+     <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+     <com.htc.lockscreen.keyboard.HtcPinKeyboard android:id="@id/keyboard2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+     <RelativeLayout android:id="@id/button_panel" style="@style/layout_panel">
+diff -rupN ../original-apks/Settings.apk/res/layout/choose_lock_pattern.xml Settings.apk/res/layout/choose_lock_pattern.xml
+--- ../original-apks/Settings.apk/res/layout/choose_lock_pattern.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout/choose_lock_pattern.xml	2012-05-26 10:09:46.000000000 +0100
+@@ -3,8 +3,8 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+         <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/lock_pattern_title_height">
+-            <TextView android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/lock_title_s_text_appearance" />
+-            <View android:background="#ff2d2d2d" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
++            <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
++            <View android:background="#ff2d2d2d" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentBottom="true" />
+         </RelativeLayout>
+         <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+         <LinearLayout android:gravity="center" android:layout_gravity="center" style="@style/lockpattern_size_style">
+@@ -13,7 +13,7 @@
+         <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+         <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/lock_pattern_foot_height">
+             <View android:background="#ff2d2d2d" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+-            <TextView android:gravity="center" android:id="@id/footerText" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/lock_footer_text_appearance" />
++            <TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/footerText" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+         </RelativeLayout>
+     </LinearLayout>
+     <RelativeLayout android:id="@id/button_panel" style="@style/layout_panel">
+diff -rupN ../original-apks/Settings.apk/res/layout/global_actions_item.xml Settings.apk/res/layout/global_actions_item.xml
+--- ../original-apks/Settings.apk/res/layout/global_actions_item.xml	2012-05-26 10:18:46.000000000 +0100
++++ Settings.apk/res/layout/global_actions_item.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -3,7 +3,7 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+         <ImageView android:gravity="center_vertical" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="0.0px" />
+-        <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="@com.htc:dimen/title_primary_l" android:textColor="@color/copy_from_core_zzz_primary_text_dark_1" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/message" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:layout_marginTop="2.0dip" android:singleLine="true" android:layout_toRightOf="@id/icon" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true" />
+-        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/title_secondary_m" android:textColor="@color/copy_from_core_zzz_secondary_text_dark_1" android:gravity="center_vertical" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:maxLines="3" android:layout_toRightOf="@id/icon" android:layout_below="@id/message" android:layout_alignLeft="@id/message" />
++        <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="@com.htc:dimen/title_primary_l" android:textColor="@color/copy_from_core_zzz_primary_text_dark_1" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/message" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="19.0px" android:layout_marginLeft="6.0px" android:layout_marginTop="2.0dip" android:singleLine="true" android:layout_toRightOf="@id/icon" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true" />
++        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/title_secondary_m" android:textColor="@color/copy_from_core_zzz_secondary_text_dark_1" android:gravity="center_vertical" android:id="@id/status" android:layout_width="fill_parent" android:layout_height="26.0px" android:layout_marginTop="-4.0dip" android:maxLines="3" android:layout_toRightOf="@id/icon" android:layout_below="@id/message" android:layout_alignLeft="@id/message" />
+     </RelativeLayout>
+ </RelativeLayout>
+diff -rupN ../original-apks/Settings.apk/res/layout/list_preference_progress_bar.xml Settings.apk/res/layout/list_preference_progress_bar.xml
+--- ../original-apks/Settings.apk/res/layout/list_preference_progress_bar.xml	2012-05-26 10:18:46.000000000 +0100
++++ Settings.apk/res/layout/list_preference_progress_bar.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <merge
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <ImageView android:layout_gravity="center_vertical" android:id="@id/list_preference_icon" android:background="@com.htc:drawable/btn_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/btn_circle_margin_right" android:src="@com.htc:drawable/ic_btn_round_more" />
+-    <android.widget.ProgressBar android:layout_gravity="center_vertical" android:id="@id/list_preference_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="@dimen/progress_bar_margin_right" />
++    <ImageView android:layout_gravity="center_vertical" android:id="@id/list_preference_icon" android:background="@com.htc:drawable/btn_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@com.htc:drawable/ic_btn_round_more" />
++    <android.widget.ProgressBar android:layout_gravity="center_vertical" android:id="@id/list_preference_progress" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="7.0dip" />
+ </merge>
+diff -rupN ../original-apks/Settings.apk/res/layout/locale_picker_item.xml Settings.apk/res/layout/locale_picker_item.xml
+--- ../original-apks/Settings.apk/res/layout/locale_picker_item.xml	2012-05-26 10:18:48.000000000 +0100
++++ Settings.apk/res/layout/locale_picker_item.xml	2012-05-26 10:09:46.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
++<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/preference_primary_text_dark" android:id="@id/locale" android:layout_width="fill_parent" android:layout_height="wrap_content" />
++    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/preference_primary_text_dark" android:id="@id/locale" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+ </LinearLayout>
+diff -rupN ../original-apks/Settings.apk/res/layout/manage_applications_item.xml Settings.apk/res/layout/manage_applications_item.xml
+--- ../original-apks/Settings.apk/res/layout/manage_applications_item.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout/manage_applications_item.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -2,7 +2,7 @@
+ <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="6.0dip" android:paddingTop="5.0dip" android:paddingRight="6.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <ImageView android:layout_gravity="center_vertical" android:id="@id/app_icon" android:layout_width="@android:dimen/app_icon_size" android:layout_height="@android:dimen/app_icon_size" android:layout_marginRight="11.0dip" android:scaleType="fitCenter" />
+-    <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
++    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+         <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:ellipsize="marquee" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:singleLine="true" />
+         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAlignedChildIndex="0">
+             <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="left|center" android:id="@id/app_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_weight="1.0" />
+diff -rupN ../original-apks/Settings.apk/res/layout/preference_widget_progress.xml Settings.apk/res/layout/preference_widget_progress.xml
+--- ../original-apks/Settings.apk/res/layout/preference_widget_progress.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout/preference_widget_progress.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -3,5 +3,5 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/preference_primary_text_dark" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0sp" android:layout_marginTop="5.0sp" android:singleLine="true" android:layout_alignParentLeft="true" />
+     <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="?android:textColorSecondary" android:id="@id/battery_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0sp" android:layout_marginTop="5.0sp" android:singleLine="true" android:layout_toRightOf="@android:id/title" />
+-    <com.android.settings.BatteryBar android:id="@id/status_progress" android:layout_width="fill_parent" android:layout_height="@dimen/battery_bar_layout_height" android:layout_marginLeft="14.0dip" android:layout_marginTop="3.0sp" android:layout_marginRight="14.0dip" android:layout_marginBottom="10.0sp" android:maxHeight="14.0dip" android:max="100" android:indeterminate="false" android:minWidth="50.0dip" android:layout_below="@android:id/title" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
++    <com.android.settings.BatteryBar android:id="@id/status_progress" android:layout_width="300.0dip" android:layout_height="14.0dip" android:layout_marginLeft="14.0dip" android:layout_marginTop="3.0sp" android:layout_marginRight="14.0dip" android:layout_marginBottom="10.0sp" android:maxHeight="14.0dip" android:max="100" android:indeterminate="false" android:minWidth="50.0dip" android:layout_below="@android:id/title" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+ </RelativeLayout>
+diff -rupN ../original-apks/Settings.apk/res/layout/preference_widget_singleline_progress.xml Settings.apk/res/layout/preference_widget_singleline_progress.xml
+--- ../original-apks/Settings.apk/res/layout/preference_widget_singleline_progress.xml	1970-01-01 01:00:00.000000000 +0100
++++ Settings.apk/res/layout/preference_widget_singleline_progress.xml	2012-05-26 10:09:48.000000000 +0100
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout android:layout_width="fill_parent" android:layout_height="70.0dip"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip">
++        <TextView android:id="@android:id/title" android:background="@null" android:paddingLeft="2.0dip" android:paddingTop="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" style="?android:attr/listSeparatorTextViewStyle" />
++        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/htc_text_appearance_small" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" />
++    </RelativeLayout>
++    <ProgressBar android:id="@id/step_progress" android:layout_width="120.0dip" android:layout_height="12.0dip" android:maxHeight="20.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal" android:progressDrawable="@drawable/orange_style_progress_horizontal" android:minHeight="20.0dip" android:text="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
++</RelativeLayout>
+diff -rupN ../original-apks/Settings.apk/res/layout-land/choose_lock_password.xml Settings.apk/res/layout-land/choose_lock_password.xml
+--- ../original-apks/Settings.apk/res/layout-land/choose_lock_password.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout-land/choose_lock_password.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@android:color/background_dark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:ellipsize="marquee" android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="68.0dip" android:layout_marginRight="6.0dip" style="@style/lock_title_s_text_appearance" />
+-    <EditText android:textAppearance="?android:textAppearanceLarge" android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/password_entry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="118.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="118.0dip" android:singleLine="true" android:inputType="textPassword" />
++    <TextView android:ellipsize="marquee" android:gravity="center" android:id="@id/headerText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="6.0dip" style="@style/lock_title_s_text_appearance" />
++    <EditText android:textAppearance="?android:textAppearanceLarge" android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/password_entry" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="118.0dip" android:layout_marginTop="5.0dip" android:singleLine="true" android:inputType="textPassword" />
+     <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+     <com.htc.lockscreen.keyboard.HtcPinKeyboard android:id="@id/keyboard2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+     <com.android.internal.widget.PasswordEntryKeyboardView android:id="@id/keyboard" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:keyBackground="@android:drawable/btn_keyboard_key_fulltrans" />
+diff -rupN ../original-apks/Settings.apk/res/layout-land/choose_lock_pattern.xml Settings.apk/res/layout-land/choose_lock_pattern.xml
+--- ../original-apks/Settings.apk/res/layout-land/choose_lock_pattern.xml	2012-05-26 10:18:46.000000000 +0100
++++ Settings.apk/res/layout-land/choose_lock_pattern.xml	2012-05-26 10:09:45.000000000 +0100
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:orientation="vertical" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="horizontal" android:id="@id/topLayout" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
++    <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="horizontal" android:id="@id/topLayout" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+         <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+             <View android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+             <TextView android:gravity="center" android:id="@id/headerText" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/lock_title_s_text_appearance" />
+diff -rupN ../original-apks/Settings.apk/res/layout-mdpi/access_point_preference_oobe.xml Settings.apk/res/layout-mdpi/access_point_preference_oobe.xml
+--- ../original-apks/Settings.apk/res/layout-mdpi/access_point_preference_oobe.xml	2012-05-26 10:18:46.000000000 +0100
++++ Settings.apk/res/layout-mdpi/access_point_preference_oobe.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -2,8 +2,8 @@
+ <LinearLayout android:gravity="center_vertical" android:paddingRight="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/layout_generic">
+-        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@drawable/white_text_white_focused" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+-        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/darklist_secondary_l" android:textColor="@drawable/secondary_text_white_focused" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" />
++        <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="15.0px" android:textColor="@drawable/white_text_white_focused" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
++        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="12.0px" android:textColor="@drawable/secondary_text_white_focused" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" />
+     </RelativeLayout>
+     <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+ </LinearLayout>
+diff -rupN ../original-apks/Settings.apk/res/layout-mdpi/gsensor.xml Settings.apk/res/layout-mdpi/gsensor.xml
+--- ../original-apks/Settings.apk/res/layout-mdpi/gsensor.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout-mdpi/gsensor.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -4,19 +4,19 @@
+     <include android:id="@id/calibration_title" layout="@com.htc:layout/title_1" />
+     <RelativeLayout android:id="@id/roundview" android:layout_width="wrap_content" android:layout_height="wrap_content"
+       xmlns:android="http://schemas.android.com/apk/res/android" />
+-    <RelativeLayout android:id="@id/white_screen_calibration" android:background="@com.htc:drawable/fill_full_round" android:layout_width="fill_parent" android:layout_height="365.0px" android:layout_below="@id/calibration_title"
++    <RelativeLayout android:id="@id/white_screen_calibration" android:background="@com.htc:drawable/fill_full_round" android:layout_width="fill_parent" android:layout_height="235.0px" android:layout_below="@id/calibration_title"
+       xmlns:android="http://schemas.android.com/apk/res/android">
+-        <TextView android:textSize="20.0px" android:textColor="@color/black" android:gravity="left" android:id="@id/tv_calibration_prompt" android:layout_width="fill_parent" android:layout_height="70.0px" android:layout_marginLeft="10.0px" android:layout_marginTop="10.0px" android:text="@string/calibration_prompt" android:layout_alignParentTop="true" />
+-        <RelativeLayout android:id="@id/rl_calibration" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="200.0px" android:layout_below="@id/tv_calibration_prompt">
+-            <ImageView android:id="@id/img_cylinder_h" android:layout_width="167.0px" android:layout_height="51.0px" android:layout_marginLeft="30.0px" android:src="@drawable/wo_level_001" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_blk_lines_left" android:layout_width="15.0px" android:layout_height="51.0px" android:layout_marginLeft="85.0px" android:src="@drawable/blacklines_left" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_bubble_h" android:layout_width="35.0px" android:layout_height="54.0px" android:layout_marginLeft="100.0px" android:src="@drawable/bubble_95_h" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_blk_lines_right" android:layout_width="15.0px" android:layout_height="51.0px" android:layout_marginLeft="140.0px" android:src="@drawable/blacklines_right" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_cylinder_v" android:layout_width="51.0px" android:layout_height="168.0px" android:layout_marginLeft="20.0px" android:src="@drawable/wo_level_002" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_blk_lines_btm" android:layout_width="51.0px" android:layout_height="15.0px" android:layout_marginLeft="20.0px" android:layout_marginBottom="53.0px" android:src="@drawable/blacklines_bottom" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_bubble_v" android:layout_width="54.0px" android:layout_height="35.0px" android:layout_marginLeft="22.0px" android:layout_marginBottom="67.0px" android:src="@drawable/bubble_v" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
+-            <ImageView android:id="@id/img_blk_lines_top" android:layout_width="51.0px" android:layout_height="15.0px" android:layout_marginLeft="20.0px" android:layout_marginBottom="107.0px" android:src="@drawable/blacklines_top" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" /> />
+-</RelativeLayout>
++        <TextView android:textSize="15.0px" android:textColor="@color/black" android:gravity="left" android:id="@id/tv_calibration_prompt" android:layout_width="fill_parent" android:layout_height="37.0px" android:layout_marginLeft="10.0px" android:layout_marginTop="5.0px" android:text="@string/calibration_prompt" android:layout_alignParentTop="true" />
++        <RelativeLayout android:id="@id/rl_calibration" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_calibration_prompt">
++            <ImageView android:id="@id/img_cylinder_h" android:layout_width="150.0px" android:layout_height="40.0px" android:layout_marginLeft="20.0px" android:layout_marginBottom="15.0px" android:src="@drawable/wo_level_001" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_blk_lines_left" android:layout_width="15.0px" android:layout_height="40.0px" android:layout_marginLeft="65.0px" android:layout_marginBottom="15.0px" android:src="@drawable/blacklines_left" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_bubble_h" android:layout_width="25.0px" android:layout_height="54.0px" android:layout_marginLeft="88.0px" android:layout_marginBottom="10.0px" android:src="@drawable/bubble_95_h" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_blk_lines_right" android:layout_width="15.0px" android:layout_height="40.0px" android:layout_marginLeft="120.0px" android:layout_marginBottom="15.0px" android:src="@drawable/blacklines_right" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_cylinder_v" android:layout_width="40.0px" android:layout_height="150.0px" android:layout_marginLeft="10.0px" android:layout_marginBottom="10.0px" android:src="@drawable/wo_level_002" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_blk_lines_btm" android:layout_width="40.0px" android:layout_height="15.0px" android:layout_marginLeft="10.0px" android:layout_marginBottom="53.0px" android:src="@drawable/blacklines_bottom" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_bubble_v" android:layout_width="54.0px" android:layout_height="25.0px" android:layout_marginLeft="7.0px" android:layout_marginBottom="75.0px" android:src="@drawable/bubble_v" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
++            <ImageView android:id="@id/img_blk_lines_top" android:layout_width="40.0px" android:layout_height="15.0px" android:layout_marginLeft="10.0px" android:layout_marginBottom="107.0px" android:src="@drawable/blacklines_top" android:layout_toRightOf="@id/img_cylinder_h" android:layout_alignParentBottom="true" />
++        </RelativeLayout>
+     </RelativeLayout>
+     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+         <include android:layout_below="@id/white_screen_calibration" android:layout_alignParentBottom="true" layout="@com.htc:layout/cmd_bar_1" />
+diff -rupN ../original-apks/Settings.apk/res/layout-mdpi/locale_picker_item_setupwizard.xml Settings.apk/res/layout-mdpi/locale_picker_item_setupwizard.xml
+--- ../original-apks/Settings.apk/res/layout-mdpi/locale_picker_item_setupwizard.xml	2012-05-26 10:18:47.000000000 +0100
++++ Settings.apk/res/layout-mdpi/locale_picker_item_setupwizard.xml	2012-05-26 10:09:46.000000000 +0100
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@drawable/white_text_white_focused" android:id="@id/locale" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" />
++    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="15.0px" android:textColor="@drawable/white_text_white_focused" android:id="@id/locale" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" />
+     <RadioButton android:id="@id/select" android:focusable="false" android:clickable="false" android:layout_width="36.0px" android:layout_height="wrap_content" />
+ </LinearLayout>
+diff -rupN ../original-apks/Settings.apk/res/layout-mdpi/locale_picker_setupwizard.xml Settings.apk/res/layout-mdpi/locale_picker_setupwizard.xml
+--- ../original-apks/Settings.apk/res/layout-mdpi/locale_picker_setupwizard.xml	2012-05-26 10:18:45.000000000 +0100
++++ Settings.apk/res/layout-mdpi/locale_picker_setupwizard.xml	2012-05-26 10:09:47.000000000 +0100
+@@ -2,7 +2,7 @@
+ <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <TextView android:id="@id/title" android:text="@string/select_your_language" style="@style/google_title_text" />
+-    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/subtitle" android:layout_marginTop="0.0px" android:text="@string/english_select_your_language" style="@style/google_title_text" />
++    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="12.0px" android:id="@id/subtitle" android:layout_marginTop="0.0px" android:text="@string/english_select_your_language" style="@style/google_title_text" />
+     <ImageView android:id="@id/divider" style="@style/google_title_divider" />
+     <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+         <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" />
+diff -rupN ../original-apks/Settings.apk/res/values/dimens.xml Settings.apk/res/values/dimens.xml
+--- ../original-apks/Settings.apk/res/values/dimens.xml	2012-05-26 10:18:48.000000000 +0100
++++ Settings.apk/res/values/dimens.xml	2012-05-26 10:09:49.000000000 +0100
+@@ -17,22 +17,22 @@
+     <dimen name="datetime_date_picker_title_text_size">18.0sp</dimen>
+     <dimen name="datetime_time_picker_title_width">@dimen/datetime_number_table_tumblers_layout_width</dimen>
+     <dimen name="datetime_time_picker_title_text_size">18.0sp</dimen>
+-    <dimen name="lock_spacer_margin_top">6.0dip</dimen>
++    <dimen name="lock_spacer_margin_top">4.0dip</dimen>
+     <dimen name="lock_password_text_size">32.0sp</dimen>
+-    <dimen name="lock_password_margin_top">23.0dip</dimen>
++    <dimen name="lock_password_margin_top">3.0dip</dimen>
+     <dimen name="lock_keyboard_margin_bottom">30.0dip</dimen>
+     <dimen name="lock_pin_edit_width">160.0dip</dimen>
+-    <dimen name="lock_pin_keyboard_width">320.0dip</dimen>
+-    <dimen name="battery_bar_layout_width">300.0dip</dimen>
++    <dimen name="lock_pin_keyboard_width">240.0dip</dimen>
++    <dimen name="battery_bar_layout_width">225.0dip</dimen>
+     <dimen name="battery_bar_layout_height">14.0dip</dimen>
+-    <dimen name="lock_pattern_title_height">63.0dip</dimen>
+-    <dimen name="lock_pattern_foot_height">63.0dip</dimen>
++    <dimen name="lock_pattern_title_height">40.0dip</dimen>
++    <dimen name="lock_pattern_foot_height">40.0dip</dimen>
+     <dimen name="btn_circle_margin_right">10.0dip</dimen>
+     <dimen name="progress_bar_margin_right">10.0dip</dimen>
+     <dimen name="uak_list_view_icon_width">48.0dip</dimen>
+     <dimen name="uak_list_view_icon_height">48.0dip</dimen>
+     <dimen name="sliding_handle_height">55.0px</dimen>
+-    <dimen name="launcher_hv_textsize">27.0px</dimen>
++    <dimen name="launcher_hv_textsize">20.0px</dimen>
+     <dimen name="uak_list_icon_margin_left">7.0dip</dimen>
+     <dimen name="uak_list_icon_margin_right">9.0dip</dimen>
+ </resources>
+diff -rupN ../original-apks/Settings.apk/res/values/layouts.xml Settings.apk/res/values/layouts.xml
+--- ../original-apks/Settings.apk/res/values/layouts.xml	2012-05-26 10:18:48.000000000 +0100
++++ Settings.apk/res/values/layouts.xml	1970-01-01 01:00:00.000000000 +0100
+@@ -1,4 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <item type="layout" name="preference_widget_singleline_progress">false</item>
+-</resources>
+diff -rupN ../original-apks/Settings.apk/res/values-land/dimens.xml Settings.apk/res/values-land/dimens.xml
+--- ../original-apks/Settings.apk/res/values-land/dimens.xml	2012-05-26 10:18:48.000000000 +0100
++++ Settings.apk/res/values-land/dimens.xml	2012-05-26 10:09:48.000000000 +0100
+@@ -14,8 +14,8 @@
+     <dimen name="datetime_date_picker_title_text_size">15.0sp</dimen>
+     <dimen name="datetime_time_picker_title_width">@dimen/datetime_number_table_tumblers_layout_width</dimen>
+     <dimen name="datetime_time_picker_title_text_size">15.0sp</dimen>
+-    <dimen name="battery_bar_layout_width">460.0dip</dimen>
++    <dimen name="battery_bar_layout_width">300.0dip</dimen>
+     <dimen name="battery_bar_layout_height">14.0dip</dimen>
+-    <dimen name="appwidget_width">421.0dip</dimen>
++    <dimen name="appwidget_width">280.0dip</dimen>
+     <dimen name="appwidget_height">68.0dip</dimen>
+ </resources>
+diff -rupN ../original-apks/Settings.apk/res/values-mdpi/dimens.xml Settings.apk/res/values-mdpi/dimens.xml
+--- ../original-apks/Settings.apk/res/values-mdpi/dimens.xml	2012-05-26 10:18:48.000000000 +0100
++++ Settings.apk/res/values-mdpi/dimens.xml	2012-05-26 10:09:48.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="lock_pattern_title_height">40.0px</dimen>
++    <dimen name="lock_pattern_title_height">20.0px</dimen>
+     <dimen name="lock_pattern_foot_height">40.0px</dimen>
+ </resources>

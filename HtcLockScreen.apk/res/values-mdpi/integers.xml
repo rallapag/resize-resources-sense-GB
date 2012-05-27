@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="initial_velocity">1200</integer>
+    <integer name="animation_accelerate">2000</integer>
+    <integer name="animation_regulation_pixel">1</integer>
+    <integer name="alert_width">200</integer>
+    <integer name="alert_height">130</integer>
+    <integer name="alert_icon_month_size">17</integer>
+    <integer name="alert_icon_month_x">134</integer>
+    <integer name="alert_icon_month_y">6</integer>
+    <integer name="alert_icon_date_size">41</integer>
+    <integer name="alert_icon_date_x">134</integer>
+    <integer name="alert_icon_date_y">45</integer>
+    <integer name="alert_icon_date_00_x">128</integer>
+    <integer name="alert_icon_date_00_y">45</integer>
+</resources>

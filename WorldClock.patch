@@ -1,0 +1,984 @@
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/add_title.xml WorldClock.apk/res/layout-mdpi/add_title.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/add_title.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/add_title.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/add_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <Button android:id="@id/add_icon" android:background="@com.htc:drawable/common_add" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" />
+-    <TextView android:textSize="18.0sp" android:textColor="@color/dark_text_bright_focused" android:id="@id/add_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/add_city" />
++    <Button android:id="@id/add_icon" android:background="@com.htc:drawable/common_add" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0px" android:layout_marginTop="8.0px" android:layout_marginBottom="8.0px" />
++    <TextView android:textSize="15.0px" android:textColor="@color/dark_text_bright_focused" android:id="@id/add_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0px" android:text="@string/add_city" />
+ </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/alarm_ring.xml WorldClock.apk/res/layout-mdpi/alarm_ring.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/alarm_ring.xml	2012-05-26 10:19:41.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/alarm_ring.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -3,11 +3,11 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <RelativeLayout android:orientation="vertical" android:id="@id/default_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <FrameLayout android:id="@id/wallpaper_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+-            <RelativeLayout android:id="@id/reminder_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="226.0px">
++            <RelativeLayout android:id="@id/reminder_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="137.0px">
+                 <ImageView android:id="@id/alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                 <AnalogClock android:id="@id/hand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:dial="@drawable/alarm_anim_dot" android:hand_hour="@drawable/hand_hours" android:hand_minute="@drawable/hand_hub_minutes" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                 <ImageView android:id="@id/dot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alarm_anim_dot" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+-                <TextView android:textSize="24.0sp" android:textColor="@color/white" android:id="@id/alert_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="15.0px" android:layout_marginRight="10.0px" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.1" android:shadowDy="1.1" android:shadowRadius="1.2" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
++                <TextView android:textSize="18.0px" android:textColor="@color/white" android:id="@id/alert_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:layout_marginTop="8.0px" android:layout_marginRight="8.0px" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.1" android:shadowDy="1.1" android:shadowRadius="1.2" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+             </RelativeLayout>
+         </FrameLayout>
+     </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/alarm_time.xml WorldClock.apk/res/layout-mdpi/alarm_time.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/alarm_time.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/alarm_time.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -1,30 +1,30 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="75.0px"
++<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="60.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/time_layout" android:layout_width="fill_parent" android:layout_height="75.0px">
+-        <com.htc.android.worldclock.DigitalClock android:orientation="horizontal" android:id="@id/digitalClock" android:layout_width="125.0px" android:layout_height="53.0px" android:layout_marginLeft="10.0px" android:layout_centerVertical="true">
+-            <LinearLayout android:layout_gravity="right|center" android:layout_width="85.0px" android:layout_height="wrap_content">
++    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/time_layout" android:layout_width="fill_parent" android:layout_height="60.0px">
++        <com.htc.android.worldclock.DigitalClock android:orientation="horizontal" android:id="@id/digitalClock" android:layout_width="93.0px" android:layout_height="42.0px" android:layout_marginLeft="8.0px" android:layout_centerVertical="true">
++            <LinearLayout android:layout_gravity="right|center" android:layout_width="67.0px" android:layout_height="wrap_content">
+                 <TextView android:textColor="@color/black" android:gravity="right|center" android:id="@id/timeDisplay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/digitalClockTimeStyle" />
+             </LinearLayout>
+-            <RelativeLayout android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="44.0px" android:layout_marginLeft="3.0px">
++            <RelativeLayout android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="26.0px" android:layout_marginLeft="2.0px" android:layout_marginTop="10.0px">
+                 <TextView android:textColor="@color/light_grey" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am" android:includeFontPadding="false" android:layout_alignParentTop="true" style="@style/digitalClockAmPmStyle" />
+                 <TextView android:textColor="@color/light_grey" android:id="@id/day" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_below="@id/am_pm" android:layout_alignParentBottom="true" style="@style/digitalClockDayStyle" />
+             </RelativeLayout>
+         </com.htc.android.worldclock.DigitalClock>
+-        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:layout_weight="1.0">
+-            <TextView android:ellipsize="marquee" android:id="@id/description" android:layout_width="138.0px" android:layout_height="wrap_content" android:singleLine="true" style="@style/alarmclockDescription" />
+-            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0px">
+-                <TextView android:id="@id/sun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" style="@style/alarmclockWeek" />
+-                <TextView android:id="@id/mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" style="@style/alarmclockWeek" />
+-                <TextView android:id="@id/tue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" style="@style/alarmclockWeek" />
+-                <TextView android:id="@id/wed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" style="@style/alarmclockWeek" />
+-                <TextView android:id="@id/thu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" style="@style/alarmclockWeek" />
+-                <TextView android:id="@id/fri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" style="@style/alarmclockWeek" />
+-                <TextView android:id="@id/sat" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/alarmclockWeek" />
++        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0px" android:layout_marginTop="1.0px" android:layout_weight="1.0">
++            <TextView android:textSize="15.0px" android:ellipsize="marquee" android:id="@id/description" android:layout_width="107.0px" android:layout_height="wrap_content" android:singleLine="true" style="@style/alarmclockDescription" />
++            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0px">
++                <TextView android:textSize="11.0px" android:id="@id/sun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
++                <TextView android:textSize="11.0px" android:id="@id/mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
++                <TextView android:textSize="11.0px" android:id="@id/tue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
++                <TextView android:textSize="11.0px" android:id="@id/wed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
++                <TextView android:textSize="11.0px" android:id="@id/thu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
++                <TextView android:textSize="11.0px" android:id="@id/fri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
++                <TextView android:textSize="11.0px" android:id="@id/sat" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/alarmclockWeek" />
+             </LinearLayout>
+         </LinearLayout>
+     </LinearLayout>
+-    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/function_layout" android:paddingLeft="10.0px" android:paddingTop="6.0px" android:paddingBottom="6.0px" android:layout_width="50.0px" android:layout_height="75.0px" android:layout_weight="0.0" android:layout_alignParentRight="true">
+-        <CheckBox android:layout_gravity="center" android:id="@id/function_delete" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++    <LinearLayout android:gravity="right|center" android:layout_gravity="center_vertical" android:id="@id/function_layout" android:paddingBottom="10.0px" android:layout_width="35.0px" android:layout_height="60.0px" android:layout_weight="0.0" android:layout_alignParentRight="true">
++        <CheckBox android:id="@id/function_delete" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0px" android:layout_marginRight="5.0px" />
+     </LinearLayout>
+ </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/bottom_round_view.xml WorldClock.apk/res/layout-mdpi/bottom_round_view.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/bottom_round_view.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/bottom_round_view.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:gravity="bottom" android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="50.0px"
++<LinearLayout android:gravity="bottom" android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="40.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <View android:layout_gravity="bottom" android:background="@com.htc:drawable/trans_bottomround" android:layout_width="fill_parent" android:layout_height="50.0px" />
++    <View android:layout_gravity="bottom" android:background="@com.htc:drawable/trans_bottomround" android:layout_width="fill_parent" android:layout_height="40.0px" />
+ </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/city_list_text.xml WorldClock.apk/res/layout-mdpi/city_list_text.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/city_list_text.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/city_list_text.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0px"
++<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:textSize="18.0px" android:textColor="@color/dark_text_bright_focused" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+-    <TextView android:textSize="14.0px" android:textColor="@color/second_text_bright_focused" android:gravity="center_vertical" android:id="@android:id/text2" android:paddingLeft="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
++    <TextView android:textSize="16.0px" android:textColor="@color/dark_text_bright_focused" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="7.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
++    <TextView android:textSize="12.0px" android:textColor="@color/second_text_bright_focused" android:gravity="center_vertical" android:id="@android:id/text2" android:paddingLeft="7.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+ </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/common_title_bar.xml WorldClock.apk/res/layout-mdpi/common_title_bar.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/common_title_bar.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/common_title_bar.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<RelativeLayout android:background="@com.htc:drawable/common_titlebar_sublevel" android:layout_width="fill_parent" android:layout_height="35.0px" android:layout_alignParentTop="true"
++<RelativeLayout android:background="@com.htc:drawable/common_titlebar_sublevel" android:layout_width="fill_parent" android:layout_height="26.0px" android:layout_alignParentTop="true"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <TextView android:id="@id/title_shadow" style="@style/titleBarShadowStyle" />
+     <TextView android:id="@id/title" style="@style/titleBarStyle" />
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_digital.xml WorldClock.apk/res/layout-mdpi/desk_clock_digital.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_digital.xml	2012-05-26 10:19:41.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/desk_clock_digital.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -8,5 +8,5 @@
+         <ImageView android:id="@id/minute_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+         <ImageView android:layout_gravity="center" android:id="@id/minute_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+     </LinearLayout>
+-    <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0px" android:singleLine="true" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" android:layout_toRightOf="@id/digit_time" />
++    <TextView android:textSize="14.0px" android:textColor="#ffffffff" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0px" android:singleLine="true" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" android:layout_toRightOf="@id/digit_time" />
+ </com.htc.android.worldclock.DeskDigitalClock>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_saver_time_date.xml WorldClock.apk/res/layout-mdpi/desk_clock_saver_time_date.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_saver_time_date.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/desk_clock_saver_time_date.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -1,10 +1,10 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout android:id="@id/time_date" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <include android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" layout="@layout/desk_clock_digital" />
+-    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/date" android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_marginTop="10.0px" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" android:layout_below="@id/time" />
+-    <RelativeLayout android:gravity="center" android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_below="@id/date">
+-        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/nextAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0px" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" />
++    <include android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="14.0px" layout="@layout/desk_clock_digital" />
++    <TextView android:textSize="12.0px" android:textColor="#ffffffff" android:gravity="center" android:id="@id/date" android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="13.0px" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" android:layout_below="@id/time" />
++    <RelativeLayout android:gravity="center" android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_below="@id/date">
++        <TextView android:textSize="12.0px" android:textColor="#ffffffff" android:id="@id/nextAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0px" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" />
+         <ImageView android:id="@id/ic_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/nextAlarm" />
+     </RelativeLayout>
+ </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_time_date.xml WorldClock.apk/res/layout-mdpi/desk_clock_time_date.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_time_date.xml	2012-05-26 10:19:41.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/desk_clock_time_date.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout android:id="@id/time_date" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <include android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" layout="@layout/desk_clock_digital" />
+-    <TextView android:id="@id/date" android:paddingLeft="10.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_below="@id/time" style="@style/deskclockDate" />
+-    <TextView android:gravity="right" android:id="@id/nextAlarm" android:paddingRight="34.0px" android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_marginTop="18.0px" android:layout_below="@id/time" style="@style/deskclockAlarm" />
+-    <ImageView android:id="@id/ic_alarm" android:paddingLeft="234.0px" android:layout_width="268.0px" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:layout_below="@id/time" />
++    <include android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="14.0px" layout="@layout/desk_clock_digital" />
++    <TextView android:textSize="13.0px" android:id="@id/date" android:paddingLeft="10.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="73.0px" android:layout_below="@id/time" style="@style/deskclockDate" />
++    <TextView android:textSize="13.0px" android:gravity="right" android:id="@id/nextAlarm" android:paddingRight="25.0px" android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="73.0px" android:layout_below="@id/time" style="@style/deskclockAlarm" />
++    <ImageView android:id="@id/ic_alarm" android:paddingLeft="175.0px" android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="72.0px" android:layout_below="@id/time" />
+ </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_weather.xml WorldClock.apk/res/layout-mdpi/desk_clock_weather.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock_weather.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/desk_clock_weather.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout android:orientation="vertical" android:id="@id/weather" android:background="@drawable/btn_weather" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:id="@id/weather_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/weather_location_marginLeft" android:layout_marginTop="@dimen/weather_location_marginTop" android:layout_marginBottom="@dimen/weather_location_marginBttom" android:layout_alignParentBottom="@string/weather_location_alignParentBottom" style="@style/deskclockWeatherLocation" />
+-    <TextView android:id="@id/weather_information" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/weather_information_marginLeft" android:layout_marginTop="@dimen/weather_information_marginTop" android:layout_alignParentLeft="@string/weather_information_alignParentLeft" android:layout_alignParentBottom="@string/weather_information_alignParentBottom" style="@style/deskclockWeatherInformation" />
+-    <TextView android:textSize="@dimen/weather_temperature_textSize" android:textColor="#ffffffff" android:id="@id/weather_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/weather_temperature_marginTop" android:layout_marginRight="@dimen/weather_temperature_marginRight" android:layout_alignParentRight="true" android:lineSpacingMultiplier="0.8" style="@style/shadowStyle" />
+-    <TextView android:id="@id/high" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/high_marginLeft" android:layout_marginTop="@dimen/high_marginTop" android:layout_marginBottom="@dimen/high_marginBottom" android:layout_alignParentLeft="@string/high_alignParentLeft" android:layout_alignParentBottom="@string/high_alignParentBottom" style="@style/deskclockWeatherTemperature" />
+-    <TextView android:id="@id/weather_high_temperature" android:paddingLeft="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/weather_high_temperature_marginTop" android:layout_marginBottom="@dimen/weather_high_temperature_marginBottom" android:layout_toRightOf="@id/high" android:layout_alignParentBottom="@string/weather_high_temperature_alignParentBottom" style="@style/deskclockWeatherTemperature" />
+-    <TextView android:id="@id/low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/low_marginLeft" android:layout_marginTop="@dimen/low_marginTop" android:layout_marginBottom="@dimen/low_marginBottom" android:layout_alignParentLeft="@string/low_alignParentLeft" android:layout_alignParentBottom="@string/low_alignParentBottom" style="@style/deskclockWeatherTemperature" />
+-    <TextView android:id="@id/weather_low_temperature" android:paddingLeft="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/weather_low_temperature_marginTop" android:layout_marginBottom="@dimen/weather_low_temperature_marginBottom" android:layout_toRightOf="@id/high" android:layout_alignParentBottom="@string/weather_low_temperature_alignParentBottom" style="@style/deskclockWeatherTemperature" />
+-    <ImageView android:id="@id/weather_icon" android:layout_width="146.0px" android:layout_height="159.0px" android:layout_marginTop="@dimen/weather_icon_marginTop" android:layout_marginRight="@dimen/weather_icon_marginRight" android:layout_alignParentRight="@string/weather_icon_alignParentRight" />
++    <TextView android:textSize="13.0px" android:id="@id/weather_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/weather_location_marginLeft" android:layout_marginTop="@dimen/weather_location_marginTop" android:layout_marginBottom="@dimen/weather_location_marginBttom" android:layout_alignParentBottom="@string/weather_location_alignParentBottom" style="@style/deskclockWeatherLocation" />
++    <TextView android:textSize="13.0px" android:id="@id/weather_information" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/weather_information_marginLeft" android:layout_marginTop="@dimen/weather_information_marginTop" android:layout_alignParentLeft="@string/weather_information_alignParentLeft" android:layout_alignParentBottom="@string/weather_information_alignParentBottom" style="@style/deskclockWeatherInformation" />
++    <TextView android:textSize="34.0px" android:textColor="#ffffffff" android:id="@id/weather_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/weather_temperature_marginTop" android:layout_marginRight="@dimen/weather_temperature_marginRight" android:layout_alignParentRight="true" android:lineSpacingMultiplier="0.8" style="@style/shadowStyle" />
++    <TextView android:textSize="12.0px" android:id="@id/high" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/high_marginLeft" android:layout_marginTop="@dimen/high_marginTop" android:layout_marginBottom="@dimen/high_marginBottom" android:layout_alignParentLeft="@string/high_alignParentLeft" android:layout_alignParentBottom="@string/high_alignParentBottom" style="@style/deskclockWeatherTemperature" />
++    <TextView android:textSize="12.0px" android:id="@id/weather_high_temperature" android:paddingLeft="4.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/weather_high_temperature_marginTop" android:layout_marginBottom="@dimen/weather_high_temperature_marginBottom" android:layout_toRightOf="@id/high" android:layout_alignParentBottom="@string/weather_high_temperature_alignParentBottom" style="@style/deskclockWeatherTemperature" />
++    <TextView android:textSize="12.0px" android:id="@id/low" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/low_marginLeft" android:layout_marginTop="@dimen/low_marginTop" android:layout_marginBottom="@dimen/low_marginBottom" android:layout_alignParentLeft="@string/low_alignParentLeft" android:layout_alignParentBottom="@string/low_alignParentBottom" style="@style/deskclockWeatherTemperature" />
++    <TextView android:textSize="12.0px" android:id="@id/weather_low_temperature" android:paddingLeft="4.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/weather_low_temperature_marginTop" android:layout_marginBottom="@dimen/weather_low_temperature_marginBottom" android:layout_toRightOf="@id/high" android:layout_alignParentBottom="@string/weather_low_temperature_alignParentBottom" style="@style/deskclockWeatherTemperature" />
++    <ImageView android:id="@id/weather_icon" android:layout_width="109.0px" android:layout_height="119.0px" android:layout_marginTop="@dimen/weather_icon_marginTop" android:layout_marginRight="@dimen/weather_icon_marginRight" android:layout_alignParentRight="@string/weather_icon_alignParentRight" />
+ </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock.xml WorldClock.apk/res/layout-mdpi/desk_clock.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/desk_clock.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/desk_clock.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,17 +1,14 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout android:orientation="vertical" android:id="@id/desk_clock" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="55.0px">
+-        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:background="@drawable/stopwatch_topround" android:layout_width="fill_parent" android:layout_height="55.0px" android:layout_alignParentTop="true" />
+-        <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+-    </RelativeLayout>
+-    <View android:id="@id/led_bg" android:background="@drawable/deskclock_led_bg" android:visibility="invisible" android:layout_width="267.0px" android:layout_height="124.0px" android:layout_marginLeft="@dimen/led_bg_marginLeft" android:layout_marginTop="@dimen/led_bg_marginTop" android:layout_centerHorizontal="@string/led_bg_centerHorizontal" />
+-    <include android:layout_width="268.0px" android:layout_height="124.0px" android:layout_marginLeft="@dimen/desk_clock_time_date_marginLeft" android:layout_marginTop="@dimen/desk_clock_time_date_marginTop" android:layout_centerHorizontal="@string/desk_clock_time_date_centerHorizontal" layout="@layout/desk_clock_time_date" />
++    <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
++    <View android:id="@id/led_bg" android:background="@drawable/deskclock_led_bg" android:visibility="invisible" android:layout_width="202.0px" android:layout_height="94.0px" android:layout_marginLeft="@dimen/led_bg_marginLeft" android:layout_marginTop="@dimen/led_bg_marginTop" android:layout_centerHorizontal="@string/led_bg_centerHorizontal" />
++    <include android:layout_width="202.0px" android:layout_height="92.0px" android:layout_marginLeft="@dimen/desk_clock_time_date_marginLeft" android:layout_marginTop="@dimen/desk_clock_time_date_marginTop" android:layout_centerHorizontal="@string/desk_clock_time_date_centerHorizontal" layout="@layout/desk_clock_time_date" />
+     <include android:visibility="gone" android:layout_width="@dimen/desk_clock_weather_width" android:layout_height="@dimen/desk_clock_weather_height" android:layout_marginBottom="@dimen/desk_clock_weather_marginBottom" android:layout_alignParentTop="@string/desk_clock_weather_alignParentTop" android:layout_alignParentRight="@string/desk_clock_weather_alignParentRight" android:layout_alignParentBottom="@string/desk_clock_weather_alignParentBottom" layout="@layout/desk_clock_weather" />
+     <include android:visibility="gone" android:layout_width="@dimen/desk_clock_weather_width" android:layout_height="@dimen/desk_clock_weather_height" android:layout_marginBottom="@dimen/desk_clock_weather_marginBottom" android:layout_alignParentTop="@string/desk_clock_weather_alignParentTop" android:layout_alignParentRight="@string/desk_clock_weather_alignParentRight" android:layout_alignParentBottom="@string/desk_clock_weather_alignParentBottom" layout="@layout/desk_clock_weather_disable" />
+-    <ImageButton android:id="@id/nightmode_button" android:visibility="invisible" android:layout_width="63.0px" android:layout_height="40.0px" android:layout_marginRight="@dimen/nightmode_button_marginRight" android:layout_marginBottom="@dimen/nightmode_button_marginBottom" android:src="@drawable/icon_night_rest" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/centerLeftButtonStyle" />
++    <ImageButton android:id="@id/nightmode_button" android:visibility="invisible" android:layout_width="47.0px" android:layout_height="30.0px" android:layout_marginRight="@dimen/nightmode_button_marginRight" android:layout_marginBottom="@dimen/nightmode_button_marginBottom" android:src="@drawable/icon_night_rest" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/centerLeftButtonStyle" />
+     <View android:id="@id/nightmode_button_layout" android:layout_width="@dimen/center_touch_width" android:layout_height="@dimen/center_touch_height" android:layout_marginRight="@dimen/nightmode_button_layout_marginRight" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+-    <ImageButton android:id="@id/savermode_button" android:visibility="invisible" android:layout_width="63.0px" android:layout_height="40.0px" android:layout_marginLeft="@dimen/savermode_button_marginLeft" android:layout_marginBottom="@dimen/savermode_button_marginBottom" android:src="@drawable/icon_screensaver_rest" android:layout_alignParentBottom="true" style="@style/centerRightButtonStyle" />
++    <ImageButton android:id="@id/savermode_button" android:visibility="invisible" android:layout_width="47.0px" android:layout_height="30.0px" android:layout_marginLeft="@dimen/savermode_button_marginLeft" android:layout_marginBottom="@dimen/savermode_button_marginBottom" android:src="@drawable/icon_screensaver_rest" android:layout_alignParentBottom="true" style="@style/centerRightButtonStyle" />
+     <View android:id="@id/savermode_button_layout" android:layout_width="@dimen/center_touch_width" android:layout_height="@dimen/center_touch_height" android:layout_marginLeft="@dimen/savermode_button_layout_marginLeft" android:layout_alignParentBottom="true" />
+     <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_clock_battery_marginLeft" android:layout_marginRight="@dimen/desk_clock_battery_marginRight" android:layout_marginBottom="@dimen/desk_clock_battery_marginBottom" android:layout_weight="0.0" android:layout_alignParentRight="@string/desk_clock_battery_alignParentRight" android:layout_alignParentBottom="true" layout="@layout/desk_clock_battery" />
+ </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/digital_clock.xml WorldClock.apk/res/layout-mdpi/digital_clock.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/digital_clock.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/digital_clock.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,13 +1,13 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<com.htc.android.worldclock.DigitalClock android:layout_gravity="center" android:orientation="vertical" android:id="@id/digitalClock" android:background="@color/transparent" android:paddingLeft="10.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
++<com.htc.android.worldclock.DigitalClock android:layout_gravity="center" android:orientation="vertical" android:id="@id/digitalClock" android:background="@color/transparent" android:paddingLeft="7.0px" android:paddingRight="7.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/timetile" android:paddingTop="10.0px" android:paddingBottom="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0px" android:src="@drawable/icon_alarm_dialogbox" />
++    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/timetile" android:paddingTop="7.0px" android:paddingBottom="7.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
++        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" android:src="@drawable/icon_alarm_dialogbox" />
+         <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/timeDisplay" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++            <TextView android:textSize="14.0px" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/timeDisplay" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+         </LinearLayout>
+-        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0px">
+-            <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0px">
++            <TextView android:textSize="14.0px" android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+             <TextView android:id="@id/day" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+         </RelativeLayout>
+     </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/number_table.xml WorldClock.apk/res/layout-mdpi/number_table.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/number_table.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/number_table.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <merge
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <LinearLayout android:id="@id/tumblers" android:layout_width="102.0px" android:layout_height="189.0px" android:layout_centerInParent="true" />
++    <LinearLayout android:id="@id/tumblers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+     <ImageView android:id="@id/timer_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@com.htc:drawable/timer_tumblers_line01" android:layout_centerInParent="true" />
+-    <com.htc.android.worldclock.widget.MyTableView android:id="@id/my_table_view" android:focusable="false" android:layout_width="80.0px" android:layout_height="171.0px" android:layout_centerInParent="true" android:selectable="false" />
+-    <LinearLayout android:id="@id/shadow" android:background="@com.htc:drawable/timer_shadow01" android:layout_width="84.0px" android:layout_height="171.0px" android:layout_centerInParent="true" />
++    <com.htc.android.worldclock.widget.MyTableView android:id="@id/my_table_view" android:paddingBottom="1.0px" android:focusable="false" android:layout_width="63.0px" android:layout_height="118.0px" android:layout_centerInParent="true" android:selectable="false" />
++    <LinearLayout android:id="@id/shadow" android:background="@com.htc:drawable/timer_shadow01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+ </merge>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/number_text.xml WorldClock.apk/res/layout-mdpi/number_text.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/number_text.xml	2012-05-26 10:19:41.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/number_text.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<RelativeLayout android:layout_width="50.0px" android:layout_height="50.0px"
++<RelativeLayout android:layout_width="42.0px" android:layout_height="42.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:textSize="40.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/number" android:layout_width="50.0px" android:layout_height="50.0px" android:scrollHorizontally="true" android:includeFontPadding="false" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_centerHorizontal="true" />
++    <TextView android:textSize="32.0px" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/number" android:layout_width="42.0px" android:layout_height="42.0px" android:scrollHorizontally="true" android:includeFontPadding="false" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_centerHorizontal="true" />
+ </RelativeLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/rearrange_clock.xml WorldClock.apk/res/layout-mdpi/rearrange_clock.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/rearrange_clock.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/rearrange_clock.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -2,6 +2,6 @@
+ <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+-    <com.htc.widget.HtcReorderListView android:id="@id/touch_interceptor" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="360.0px" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:divider="@com.htc:drawable/common_divider_items" android:layout_weight="1.0" />
++    <com.htc.widget.HtcReorderListView android:id="@id/touch_interceptor" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="229.0px" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:divider="@com.htc:drawable/common_divider_items" android:layout_weight="1.0" />
+     <include android:id="@id/btn" style="@style/commandButtonBarStyle" layout="@layout/common_button_bar" />
+ </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/rearrange_item.xml WorldClock.apk/res/layout-mdpi/rearrange_item.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/rearrange_item.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/rearrange_item.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/view_item_list_height"
++<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="40.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+-        <TextView android:id="@id/time_zone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/commonHtclistSecondary" />
+-        <TextView android:id="@id/area" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/commonHtclistPrimary" />
++        <TextView android:textSize="12.0px" android:id="@id/time_zone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/commonHtclistSecondary" />
++        <TextView android:textSize="15.0px" android:id="@id/area" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/commonHtclistPrimary" />
+     </RelativeLayout>
+     <ImageView android:id="@com.htc:id/img_1x1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+ </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/set_alarm.xml WorldClock.apk/res/layout-mdpi/set_alarm.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/set_alarm.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/set_alarm.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,44 +1,41 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/whole_layout" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="55.0px" android:layout_centerHorizontal="true">
+-        <LinearLayout android:id="@id/header" android:background="@drawable/stopwatch_topround" android:layout_width="fill_parent" android:layout_height="55.0px" android:layout_alignParentTop="true" />
+-        <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+-    </RelativeLayout>
++    <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+     <com.htc.android.worldclock.widget.MyScrollView android:id="@id/myscrollview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+         <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-            <RelativeLayout android:layout_width="wrap_content" android:layout_height="220.0px" android:layout_marginTop="-6.0px">
+-                <LinearLayout android:gravity="center" android:id="@id/timerPickerTitle" android:layout_width="284.0px" android:layout_height="wrap_content" android:layout_marginTop="0.0px">
+-                    <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="94.0px" android:layout_height="wrap_content" android:text="@string/timer_hour" style="@style/commonTimerPickerTitle" />
+-                    <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="94.0px" android:layout_height="wrap_content" android:text="@string/timer_minute" style="@style/commonTimerPickerTitle" />
+-                    <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="94.0px" android:layout_height="wrap_content" style="@style/commonTimerPickerTitle" />
++            <RelativeLayout android:layout_width="wrap_content" android:layout_height="149.0px">
++                <com.htc.widget.HtcTimePicker android:gravity="center_horizontal" android:id="@id/timerPicker" android:layout_width="213.0px" android:layout_height="134.0px" android:layout_marginTop="15.0px" android:layout_centerHorizontal="true" android:selectable="false" />
++                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/timerPickerTitle" android:layout_width="213.0px" android:layout_height="wrap_content" android:layout_marginTop="2.0px" android:layout_centerHorizontal="true">
++                    <TextView android:textSize="12.0px" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="71.0px" android:layout_height="wrap_content" android:text="@string/timer_hour" style="@style/commonTimerPickerTitle" />
++                    <TextView android:textSize="12.0px" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="71.0px" android:layout_height="wrap_content" android:text="@string/timer_minute" style="@style/commonTimerPickerTitle" />
++                    <TextView android:textSize="12.0px" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="71.0px" android:layout_height="wrap_content" style="@style/commonTimerPickerTitle" />
+                 </LinearLayout>
+-                <com.htc.widget.HtcTimePicker android:gravity="center_horizontal" android:id="@id/timerPicker" android:layout_width="284.0px" android:layout_height="202.0px" android:layout_marginTop="18.0px" android:layout_centerHorizontal="true" android:selectable="false" />
+             </RelativeLayout>
+-            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-8.0px" style="@style/setAlarmStyle">
++            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/setAlarmStyle">
+                 <RelativeLayout android:id="@id/alarm_description" android:layout_width="fill_parent" android:layout_height="fill_parent">
+-                    <TextView android:id="@id/des_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="4.0px" android:text="@string/alarm_description" android:includeFontPadding="false" android:layout_alignParentTop="true" style="@style/commonHtclistPrimary" />
+-                    <EditText android:id="@id/description" android:background="@com.htc:drawable/common_inputfield_light" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0px" android:layout_marginTop="4.0px" android:layout_marginRight="10.0px" android:layout_marginBottom="4.0px" android:capitalize="sentences" android:layout_below="@id/des_layout" />
+-                    <View android:background="@com.htc:drawable/common_divider_items" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="4.0px" android:layout_below="@id/description" />
+-                    <LinearLayout android:layout_width="fill_parent" android:layout_height="70.0px" android:layout_alignParentTop="true">
+-                        <View android:background="@com.htc:drawable/trans_topround" android:layout_width="fill_parent" android:layout_height="70.0px" android:layout_alignParentTop="true" />
++                    <TextView android:textSize="15.0px" android:id="@id/des_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="4.0px" android:text="@string/alarm_description" android:includeFontPadding="false" android:layout_alignParentTop="true" style="@style/commonHtclistPrimary" />
++                    <EditText android:id="@id/description" android:background="@com.htc:drawable/common_inputfield_light" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0px" android:layout_marginTop="0.0px" android:layout_marginRight="8.0px" android:layout_marginBottom="4.0px" android:capitalize="sentences" android:layout_below="@id/des_layout" />
++                    <View android:background="@com.htc:drawable/common_divider_items" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="3.0px" android:layout_below="@id/description" />
++                    <LinearLayout android:layout_width="fill_parent" android:layout_height="52.0px" android:layout_alignParentTop="true">
++                        <View android:background="@com.htc:drawable/trans_topround" android:layout_width="fill_parent" android:layout_height="52.0px" android:layout_alignParentTop="true" />
+                     </LinearLayout>
+                 </RelativeLayout>
+-                <LinearLayout android:orientation="vertical" android:id="@id/alarm_ringtone" android:background="@android:drawable/list_selector_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="50.0px">
+-                    <TextView android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="5.0px" android:text="@string/alarm_ringtone" android:includeFontPadding="false" style="@style/commonHtclistPrimary" />
+-                    <TextView android:id="@id/ringtone" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" style="@style/commonHtclistSecondary" />
++                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/alarm_ringtone" android:background="@android:drawable/list_selector_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="40.0px">
++                    <TextView android:textSize="15.0px" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="-1.0px" android:text="@string/alarm_ringtone" android:includeFontPadding="false" style="@style/commonHtclistPrimary" />
++                    <TextView android:textSize="12.0px" android:id="@id/ringtone" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" style="@style/commonHtclistSecondary" />
+                 </LinearLayout>
+                 <View android:background="@com.htc:drawable/common_divider_items" android:layout_width="fill_parent" android:layout_height="1.0px" />
+-                <LinearLayout android:orientation="vertical" android:id="@id/alarm_repeat" android:background="@android:drawable/list_selector_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="50.0px">
+-                    <TextView android:enabled="true" android:focusable="true" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="5.0px" android:text="@string/alarm_repeat" android:includeFontPadding="false" style="@style/commonHtclistPrimary" />
+-                    <TextView android:id="@id/repeat" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:singleLine="true" style="@style/commonHtclistSecondary" />
++                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/alarm_repeat" android:background="@android:drawable/list_selector_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="40.0px">
++                    <TextView android:enabled="true" android:textSize="15.0px" android:focusable="true" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="-1.0px" android:text="@string/alarm_repeat" android:includeFontPadding="false" style="@style/commonHtclistPrimary" />
++                    <TextView android:textSize="12.0px" android:id="@id/repeat" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:singleLine="true" style="@style/commonHtclistSecondary" />
+                 </LinearLayout>
+                 <View android:background="@com.htc:drawable/common_divider_items" android:layout_width="fill_parent" android:layout_height="1.0px" />
+-                <RelativeLayout android:id="@id/alarm_vibrate" android:background="@android:drawable/list_selector_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="50.0px">
+-                    <TextView android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:text="@string/alarm_vibrate" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/commonHtclistPrimary" />
+-                    <CheckBox android:id="@id/vibrate" android:focusable="false" android:layout_width="37.0px" android:layout_height="37.0px" android:layout_marginRight="10.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+-                    <LinearLayout android:gravity="bottom" android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="50.0px" android:layout_alignParentBottom="true">
+-                        <View android:layout_gravity="bottom" android:background="@com.htc:drawable/trans_bottomround" android:layout_width="fill_parent" android:layout_height="50.0px" />
++                <RelativeLayout android:id="@id/alarm_vibrate" android:background="@android:drawable/list_selector_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="40.0px">
++                    <TextView android:textSize="15.0px" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:text="@string/alarm_vibrate" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/commonHtclistPrimary" />
++                    <CheckBox android:id="@id/vibrate" android:focusable="false" android:layout_width="22.0px" android:layout_height="22.0px" android:layout_marginRight="20.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
++                    <LinearLayout android:gravity="bottom" android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="40.0px" android:layout_alignParentBottom="true">
++                        <View android:layout_gravity="bottom" android:background="@com.htc:drawable/trans_bottomround" android:layout_width="fill_parent" android:layout_height="40.0px" />
+                     </LinearLayout>
+                 </RelativeLayout>
+             </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/stopwatch.xml WorldClock.apk/res/layout-mdpi/stopwatch.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/stopwatch.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/stopwatch.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -1,18 +1,15 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:orientation="vertical" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="55.0px">
+-        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:background="@drawable/stopwatch_topround" android:layout_width="fill_parent" android:layout_height="55.0px" android:layout_alignParentTop="true" />
+-        <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+-    </RelativeLayout>
++    <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/led_pannel" android:background="@drawable/common_led_bg" android:layout_width="280.0px" android:layout_height="104.0px" android:layout_marginLeft="@dimen/led_pannel_marginLeft" android:layout_marginTop="@dimen/led_pannel_marginTop" android:layout_marginBottom="@dimen/led_pannel_marginBottom" android:layout_centerHorizontal="@string/led_pannel_centerHorizontal">
++        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/led_pannel" android:background="@drawable/common_led_bg" android:layout_width="210.0px" android:layout_height="78.0px" android:layout_marginLeft="@dimen/led_pannel_marginLeft" android:layout_marginTop="@dimen/led_pannel_marginTop" android:layout_marginBottom="@dimen/led_pannel_marginBottom" android:layout_centerHorizontal="@string/led_pannel_centerHorizontal">
+             <ImageView android:layout_gravity="center" android:id="@id/minute_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+             <ImageView android:layout_gravity="center" android:id="@id/minute_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+             <ImageView android:layout_gravity="center" android:id="@id/digit_colon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" android:src="@com.htc:drawable/common_digit_colon" />
+             <ImageView android:layout_gravity="center" android:id="@id/second_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+             <ImageView android:layout_gravity="center" android:id="@id/second_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+-            <ImageView android:layout_gravity="center" android:id="@id/dot" android:paddingTop="52.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" android:src="@drawable/common_dot" />
++            <ImageView android:layout_gravity="center" android:id="@id/dot" android:paddingTop="36.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" android:src="@drawable/common_dot" />
+             <ImageView android:layout_gravity="center" android:id="@id/millisecond" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+         </LinearLayout>
+         <RelativeLayout android:id="@id/navbar_button" android:layout_width="@dimen/navbar_button_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/navbar_button_marginTop" android:layout_alignParentRight="true">
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/timer_table.xml WorldClock.apk/res/layout-mdpi/timer_table.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/timer_table.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/timer_table.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <merge
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/hour_table_view" android:focusable="false" android:layout_width="102.0px" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:selectable="false" />
+-    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/minute_table_view" android:focusable="false" android:layout_width="102.0px" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:selectable="false" />
+-    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/second_table_view" android:focusable="false" android:layout_width="102.0px" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:selectable="false" />
+-    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/ampm_table_view" android:focusable="false" android:layout_width="102.0px" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:selectable="false" />
++    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/hour_table_view" android:focusable="false" android:layout_width="77.0px" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:selectable="false" />
++    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/minute_table_view" android:focusable="false" android:layout_width="77.0px" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:selectable="false" />
++    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/second_table_view" android:focusable="false" android:layout_width="77.0px" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:selectable="false" />
++    <com.htc.android.worldclock.widget.NumberTableView android:id="@id/ampm_table_view" android:focusable="false" android:layout_width="77.0px" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:selectable="false" />
+ </merge>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/timer.xml WorldClock.apk/res/layout-mdpi/timer.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/timer.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/timer.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -2,20 +2,19 @@
+ <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+-        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/header" android:background="@drawable/stopwatch_topround" android:layout_width="fill_parent" android:layout_height="55.0px" android:layout_alignParentTop="true" />
+         <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+-        <com.htc.widget.HtcTimePicker android:gravity="center_horizontal" android:id="@id/timerPicker" android:layout_width="@dimen/timerPicker_width" android:layout_height="202.0px" android:layout_marginTop="@dimen/timerPicker_marginTop" android:layout_below="@id/header" android:layout_alignParentLeft="@string/timerPicker_alignParentLeft" android:layout_centerHorizontal="true" android:selectable="false" />
+-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/timerPickerTitle" android:layout_width="@dimen/timerPickerTitle_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/timerPickerTitle_marginTop" android:layout_alignParentLeft="@string/timerPickerTitle_alignParentLeft" android:layout_centerHorizontal="true">
+-            <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="90.0px" android:layout_height="wrap_content" android:text="@string/timer_hour" style="@style/commonTimerPickerTitle" />
+-            <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="90.0px" android:layout_height="wrap_content" android:text="@string/timer_minute" style="@style/commonTimerPickerTitle" />
+-            <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="90.0px" android:layout_height="wrap_content" android:text="@string/timer_second" style="@style/commonTimerPickerTitle" />
++        <com.htc.widget.HtcTimePicker android:gravity="center_horizontal" android:id="@id/timerPicker" android:layout_width="@dimen/timerPicker_width" android:layout_height="134.0px" android:layout_marginTop="32.0px" android:layout_below="@id/header" android:layout_alignParentLeft="@string/timerPicker_alignParentLeft" android:layout_centerHorizontal="true" android:selectable="false" />
++        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/timerPickerTitle" android:layout_width="@dimen/timerPickerTitle_width" android:layout_height="wrap_content" android:layout_marginTop="27.0px" android:layout_alignParentLeft="@string/timerPickerTitle_alignParentLeft" android:layout_centerHorizontal="true">
++            <TextView android:textSize="12.0px" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="68.0px" android:layout_height="wrap_content" android:text="@string/timer_hour" style="@style/commonTimerPickerTitle" />
++            <TextView android:textSize="12.0px" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="68.0px" android:layout_height="wrap_content" android:text="@string/timer_minute" style="@style/commonTimerPickerTitle" />
++            <TextView android:textSize="12.0px" android:gravity="center_horizontal" android:layout_gravity="center" android:layout_width="68.0px" android:layout_height="wrap_content" android:text="@string/timer_second" style="@style/commonTimerPickerTitle" />
+         </LinearLayout>
+     </RelativeLayout>
+-    <RelativeLayout android:id="@id/alert_layout" android:focusable="true" android:layout_width="@dimen/alert_layout_width" android:layout_height="46.0px" android:layout_marginTop="@dimen/alert_layout_marginTop" android:layout_marginRight="@dimen/alert_layout_marginRight" android:layout_alignParentRight="@string/alert_layout_alignParentRight" android:layout_centerHorizontal="true">
++    <RelativeLayout android:id="@id/alert_layout" android:focusable="true" android:layout_width="@dimen/alert_layout_width" android:layout_height="38.0px" android:layout_marginTop="@dimen/alert_layout_marginTop" android:layout_marginRight="@dimen/alert_layout_marginRight" android:layout_alignParentRight="@string/alert_layout_alignParentRight" android:layout_centerHorizontal="true">
+         <View android:id="@id/alert_view" android:focusable="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+-        <TextView android:ellipsize="marquee" android:focusable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0px" android:layout_marginTop="-3.0px" android:layout_marginRight="40.0px" android:text="@string/alert_sound" android:singleLine="true" style="@style/timerAlarmSoundText" />
+-        <TextView android:ellipsize="marquee" android:id="@id/alert_uri" android:focusable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0px" android:layout_marginTop="20.0px" android:layout_marginRight="40.0px" android:singleLine="true" style="@style/timerAlarmSoundURI" />
+-        <Button android:id="@id/alert" android:background="@drawable/btn_more" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
++        <TextView android:textSize="15.0px" android:ellipsize="marquee" android:focusable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0px" android:layout_marginTop="1.0px" android:layout_marginRight="30.0px" android:text="@string/alert_sound" android:singleLine="true" style="@style/timerAlarmSoundText" />
++        <TextView android:textSize="13.0px" android:ellipsize="marquee" android:id="@id/alert_uri" android:focusable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0px" android:layout_marginTop="18.0px" android:layout_marginRight="30.0px" android:singleLine="true" style="@style/timerAlarmSoundURI" />
++        <Button android:id="@id/alert" android:background="@drawable/btn_more" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+     </RelativeLayout>
+     <RelativeLayout android:id="@id/btn" android:layout_width="@dimen/timer_btn_width" android:layout_height="@dimen/timer_btn_height" android:layout_marginTop="@dimen/timer_btn_marginTop" android:layout_marginRight="@dimen/timer_btn_marginRight" android:layout_alignParentRight="@string/timer_btn_alignParentRight" android:layout_centerHorizontal="@string/timer_btn_centerHorizontal">
+         <Button android:id="@id/btn1" android:background="@drawable/btn_green" android:layout_width="@dimen/timer_btn1_width" android:layout_height="@dimen/timer_btn1_height" android:layout_marginLeft="@dimen/timer_btn1_marginLeft" android:text="@string/start" android:layout_centerHorizontal="@string/timer_btn1_centerHorizontal" style="@style/commonButton" />
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/top_round_view.xml WorldClock.apk/res/layout-mdpi/top_round_view.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/top_round_view.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/top_round_view.xml	2012-05-26 10:11:23.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:orientation="vertical" android:id="@id/top_layout" android:layout_width="fill_parent" android:layout_height="50.0px"
++<LinearLayout android:orientation="vertical" android:id="@id/top_layout" android:layout_width="fill_parent" android:layout_height="40.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <View android:background="@com.htc:drawable/trans_topround" android:layout_width="fill_parent" android:layout_height="50.0px" android:layout_alignParentTop="true" />
++    <View android:background="@com.htc:drawable/trans_topround" android:layout_width="fill_parent" android:layout_height="40.0px" android:layout_alignParentTop="true" />
+ </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/layout-mdpi/world_clock_item.xml WorldClock.apk/res/layout-mdpi/world_clock_item.xml
+--- ../original-apks/WorldClock.apk/res/layout-mdpi/world_clock_item.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/layout-mdpi/world_clock_item.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -1,21 +1,21 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="75.0px"
++<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="60.0px"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_weight="1.0">
+-        <TextView android:gravity="top|left|center" android:id="@id/description" android:paddingBottom="2.0px" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/worldclockDescription" />
+-        <TextView android:ellipsize="marquee" android:gravity="left" android:id="@id/area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" style="@style/worldclockArea" />
+-        <TextView android:gravity="top|left|center" android:id="@id/time_zone" android:paddingTop="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/worldclockTimezone" />
++    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:layout_weight="1.0">
++        <TextView android:textSize="11.0px" android:gravity="top|left|center" android:id="@id/description" android:paddingBottom="2.0px" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/worldclockDescription" />
++        <TextView android:textSize="15.0px" android:ellipsize="marquee" android:gravity="left" android:id="@id/area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" style="@style/worldclockArea" />
++        <TextView android:textSize="12.0px" android:gravity="top|left|center" android:id="@id/time_zone" android:paddingTop="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/worldclockTimezone" />
+     </LinearLayout>
+-    <com.htc.android.worldclock.DigitalClock android:layout_gravity="right|center" android:orientation="horizontal" android:id="@id/digitalClock" android:focusable="true" android:layout_width="125.0px" android:layout_height="53.0px" android:layout_marginLeft="4.0px" android:layout_marginRight="10.0px" android:layout_weight="0.0">
+-        <LinearLayout android:layout_gravity="right|center" android:layout_width="85.0px" android:layout_height="wrap_content">
++    <com.htc.android.worldclock.DigitalClock android:layout_gravity="right|center" android:orientation="horizontal" android:id="@id/digitalClock" android:focusable="true" android:layout_width="93.0px" android:layout_height="42.0px" android:layout_marginLeft="3.0px" android:layout_marginRight="5.0px" android:layout_weight="0.0">
++        <LinearLayout android:layout_gravity="right|center" android:layout_width="64.0px" android:layout_height="wrap_content">
+             <TextView android:textColor="@color/black" android:gravity="right|center" android:id="@id/timeDisplay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/digitalClockTimeStyle" />
+         </LinearLayout>
+-        <RelativeLayout android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="44.0px" android:layout_marginLeft="3.0px">
++        <RelativeLayout android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="26.0px" android:layout_marginLeft="2.0px" android:layout_marginTop="10.0px">
+             <TextView android:textColor="@color/light_grey" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am" android:includeFontPadding="false" android:layout_alignParentTop="true" style="@style/digitalClockAmPmStyle" />
+             <TextView android:textColor="@color/light_grey" android:id="@id/day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_below="@id/am_pm" android:layout_alignParentBottom="true" style="@style/digitalClockDayStyle" />
+         </RelativeLayout>
+     </com.htc.android.worldclock.DigitalClock>
+-    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/function_layout" android:paddingTop="4.0px" android:paddingRight="8.0px" android:paddingBottom="4.0px" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0">
++    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/function_layout" android:paddingTop="2.0px" android:paddingRight="0.0px" android:paddingBottom="3.0px" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0">
+         <CheckBox android:layout_gravity="center" android:id="@id/function_delete" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+         <Button android:layout_gravity="center" android:id="@id/function_rearrange" android:background="@com.htc:drawable/common_rearrange" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+     </LinearLayout>
+diff -rupN ../original-apks/WorldClock.apk/res/values/dimens.xml WorldClock.apk/res/values/dimens.xml
+--- ../original-apks/WorldClock.apk/res/values/dimens.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/values/dimens.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="view_item_list_height">@com.htc:dimen/htc_list_item_height</dimen>
++    <dimen name="view_item_list_height">40.0px</dimen>
+ </resources>
+diff -rupN ../original-apks/WorldClock.apk/res/values-land-mdpi/dimens.xml WorldClock.apk/res/values-land-mdpi/dimens.xml
+--- ../original-apks/WorldClock.apk/res/values-land-mdpi/dimens.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/values-land-mdpi/dimens.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,97 +1,97 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="led_bg_marginTop">102.0px</dimen>
+-    <dimen name="led_bg_marginLeft">17.0px</dimen>
+-    <dimen name="desk_clock_time_date_marginTop">102.0px</dimen>
+-    <dimen name="desk_clock_time_date_marginLeft">17.0px</dimen>
+-    <dimen name="desk_clock_weather_width">240.0px</dimen>
+-    <dimen name="desk_clock_weather_height">185.0px</dimen>
++    <dimen name="led_bg_marginTop">61.0px</dimen>
++    <dimen name="led_bg_marginLeft">7.0px</dimen>
++    <dimen name="desk_clock_time_date_marginTop">61.0px</dimen>
++    <dimen name="desk_clock_time_date_marginLeft">7.0px</dimen>
++    <dimen name="desk_clock_weather_width">190.0px</dimen>
++    <dimen name="desk_clock_weather_height">127.0px</dimen>
+     <dimen name="desk_clock_weather_marginBottom">0.0px</dimen>
+-    <dimen name="nightmode_button_marginRight">266.0px</dimen>
+-    <dimen name="nightmode_button_marginBottom">8.0px</dimen>
+-    <dimen name="nightmode_button_layout_marginRight">266.0px</dimen>
+-    <dimen name="savermode_button_marginLeft">214.0px</dimen>
+-    <dimen name="savermode_button_marginBottom">8.0px</dimen>
+-    <dimen name="savermode_button_layout_marginLeft">214.0px</dimen>
+-    <dimen name="desk_clock_battery_marginLeft">288.0px</dimen>
+-    <dimen name="desk_clock_battery_marginBottom">12.0px</dimen>
+-    <dimen name="desk_clock_battery_marginRight">13.0px</dimen>
+-    <dimen name="weather_location_marginLeft">48.0px</dimen>
++    <dimen name="nightmode_button_marginRight">115.0px</dimen>
++    <dimen name="nightmode_button_marginBottom">10.0px</dimen>
++    <dimen name="nightmode_button_layout_marginRight">115.0px</dimen>
++    <dimen name="savermode_button_marginLeft">285.0px</dimen>
++    <dimen name="savermode_button_marginBottom">10.0px</dimen>
++    <dimen name="savermode_button_layout_marginLeft">285.0px</dimen>
++    <dimen name="desk_clock_battery_marginLeft">345.0px</dimen>
++    <dimen name="desk_clock_battery_marginBottom">14.0px</dimen>
++    <dimen name="desk_clock_battery_marginRight">12.0px</dimen>
++    <dimen name="weather_location_marginLeft">30.0px</dimen>
+     <dimen name="weather_location_marginTop">0.0px</dimen>
+-    <dimen name="weather_location_marginBttom">19.0px</dimen>
+-    <dimen name="weather_information_marginTop">40.0px</dimen>
+-    <dimen name="weather_information_marginLeft">48.0px</dimen>
+-    <dimen name="weather_information_marginRight">15.0px</dimen>
+-    <dimen name="weather_temperature_marginRight">131.0px</dimen>
+-    <dimen name="weather_temperature_marginTop">51.0px</dimen>
+-    <dimen name="weather_temperature_textSize">45.0px</dimen>
+-    <dimen name="high_marginLeft">48.0px</dimen>
++    <dimen name="weather_location_marginBttom">15.0px</dimen>
++    <dimen name="weather_information_marginTop">30.0px</dimen>
++    <dimen name="weather_information_marginLeft">30.0px</dimen>
++    <dimen name="weather_information_marginRight">7.0px</dimen>
++    <dimen name="weather_temperature_marginRight">7.0px</dimen>
++    <dimen name="weather_temperature_marginTop">34.0px</dimen>
++    <dimen name="weather_temperature_textSize">30.0px</dimen>
++    <dimen name="high_marginLeft">132.0px</dimen>
+     <dimen name="high_marginTop">0.0px</dimen>
+-    <dimen name="high_marginBottom">63.0px</dimen>
++    <dimen name="high_marginBottom">34.0px</dimen>
+     <dimen name="weather_high_temperature_marginTop">0.0px</dimen>
+-    <dimen name="weather_high_temperature_marginBottom">63.0px</dimen>
+-    <dimen name="low_marginLeft">48.0px</dimen>
++    <dimen name="weather_high_temperature_marginBottom">34.0px</dimen>
++    <dimen name="low_marginLeft">132.0px</dimen>
+     <dimen name="low_marginTop">0.0px</dimen>
+-    <dimen name="low_marginBottom">44.0px</dimen>
++    <dimen name="low_marginBottom">17.0px</dimen>
+     <dimen name="weather_low_temperature_marginTop">0.0px</dimen>
+-    <dimen name="weather_low_temperature_marginBottom">44.0px</dimen>
+-    <dimen name="weather_icon_marginRight">0.0px</dimen>
+-    <dimen name="weather_icon_marginTop">0.0px</dimen>
+-    <dimen name="check_box_touch_width">60.0px</dimen>
+-    <dimen name="check_box_touch_height">75.0px</dimen>
+-    <dimen name="button_touch_width">160.0px</dimen>
+-    <dimen name="button_touch_height">60.0px</dimen>
+-    <dimen name="center_touch_width">90.0px</dimen>
+-    <dimen name="center_touch_height">60.0px</dimen>
+-    <dimen name="list_height">50.0px</dimen>
+-    <dimen name="ampm_text_size">26.0px</dimen>
+-    <dimen name="table_view_height">171.0px</dimen>
+-    <dimen name="table_view_slide_offest">30.0px</dimen>
+-    <dimen name="rearrange_limit">430.0px</dimen>
+-    <dimen name="status_bar_height">25.0px</dimen>
+-    <dimen name="led_pannel_height">156.0px</dimen>
+-    <dimen name="led_pannel_marginTop">46.0px</dimen>
++    <dimen name="weather_low_temperature_marginBottom">17.0px</dimen>
++    <dimen name="weather_icon_marginRight">60.0px</dimen>
++    <dimen name="weather_icon_marginTop">-15.0px</dimen>
++    <dimen name="check_box_touch_width">45.0px</dimen>
++    <dimen name="check_box_touch_height">60.0px</dimen>
++    <dimen name="button_touch_width">120.0px</dimen>
++    <dimen name="button_touch_height">45.0px</dimen>
++    <dimen name="center_touch_width">67.0px</dimen>
++    <dimen name="center_touch_height">45.0px</dimen>
++    <dimen name="list_height">40.0px</dimen>
++    <dimen name="ampm_text_size">22.0px</dimen>
++    <dimen name="table_view_height">118.0px</dimen>
++    <dimen name="table_view_slide_offest">25.0px</dimen>
++    <dimen name="rearrange_limit">355.0px</dimen>
++    <dimen name="status_bar_height">19.0px</dimen>
++    <dimen name="led_pannel_height">104.0px</dimen>
++    <dimen name="led_pannel_marginTop">29.0px</dimen>
+     <dimen name="led_pannel_marginBottom">15.0px</dimen>
+-    <dimen name="led_pannel_marginLeft">25.0px</dimen>
+-    <dimen name="led_pannel_time_marginRight">1.0px</dimen>
+-    <dimen name="navbar_button_width">155.0px</dimen>
+-    <dimen name="navbar_button_marginTop">148.0px</dimen>
+-    <dimen name="navbar_button_marginRight">33.0px</dimen>
+-    <dimen name="btn1_width">146.0px</dimen>
+-    <dimen name="btn1_height">52.0px</dimen>
+-    <dimen name="btn1_marginLeft">52.0px</dimen>
+-    <dimen name="btn1_marginTop">158.0px</dimen>
+-    <dimen name="btn2_width">146.0px</dimen>
+-    <dimen name="btn2_height">52.0px</dimen>
+-    <dimen name="btn2_marginTop">158.0px</dimen>
+-    <dimen name="btn2_marginRight">63.0px</dimen>
+-    <dimen name="tabcontrol_height">295.0px</dimen>
+-    <dimen name="timerPicker_width">252.0px</dimen>
+-    <dimen name="timerPicker_marginTop">77.0px</dimen>
+-    <dimen name="timerPickerTitle_width">252.0px</dimen>
+-    <dimen name="timerPickerTitle_marginTop">46.0px</dimen>
+-    <dimen name="alert_layout_width">133.0px</dimen>
+-    <dimen name="alert_layout_marginTop">210.0px</dimen>
+-    <dimen name="alert_layout_marginRight">16.0px</dimen>
+-    <dimen name="timer_btn_width">133.0px</dimen>
+-    <dimen name="timer_btn_height">122.0px</dimen>
+-    <dimen name="timer_btn_marginTop">108.0px</dimen>
+-    <dimen name="timer_btn_marginRight">20.0px</dimen>
+-    <dimen name="timer_btn1_width">146.0px</dimen>
+-    <dimen name="timer_btn1_height">52.0px</dimen>
+-    <dimen name="timer_btn1_marginLeft">241.0px</dimen>
+-    <dimen name="timer_btn2_width">146.0px</dimen>
+-    <dimen name="timer_btn2_height">52.0px</dimen>
+-    <dimen name="timer_btn2_marginTop">144.0px</dimen>
+-    <dimen name="timer_btn2_marginLeft">241.0px</dimen>
+-    <dimen name="high_marginRight">115.0px</dimen>
++    <dimen name="led_pannel_marginLeft">38.0px</dimen>
++    <dimen name="led_pannel_time_marginRight">2.0px</dimen>
++    <dimen name="navbar_button_width">120.0px</dimen>
++    <dimen name="navbar_button_marginTop">23.0px</dimen>
++    <dimen name="navbar_button_marginRight">25.0px</dimen>
++    <dimen name="btn1_width">106.0px</dimen>
++    <dimen name="btn1_height">35.0px</dimen>
++    <dimen name="btn1_marginLeft">-8.0px</dimen>
++    <dimen name="btn1_marginTop">1.0px</dimen>
++    <dimen name="btn2_width">106.0px</dimen>
++    <dimen name="btn2_height">35.0px</dimen>
++    <dimen name="btn2_marginTop">48.0px</dimen>
++    <dimen name="btn2_marginRight">0.0px</dimen>
++    <dimen name="tabcontrol_height">221.0px</dimen>
++    <dimen name="timerPicker_width">210.0px</dimen>
++    <dimen name="timerPicker_marginTop">0.0px</dimen>
++    <dimen name="timerPickerTitle_width">210.0px</dimen>
++    <dimen name="timerPickerTitle_marginTop">30.0px</dimen>
++    <dimen name="alert_layout_width">150.0px</dimen>
++    <dimen name="alert_layout_marginTop">125.0px</dimen>
++    <dimen name="alert_layout_marginRight">12.0px</dimen>
++    <dimen name="timer_btn_width">150.0px</dimen>
++    <dimen name="timer_btn_height">100.0px</dimen>
++    <dimen name="timer_btn_marginTop">35.0px</dimen>
++    <dimen name="timer_btn_marginRight">12.0px</dimen>
++    <dimen name="timer_btn1_width">106.0px</dimen>
++    <dimen name="timer_btn1_height">35.0px</dimen>
++    <dimen name="timer_btn1_marginLeft">0.0px</dimen>
++    <dimen name="timer_btn2_width">93.0px</dimen>
++    <dimen name="timer_btn2_height">35.0px</dimen>
++    <dimen name="timer_btn2_marginTop">50.0px</dimen>
++    <dimen name="timer_btn2_marginLeft">6.0px</dimen>
++    <dimen name="high_marginRight">77.0px</dimen>
+     <dimen name="weather_high_temperature_marginRight">15.0px</dimen>
+     <dimen name="weather_low_temperature_marginRight">15.0px</dimen>
+-    <dimen name="btn2_marginLeft">198.0px</dimen>
++    <dimen name="btn2_marginLeft">132.0px</dimen>
+     <dimen name="timerPickerTitle_height">38.0px</dimen>
+     <dimen name="timerPickerTitle_item_width">75.0px</dimen>
+     <dimen name="timerPickerTitle_marginLeft">0.0px</dimen>
+-    <dimen name="timerPicker_height">252.0px</dimen>
++    <dimen name="timerPicker_height">189.0px</dimen>
+     <dimen name="timerPicker_marginBottom">-10.0px</dimen>
+     <dimen name="timerPicker_marginLeft">0.0px</dimen>
+     <dimen name="timer_btn1_marginTop">85.0px</dimen>
+diff -rupN ../original-apks/WorldClock.apk/res/values-mdpi/dimens.xml WorldClock.apk/res/values-mdpi/dimens.xml
+--- ../original-apks/WorldClock.apk/res/values-mdpi/dimens.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/values-mdpi/dimens.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -1,87 +1,87 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="led_bg_marginTop">77.0px</dimen>
++    <dimen name="led_bg_marginTop">43.0px</dimen>
+     <dimen name="led_bg_marginLeft">0.0px</dimen>
+-    <dimen name="desk_clock_time_date_marginTop">77.0px</dimen>
++    <dimen name="desk_clock_time_date_marginTop">43.0px</dimen>
+     <dimen name="desk_clock_time_date_marginLeft">0.0px</dimen>
+     <dimen name="desk_clock_weather_width">-1.0px</dimen>
+-    <dimen name="desk_clock_weather_height">125.0px</dimen>
+-    <dimen name="desk_clock_weather_marginBottom">75.0px</dimen>
+-    <dimen name="nightmode_button_marginRight">160.0px</dimen>
+-    <dimen name="nightmode_button_marginBottom">18.0px</dimen>
+-    <dimen name="nightmode_button_layout_marginRight">160.0px</dimen>
+-    <dimen name="savermode_button_marginLeft">160.0px</dimen>
+-    <dimen name="savermode_button_marginBottom">18.0px</dimen>
+-    <dimen name="savermode_button_layout_marginLeft">160.0px</dimen>
+-    <dimen name="desk_clock_battery_marginLeft">235.0px</dimen>
+-    <dimen name="desk_clock_battery_marginBottom">24.0px</dimen>
++    <dimen name="desk_clock_weather_height">85.0px</dimen>
++    <dimen name="desk_clock_weather_marginBottom">40.0px</dimen>
++    <dimen name="nightmode_button_marginRight">120.0px</dimen>
++    <dimen name="nightmode_button_marginBottom">10.0px</dimen>
++    <dimen name="nightmode_button_layout_marginRight">120.0px</dimen>
++    <dimen name="savermode_button_marginLeft">120.0px</dimen>
++    <dimen name="savermode_button_marginBottom">10.0px</dimen>
++    <dimen name="savermode_button_layout_marginLeft">120.0px</dimen>
++    <dimen name="desk_clock_battery_marginLeft">176.0px</dimen>
++    <dimen name="desk_clock_battery_marginBottom">14.0px</dimen>
+     <dimen name="desk_clock_battery_marginRight">13.0px</dimen>
+-    <dimen name="weather_location_marginLeft">28.0px</dimen>
+-    <dimen name="weather_location_marginTop">74.0px</dimen>
++    <dimen name="weather_location_marginLeft">20.0px</dimen>
++    <dimen name="weather_location_marginTop">42.0px</dimen>
+     <dimen name="weather_location_marginBttom">0.0px</dimen>
+-    <dimen name="weather_information_marginTop">95.0px</dimen>
+-    <dimen name="weather_information_marginLeft">28.0px</dimen>
++    <dimen name="weather_information_marginTop">58.0px</dimen>
++    <dimen name="weather_information_marginLeft">20.0px</dimen>
+     <dimen name="weather_information_marginRight">15.0px</dimen>
+-    <dimen name="weather_temperature_marginRight">230.0px</dimen>
+-    <dimen name="weather_temperature_marginTop">23.0px</dimen>
+-    <dimen name="weather_temperature_textSize">42.0px</dimen>
+-    <dimen name="high_marginLeft">93.0px</dimen>
+-    <dimen name="high_marginTop">35.0px</dimen>
++    <dimen name="weather_temperature_marginRight">170.0px</dimen>
++    <dimen name="weather_temperature_marginTop">3.0px</dimen>
++    <dimen name="weather_temperature_textSize">30.0px</dimen>
++    <dimen name="high_marginLeft">73.0px</dimen>
++    <dimen name="high_marginTop">10.0px</dimen>
+     <dimen name="high_marginBottom">0.0px</dimen>
+-    <dimen name="weather_high_temperature_marginTop">35.0px</dimen>
++    <dimen name="weather_high_temperature_marginTop">11.0px</dimen>
+     <dimen name="weather_high_temperature_marginBottom">0.0px</dimen>
+-    <dimen name="low_marginLeft">93.0px</dimen>
+-    <dimen name="low_marginTop">54.0px</dimen>
++    <dimen name="low_marginLeft">73.0px</dimen>
++    <dimen name="low_marginTop">25.0px</dimen>
+     <dimen name="low_marginBottom">0.0px</dimen>
+-    <dimen name="weather_low_temperature_marginTop">54.0px</dimen>
++    <dimen name="weather_low_temperature_marginTop">25.0px</dimen>
+     <dimen name="weather_low_temperature_marginBottom">0.0px</dimen>
+-    <dimen name="weather_icon_marginRight">13.0px</dimen>
+-    <dimen name="weather_icon_marginTop">-10.0px</dimen>
+-    <dimen name="check_box_touch_width">60.0px</dimen>
+-    <dimen name="check_box_touch_height">75.0px</dimen>
+-    <dimen name="button_touch_width">160.0px</dimen>
+-    <dimen name="button_touch_height">60.0px</dimen>
+-    <dimen name="center_touch_width">90.0px</dimen>
+-    <dimen name="center_touch_height">60.0px</dimen>
+-    <dimen name="list_height">50.0px</dimen>
+-    <dimen name="ampm_text_size">26.0px</dimen>
+-    <dimen name="table_view_height">171.0px</dimen>
+-    <dimen name="table_view_slide_offest">30.0px</dimen>
+-    <dimen name="rearrange_limit">270.0px</dimen>
+-    <dimen name="status_bar_height">25.0px</dimen>
+-    <dimen name="led_pannel_height">156.0px</dimen>
+-    <dimen name="led_pannel_marginTop">30.0px</dimen>
++    <dimen name="weather_icon_marginRight">10.0px</dimen>
++    <dimen name="weather_icon_marginTop">-30.0px</dimen>
++    <dimen name="check_box_touch_width">45.0px</dimen>
++    <dimen name="check_box_touch_height">60.0px</dimen>
++    <dimen name="button_touch_width">120.0px</dimen>
++    <dimen name="button_touch_height">45.0px</dimen>
++    <dimen name="center_touch_width">67.0px</dimen>
++    <dimen name="center_touch_height">45.0px</dimen>
++    <dimen name="list_height">40.0px</dimen>
++    <dimen name="ampm_text_size">22.0px</dimen>
++    <dimen name="table_view_height">118.0px</dimen>
++    <dimen name="table_view_slide_offest">25.0px</dimen>
++    <dimen name="rearrange_limit">195.0px</dimen>
++    <dimen name="status_bar_height">19.0px</dimen>
++    <dimen name="led_pannel_height">106.0px</dimen>
++    <dimen name="led_pannel_marginTop">12.0px</dimen>
+     <dimen name="led_pannel_marginBottom">30.0px</dimen>
+     <dimen name="led_pannel_marginLeft">0.0px</dimen>
+     <dimen name="led_pannel_time_marginRight">2.0px</dimen>
+     <dimen name="navbar_button_width">-1.0px</dimen>
+-    <dimen name="navbar_button_marginTop">146.0px</dimen>
+-    <dimen name="navbar_button_marginRight">5.0px</dimen>
+-    <dimen name="btn1_width">142.0px</dimen>
+-    <dimen name="btn1_height">60.0px</dimen>
+-    <dimen name="btn1_marginLeft">10.0px</dimen>
+-    <dimen name="btn1_marginTop">18.0px</dimen>
+-    <dimen name="btn2_width">124.0px</dimen>
+-    <dimen name="btn2_height">46.0px</dimen>
+-    <dimen name="btn2_marginTop">25.0px</dimen>
+-    <dimen name="btn2_marginRight">22.0px</dimen>
+-    <dimen name="tabcontrol_height">455.0px</dimen>
+-    <dimen name="timerPicker_width">284.0px</dimen>
+-    <dimen name="timerPicker_marginTop">7.0px</dimen>
+-    <dimen name="timerPickerTitle_width">284.0px</dimen>
+-    <dimen name="timerPickerTitle_marginTop">46.0px</dimen>
+-    <dimen name="alert_layout_width">268.0px</dimen>
+-    <dimen name="alert_layout_marginTop">257.0px</dimen>
++    <dimen name="navbar_button_marginTop">92.0px</dimen>
++    <dimen name="navbar_button_marginRight">4.0px</dimen>
++    <dimen name="btn1_width">95.0px</dimen>
++    <dimen name="btn1_height">45.0px</dimen>
++    <dimen name="btn1_marginLeft">7.0px</dimen>
++    <dimen name="btn1_marginTop">12.0px</dimen>
++    <dimen name="btn2_width">82.0px</dimen>
++    <dimen name="btn2_height">32.0px</dimen>
++    <dimen name="btn2_marginTop">18.0px</dimen>
++    <dimen name="btn2_marginRight">16.0px</dimen>
++    <dimen name="tabcontrol_height">301.0px</dimen>
++    <dimen name="timerPicker_width">213.0px</dimen>
++    <dimen name="timerPicker_marginTop">3.0px</dimen>
++    <dimen name="timerPickerTitle_width">213.0px</dimen>
++    <dimen name="timerPickerTitle_marginTop">32.0px</dimen>
++    <dimen name="alert_layout_width">201.0px</dimen>
++    <dimen name="alert_layout_marginTop">173.0px</dimen>
+     <dimen name="alert_layout_marginRight">0.0px</dimen>
+-    <dimen name="timer_btn_width">268.0px</dimen>
++    <dimen name="timer_btn_width">215.0px</dimen>
+     <dimen name="timer_btn_height">-1.0px</dimen>
+-    <dimen name="timer_btn_marginTop">321.0px</dimen>
+-    <dimen name="timer_btn_marginRight">11.0px</dimen>
+-    <dimen name="timer_btn1_width">142.0px</dimen>
+-    <dimen name="timer_btn1_height">60.0px</dimen>
+-    <dimen name="timer_btn1_marginLeft">-10.0px</dimen>
+-    <dimen name="timer_btn2_width">124.0px</dimen>
+-    <dimen name="timer_btn2_height">46.0px</dimen>
+-    <dimen name="timer_btn2_marginTop">7.0px</dimen>
+-    <dimen name="timer_btn2_marginLeft">144.0px</dimen>
++    <dimen name="timer_btn_marginTop">212.0px</dimen>
++    <dimen name="timer_btn_marginRight">10.0px</dimen>
++    <dimen name="timer_btn1_width">106.0px</dimen>
++    <dimen name="timer_btn1_height">45.0px</dimen>
++    <dimen name="timer_btn1_marginLeft">0.0px</dimen>
++    <dimen name="timer_btn2_width">93.0px</dimen>
++    <dimen name="timer_btn2_height">32.0px</dimen>
++    <dimen name="timer_btn2_marginTop">6.0px</dimen>
++    <dimen name="timer_btn2_marginLeft">115.0px</dimen>
+ </resources>
+diff -rupN ../original-apks/WorldClock.apk/res/values-mdpi/styles.xml WorldClock.apk/res/values-mdpi/styles.xml
+--- ../original-apks/WorldClock.apk/res/values-mdpi/styles.xml	2012-05-26 10:19:43.000000000 +0100
++++ WorldClock.apk/res/values-mdpi/styles.xml	2012-05-26 10:11:25.000000000 +0100
+@@ -24,7 +24,7 @@
+         <item name="android:disabledAlpha">0.5</item>
+         <item name="android:textColorPrimary">@color/white</item>
+         <item name="android:textColorSecondary">@color/light_grey</item>
+-        <item name="android:listPreferredItemHeight">50.0px</item>
++        <item name="android:listPreferredItemHeight">40.0px</item>
+         <item name="android:windowNoTitle">true</item>
+         <item name="android:windowContentOverlay">@null</item>
+         <item name="android:popupWindowStyle">@android:style/Widget.PopupWindow</item>
+@@ -45,7 +45,7 @@
+         <item name="android:shadowRadius">1.0</item>
+     </style>
+     <style name="timerTextStyle">
+-        <item name="android:textSize">16.0px</item>
++        <item name="android:textSize">11.0px</item>
+         <item name="android:textColor">@color/timer_color</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+@@ -55,14 +55,14 @@
+         <item name="android:shadowRadius">1.0</item>
+     </style>
+     <style name="oriNavbarButtonStyle">
+-        <item name="android:textSize">18.0sp</item>
++        <item name="android:textSize">16.0px</item>
+         <item name="android:textColor">@color/white</item>
+         <item name="android:ellipsize">marquee</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:background">@com.htc:drawable/common_b_button</item>
+-        <item name="android:layout_width">124.0px</item>
+-        <item name="android:layout_height">46.0px</item>
++        <item name="android:layout_width">93.0px</item>
++        <item name="android:layout_height">35.0px</item>
+         <item name="android:singleLine">true</item>
+         <item name="android:shadowColor">@color/black</item>
+         <item name="android:shadowDx">1.0</item>
+@@ -70,26 +70,26 @@
+         <item name="android:shadowRadius">1.0</item>
+     </style>
+     <style name="navbarButtonStyle">
+-        <item name="android:textSize">18.0sp</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">@color/white</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:background">@com.htc:drawable/common_panel_navbar_button</item>
+-        <item name="android:layout_width">148.0px</item>
+-        <item name="android:layout_height">50.0px</item>
++        <item name="android:layout_width">112.0px</item>
++        <item name="android:layout_height">34.0px</item>
+         <item name="android:shadowColor">@color/black</item>
+         <item name="android:shadowDx">1.0</item>
+         <item name="android:shadowDy">1.0</item>
+         <item name="android:shadowRadius">1.0</item>
+     </style>
+     <style name="startButtonStyle">
+-        <item name="android:textSize">18.0sp</item>
++        <item name="android:textSize">16.0px</item>
+         <item name="android:textColor">@color/white</item>
+         <item name="android:ellipsize">marquee</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+-        <item name="android:layout_width">142.0px</item>
+-        <item name="android:layout_height">60.0px</item>
++        <item name="android:layout_width">106.0px</item>
++        <item name="android:layout_height">47.0px</item>
+         <item name="android:singleLine">true</item>
+         <item name="android:shadowColor">@color/shadow1_color</item>
+         <item name="android:shadowDx">1.0</item>
+@@ -103,8 +103,8 @@
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:background">@drawable/btn_center_left</item>
+-        <item name="android:layout_width">40.0px</item>
+-        <item name="android:layout_height">63.0px</item>
++        <item name="android:layout_width">30.0px</item>
++        <item name="android:layout_height">47.0px</item>
+         <item name="android:singleLine">true</item>
+         <item name="android:shadowColor">@color/black</item>
+         <item name="android:shadowDx">1.0</item>
+@@ -118,8 +118,8 @@
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:background">@drawable/btn_center_right</item>
+-        <item name="android:layout_width">40.0px</item>
+-        <item name="android:layout_height">63.0px</item>
++        <item name="android:layout_width">30.0px</item>
++        <item name="android:layout_height">47.0px</item>
+         <item name="android:singleLine">true</item>
+         <item name="android:shadowColor">@color/black</item>
+         <item name="android:shadowDx">1.0</item>
+@@ -127,46 +127,46 @@
+         <item name="android:shadowRadius">1.0</item>
+     </style>
+     <style name="titleBarStyle">
+-        <item name="android:textSize">18.0sp</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">@color/white</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_height">26.0px</item>
+         <item name="android:singleLine">true</item>
+     </style>
+     <style name="titleBarShadowStyle">
+-        <item name="android:textSize">18.0sp</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">@color/black</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_height">26.0px</item>
+         <item name="android:layout_marginRight">2.0px</item>
+         <item name="android:layout_marginBottom">2.0px</item>
+         <item name="android:singleLine">true</item>
+     </style>
+     <style name="commandButtonBarStyle">
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">56.0px</item>
++        <item name="android:layout_height">40.0px</item>
+     </style>
+     <style name="alertTextStyle">
+-        <item name="android:textSize">18.0px</item>
++        <item name="android:textSize">15.0px</item>
+         <item name="android:textColor">@color/white</item>
+     </style>
+     <style name="alertUriStyle">
+-        <item name="android:textSize">14.0px</item>
++        <item name="android:textSize">12.0px</item>
+         <item name="android:textColor">@color/alert_uri_color</item>
+     </style>
+     <style name="digitalClockTimeStyle">
+-        <item name="android:textSize">32.0sp</item>
++        <item name="android:textSize">23.0px</item>
+     </style>
+     <style name="digitalClockAmPmStyle">
+-        <item name="android:textSize">16.0sp</item>
+-        <item name="android:layout_marginTop">9.0px</item>
++        <item name="android:textSize">10.0px</item>
++        <item name="android:layout_marginTop">1.0px</item>
+     </style>
+     <style name="digitalClockDayStyle">
+-        <item name="android:textSize">10.0sp</item>
++        <item name="android:textSize">9.0px</item>
+     </style>
+     <style name="shadowStyle">
+         <item name="android:shadowColor">#ff000000</item>
+diff -rupN ../original-apks/WorldClock.apk/res/xml-mdpi/analog_appwidget.xml WorldClock.apk/res/xml-mdpi/analog_appwidget.xml
+--- ../original-apks/WorldClock.apk/res/xml-mdpi/analog_appwidget.xml	2012-05-26 10:19:42.000000000 +0100
++++ WorldClock.apk/res/xml-mdpi/analog_appwidget.xml	2012-05-26 10:11:24.000000000 +0100
+@@ -1,3 +1,3 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<appwidget-provider android:minWidth="146.0dip" android:minHeight="146.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/analog_appwidget"
++<appwidget-provider android:minWidth="109.0px" android:minHeight="109.0px" android:updatePeriodMillis="0" android:initialLayout="@layout/analog_appwidget"
+   xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lock_pattern_title_height">20.0px</dimen>
+    <dimen name="lock_pattern_foot_height">40.0px</dimen>
+</resources>

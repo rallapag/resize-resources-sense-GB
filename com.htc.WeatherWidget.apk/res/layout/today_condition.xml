@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/today_view"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/large_widget_current_temp_text_size" android:textColor="@color/widget_deep_color" android:id="@id/today_current_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/large_widget_current_temp_margin_left" android:layout_marginTop="@dimen/large_widget_current_temp_margin_top" style="@style/shadow_0" />
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/layoutHighLowTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/large_widget_current_high_low_temp_margin_left" android:layout_marginTop="@dimen/large_widget_current_high_low_temp_margin_top">
+        <TextView android:textSize="@dimen/large_widget_hilo_text_size" android:textColor="@color/widget_text_color" android:id="@id/today_high_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/shadow_0" />
+        <TextView android:textSize="@dimen/large_widget_hilo_text_size" android:textColor="@color/widget_text_color" android:id="@id/today_low_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/shadow_0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/info_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/large_widget_info_area_margin_left" android:layout_marginTop="@dimen/large_widget_info_area_margin_top" style="@style/info_area">
+        <TextView android:textSize="@dimen/large_widget_city_text_size" android:textColor="@color/widget_text_color" android:ellipsize="marquee" android:id="@id/city_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="0" style="@style/shadow_0_gravity" />
+        <ImageView android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/weather_p_divider" />
+        <TextView android:textSize="@dimen/large_widget_condition_text_size" android:textColor="@color/widget_text_color" android:id="@id/condition_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/large_widget_condition_text_margin_top" android:singleLine="true" style="@style/large_widget_condition_text" />
+    </LinearLayout>
+    <ImageView android:id="@id/arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/large_widget_arrow_margin_left" android:layout_marginTop="@dimen/large_widget_arrow_margin_top" android:src="@drawable/weather_arrow" android:scaleType="center" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/index_text" android:layout_width="@dimen/large_widget_index_width" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/large_widget_index_text_margin_left" android:layout_marginTop="@dimen/large_widget_index_text_margin_top">
+        <TextView android:textSize="@dimen/large_widget_index_text_size" android:textColor="@color/widget_index_color" android:gravity="right|center" android:id="@id/index_text_left" android:layout_width="@dimen/large_widget_index_item_width" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/large_widget_index_text_size" android:textColor="@color/widget_index_color" android:gravity="center" android:id="@id/index_text_center" android:layout_width="@dimen/large_widget_index_item_width" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/large_widget_index_text_size" android:textColor="@color/widget_index_color" android:gravity="left|center" android:id="@id/index_text_right" android:layout_width="@dimen/large_widget_index_item_width" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/time_date" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="14.0px" layout="@layout/desk_clock_digital" />
+    <TextView android:textSize="13.0px" android:id="@id/date" android:paddingLeft="10.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="73.0px" android:layout_below="@id/time" style="@style/deskclockDate" />
+    <TextView android:textSize="13.0px" android:gravity="right" android:id="@id/nextAlarm" android:paddingRight="25.0px" android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="73.0px" android:layout_below="@id/time" style="@style/deskclockAlarm" />
+    <ImageView android:id="@id/ic_alarm" android:paddingLeft="175.0px" android:layout_width="202.0px" android:layout_height="wrap_content" android:layout_marginTop="72.0px" android:layout_below="@id/time" />
+</RelativeLayout>

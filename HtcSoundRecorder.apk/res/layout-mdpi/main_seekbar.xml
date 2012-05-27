@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.soundrecorder.util.HtcSeekBar android:gravity="center" android:id="@id/stateProgressBar" android:layout_width="210.0px" android:layout_height="40.0dip" android:layout_marginTop="0.0px" android:layout_centerHorizontal="true" app:max="100" app:progress="0" app:progressDrawable="@drawable/progress_horizontal_pressed" app:minHeight="40.0px" app:maxHeight="40.0px" app:thumb="@com.htc:drawable/common_music_progress_button" app:thumbOffset="8.0px" app:pressed_progressDrawable="@drawable/progress_horizontal_pressed" app:pressed_minHeight="40.0px" app:pressed_maxHeight="40.0px" app:pressed_thumb="@com.htc:drawable/common_music_progress_button" app:pressed_thumbOffset="@dimen/seekbar_pressed_thumboffset" app:progress_paddingTop="10.0px" app:pressed_paddingTop="10.0px"
+      xmlns:app="http://schemas.android.com/apk/res/com.htc.soundrecorder" />
+</merge>

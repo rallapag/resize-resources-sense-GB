@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView android:textSize="@dimen/alert_dialog_textSize" android:textColor="@color/text_selector" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="9.0px" android:paddingRight="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="?attr_btn_check" android:minHeight="@dimen/alert_dialog_itemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

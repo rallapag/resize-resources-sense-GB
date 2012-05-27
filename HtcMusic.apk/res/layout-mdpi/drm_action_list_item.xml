@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:paddingLeft="0.0px" android:layout_width="fill_parent" android:layout_height="40.0px" android:ignoreGravity="@id/icon"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:background="@com.htc:drawable/common_button_small_rest" android:layout_width="40.0px" android:layout_height="40.0px" android:scaleType="center" />
+    <include layout="@com.htc:layout/htc_list_item_1text" />
+</LinearLayout>

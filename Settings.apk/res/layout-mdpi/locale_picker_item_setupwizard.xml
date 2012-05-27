@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="15.0px" android:textColor="@drawable/white_text_white_focused" android:id="@id/locale" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <RadioButton android:id="@id/select" android:focusable="false" android:clickable="false" android:layout_width="36.0px" android:layout_height="wrap_content" />
+</LinearLayout>

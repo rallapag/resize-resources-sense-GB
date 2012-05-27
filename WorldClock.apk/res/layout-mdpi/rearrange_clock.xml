@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+    <com.htc.widget.HtcReorderListView android:id="@id/touch_interceptor" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="229.0px" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:divider="@com.htc:drawable/common_divider_items" android:layout_weight="1.0" />
+    <include android:id="@id/btn" style="@style/commandButtonBarStyle" layout="@layout/common_button_bar" />
+</LinearLayout>

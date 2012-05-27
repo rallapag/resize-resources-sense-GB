@@ -1,0 +1,249 @@
+diff -rupN ../original-apks/HtcMusic.apk/res/layout/album_appwidget.xml HtcMusic.apk/res/layout/album_appwidget.xml
+--- ../original-apks/HtcMusic.apk/res/layout/album_appwidget.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout/album_appwidget.xml	2012-05-26 10:08:38.000000000 +0100
+@@ -2,9 +2,9 @@
+ <LinearLayout android:orientation="horizontal" android:background="@drawable/appwidget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/album_appwidget" android:background="@drawable/appwidget_button_left" android:paddingLeft="18.0dip" android:paddingRight="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0">
+-        <TextView android:textSize="@dimen/music_title_primary_m" android:textStyle="bold" android:textColor="@color/appwidget_text" android:ellipsize="none" android:id="@id/title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+-        <TextView android:textSize="@dimen/music_title_secondary_m" android:textColor="@color/appwidget_text" android:ellipsize="none" android:id="@id/artist" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+-        <TextView android:textSize="@dimen/music_title_secondary_m" android:textColor="@color/appwidget_text" android:ellipsize="none" android:id="@id/warning" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
++        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/appwidget_text" android:ellipsize="none" android:id="@id/title" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
++        <TextView android:textSize="14.0sp" android:textColor="@color/appwidget_text" android:ellipsize="none" android:id="@id/artist" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
++        <TextView android:textSize="14.0sp" android:textColor="@color/appwidget_text" android:ellipsize="none" android:id="@id/warning" android:fadingEdge="horizontal" android:fadingEdgeLength="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+     </LinearLayout>
+     <ImageView android:background="@drawable/appwidget_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+     <ImageButton android:id="@id/control_play" android:background="@drawable/appwidget_button_center" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_appwidget_music_play" android:scaleType="center" android:layout_weight="1.0" />
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/audio_player.xml HtcMusic.apk/res/layout-mdpi/audio_player.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/audio_player.xml	2012-05-26 10:17:44.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/audio_player.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -1,16 +1,16 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <LinearLayout android:orientation="vertical" android:id="@id/gallery_layout" android:layout_width="fill_parent" android:layout_height="262.0px" android:layout_marginTop="80.0px">
+-        <com.htc.music.widget.MainGallery android:id="@id/gallery" android:layout_width="fill_parent" android:layout_height="wrap_content" music:resolution="hvga"
++    <LinearLayout android:orientation="vertical" android:id="@id/gallery_layout" android:paddingTop="46.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
++        <com.htc.music.widget.MainGallery android:id="@id/gallery" android:layout_width="fill_parent" android:layout_height="wrap_content" music:resolution="qvga"
+           xmlns:music="http://schemas.android.com/apk/res/com.htc.music" />
+     </LinearLayout>
+     <com.htc.music.widget.RotateRelativeLayout android:id="@id/rotate_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <ProgressBar android:id="@id/title_pbr" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0px" android:layout_marginRight="30.0px" android:layout_alignParentRight="true" style="?android:attr/progressBarStyleSmallTitle" />
+         <LinearLayout android:orientation="vertical" android:id="@id/title_info" android:layout_width="fill_parent" android:layout_height="wrap_content">
+             <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+-                <ImageButton android:id="@id/plugin_icon" android:background="#00000000" android:visibility="gone" android:layout_width="32.0px" android:layout_height="32.0px" android:layout_marginTop="@com.htc:dimen/music_glance_title_icon_margin" android:layout_marginRight="8.0px" android:scaleType="center" />
+-                <TextView android:textSize="@com.htc:dimen/title_primary_l" android:textColor="@color/textColorTitle" android:ellipsize="end" android:id="@id/allsongs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0px" android:text="@string/nowplaying_title" android:singleLine="true" android:layout_centerHorizontal="true" />
++                <ImageButton android:id="@id/plugin_icon" android:background="#00000000" android:visibility="gone" android:layout_width="43.0px" android:layout_height="32.0px" android:layout_marginTop="0.0px" android:scaleType="center" />
++                <TextView android:textSize="15.0px" android:textColor="@color/textColorTitle" android:ellipsize="end" android:id="@id/allsongs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0px" android:text="@string/nowplaying_title" android:singleLine="true" android:layout_centerHorizontal="true" />
+             </LinearLayout>
+             <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-6.0px" android:layout_weight="2.0">
+                 <ImageButton android:id="@id/shuffle" android:background="#00000000" android:layout_width="30.0px" android:layout_height="40.0px" android:layout_marginLeft="6.0px" android:layout_marginTop="-4.0px" />
+@@ -21,16 +21,24 @@
+             </LinearLayout>
+         </LinearLayout>
+         <RelativeLayout android:id="@id/layout_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-            <RelativeLayout android:id="@id/play_info" android:paddingLeft="2.0px" android:paddingRight="2.0px" android:paddingBottom="93.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+-                <TextView android:textSize="@com.htc:dimen/music_glance_trackname" android:typeface="sans" android:textColor="@color/textColorPlaybackPrimary" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/trackname" android:paddingLeft="1.0px" android:paddingRight="1.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="1" />
+-                <LinearLayout android:orientation="horizontal" android:paddingLeft="0.0px" android:paddingTop="0.0px" android:paddingBottom="0.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0px" android:baselineAligned="false" android:layout_x="0.0px" android:layout_y="38.0px">
+-                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@com.htc:dimen/title_primary_xs" android:textColor="@color/textColorPlaybackTime" android:layout_gravity="center" android:id="@id/currenttime" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginBottom="5.0px" android:layout_weight="1.0" />
+-                    <com.htc.music.widget.HtcSeekBar android:id="@id/seek" android:layout_width="233.0px" android:layout_height="45.0px" android:scaleType="centerInside" android:layout_x="44.0px" android:layout_y="235.0px" android:layout_centerInParent="true" app:max="100" app:progress="50" app:progressDrawable="@drawable/progress_horizontal" app:minHeight="38.0px" app:maxHeight="38.0px" app:thumb="@drawable/common_music_progress_indicator" app:thumbOffset="5.0px" app:pressed_progressDrawable="@drawable/progress_horizontal_pressed" app:pressed_minHeight="38.0px" app:pressed_maxHeight="38.0px" app:pressed_thumb="@drawable/common_music_progress_button" app:pressed_thumbOffset="5.0px"
+-                      xmlns:app="http://schemas.android.com/apk/res/com.htc.music" />
+-                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@com.htc:dimen/title_primary_xs" android:textColor="@color/textColorPlaybackTime" android:gravity="right" android:layout_gravity="center" android:id="@id/totaltime" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginBottom="5.0px" android:layout_weight="1.0" />
+-                </LinearLayout>
+-                <TextView android:textSize="@com.htc:dimen/music_glance_artist" android:typeface="sans" android:textColor="@color/textColorPlaybackSecondary" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/artistname" android:paddingLeft="1.0px" android:paddingRight="1.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0px" android:singleLine="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="1" />
+-                <TextView android:textSize="@com.htc:dimen/music_glance_album" android:typeface="sans" android:textColor="@color/textColorPlaybackThird" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/albumname" android:paddingLeft="1.0dip" android:paddingRight="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="64.0px" android:singleLine="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="1" />
++            <RelativeLayout android:id="@id/play_info" android:paddingLeft="2.0px" android:paddingRight="2.0px" android:paddingBottom="46.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
++                <AbsoluteLayout android:paddingBottom="5.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
++                    <FrameLayout android:paddingLeft="1.0px" android:paddingTop="0.0px" android:paddingRight="1.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_x="0.0px" android:layout_y="2.0px">
++                        <TextView android:textSize="15.0px" android:typeface="sans" android:textColor="@color/textColorPlaybackPrimary" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/trackname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="1" />
++                    </FrameLayout>
++                    <LinearLayout android:orientation="horizontal" android:paddingLeft="0.0px" android:paddingTop="0.0px" android:paddingBottom="0.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_x="0.0px" android:layout_y="9.0px">
++                        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="10.0px" android:textColor="@color/textColorPlaybackTime" android:gravity="center" android:layout_gravity="right|center" android:id="@id/currenttime" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" />
++                        <com.htc.music.widget.HtcSeekBar android:id="@id/seek" android:layout_width="177.0px" android:layout_height="40.0px" android:scaleType="centerInside" android:layout_x="44.0px" android:layout_y="235.0px" android:layout_centerInParent="true" app:max="100" app:progress="50" app:progressDrawable="@drawable/progress_horizontal" app:minHeight="40.0px" app:maxHeight="40.0px" app:thumb="@drawable/common_music_progress_indicator" app:thumbOffset="5.0px" app:pressed_progressDrawable="@drawable/progress_horizontal_pressed" app:pressed_minHeight="40.0px" app:pressed_maxHeight="40.0px" app:pressed_thumb="@drawable/common_music_progress_button" app:pressed_thumbOffset="0.0px"
++                          xmlns:app="http://schemas.android.com/apk/res/com.htc.music" />
++                        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="10.0px" android:textColor="@color/textColorPlaybackTime" android:gravity="center" android:layout_gravity="left|center" android:id="@id/totaltime" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0" />
++                    </LinearLayout>
++                    <FrameLayout android:paddingLeft="1.0px" android:paddingTop="0.0px" android:paddingRight="1.0px" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_x="0.0px" android:layout_y="35.0px">
++                        <TextView android:textSize="13.0px" android:typeface="sans" android:textColor="@color/textColorPlaybackSecondary" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/artistname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="1" />
++                    </FrameLayout>
++                    <FrameLayout android:paddingLeft="1.0px" android:paddingTop="0.0px" android:paddingRight="1.0px" android:layout_width="fill_parent" android:layout_height="16.0px" android:layout_x="0.0px" android:layout_y="50.0px">
++                        <TextView android:textSize="11.0px" android:typeface="sans" android:textColor="@color/textColorPlaybackThird" android:ellipsize="marquee" android:layout_gravity="center" android:id="@id/albumname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="1" />
++                    </FrameLayout>
++                </AbsoluteLayout>
+             </RelativeLayout>
+             <RelativeLayout android:id="@id/hot_top_rl" android:background="@com.htc:drawable/common_what_hot_bg_rest" android:layout_width="fill_parent" android:layout_height="31.0px" android:layout_above="@id/music_taskbar">
+                 <ImageView android:id="@id/hot_left_store_icon" android:background="#00000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0px" android:layout_marginTop="1.0px" android:maxWidth="174.0px" android:maxHeight="31.0px" android:layout_centerVertical="true" />
+@@ -38,8 +46,8 @@
+                 <ImageView android:id="@id/hot_right_store_icon" android:background="#00000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0px" android:layout_marginRight="17.0px" android:scaleType="center" android:maxWidth="154.0px" android:maxHeight="31.0px" android:layout_alignParentRight="true" />
+                 <ImageView android:id="@id/hot_right_indicator" android:background="#00000000" android:visibility="visible" android:layout_width="15.0px" android:layout_height="20.0px" android:layout_marginTop="7.0px" android:layout_marginRight="3.0px" android:src="@drawable/common_icon_expand_right" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+             </RelativeLayout>
+-            <ImageView android:layout_gravity="left" android:id="@id/hot_highlight_left" android:background="@drawable/what_hot_highlight_left" android:clickable="true" android:layout_width="200.0px" android:layout_height="69.0px" android:layout_marginBottom="-23.0px" android:layout_above="@id/music_taskbar" />
+-            <ImageView android:layout_gravity="right" android:id="@id/hot_highlight_right" android:background="@drawable/what_hot_highlight_right" android:clickable="true" android:layout_width="200.0px" android:layout_height="69.0px" android:layout_marginBottom="-23.0px" android:layout_above="@id/music_taskbar" android:layout_alignParentRight="true" />
++            <ImageView android:layout_gravity="left" android:id="@id/hot_highlight_left" android:background="@drawable/what_hot_highlight_left" android:clickable="true" android:layout_width="150.0px" android:layout_height="46.0px" android:layout_marginBottom="-23.0px" android:layout_above="@id/music_taskbar" />
++            <ImageView android:layout_gravity="right" android:id="@id/hot_highlight_right" android:background="@drawable/what_hot_highlight_right" android:clickable="true" android:layout_width="150.0px" android:layout_height="46.0px" android:layout_marginBottom="-23.0px" android:layout_above="@id/music_taskbar" android:layout_alignParentRight="true" />
+             <RelativeLayout android:id="@id/music_taskbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                 <include layout="@com.htc:layout/taskbar_3" />
+             </RelativeLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/confirm_delete.xml HtcMusic.apk/res/layout-mdpi/confirm_delete.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/confirm_delete.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/confirm_delete.xml	2012-05-26 10:08:38.000000000 +0100
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:id="@id/prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:drawableLeft="@android:drawable/ic_dialog_alert" android:drawablePadding="8.0dip" />
+-    <RelativeLayout android:background="#ffffffff" android:padding="6.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-        <Button android:layout_gravity="center_horizontal" android:id="@id/delete" android:layout_width="120.0px" android:layout_height="wrap_content" android:text="@com.htc:string/dialog_button_ok" android:layout_alignParentLeft="true" />
+-        <Button android:id="@id/cancel" android:layout_width="120.0px" android:layout_height="wrap_content" android:text="@com.htc:string/dialog_button_cancel" android:layout_alignParentRight="true" />
++    <TextView android:id="@id/prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0px" android:layout_marginTop="6.0px" android:layout_marginBottom="6.0px" android:drawableLeft="@android:drawable/ic_dialog_alert" android:drawablePadding="6.0px" />
++    <RelativeLayout android:background="#ffffffff" android:padding="4.0px" android:layout_width="fill_parent" android:layout_height="wrap_content">
++        <Button android:layout_gravity="center_horizontal" android:id="@id/delete" android:layout_width="90.0px" android:layout_height="wrap_content" android:text="@com.htc:string/dialog_button_ok" android:layout_alignParentLeft="true" />
++        <Button android:id="@id/cancel" android:layout_width="90.0px" android:layout_height="wrap_content" android:text="@com.htc:string/dialog_button_cancel" android:layout_alignParentRight="true" />
+     </RelativeLayout>
+ </LinearLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/drm_action_list_item.xml HtcMusic.apk/res/layout-mdpi/drm_action_list_item.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/drm_action_list_item.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/drm_action_list_item.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:gravity="center_vertical" android:paddingLeft="0.0px" android:layout_width="fill_parent" android:layout_height="@com.htc:dimen/htc_list_item_height" android:ignoreGravity="@id/icon"
++<LinearLayout android:gravity="center_vertical" android:paddingLeft="0.0px" android:layout_width="fill_parent" android:layout_height="40.0px" android:ignoreGravity="@id/icon"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:background="@com.htc:drawable/common_button_small_rest" android:layout_width="52.0px" android:layout_height="52.0px" android:layout_marginLeft="14.0px" android:scaleType="center" />
++    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:background="@com.htc:drawable/common_button_small_rest" android:layout_width="40.0px" android:layout_height="40.0px" android:scaleType="center" />
+     <include layout="@com.htc:layout/htc_list_item_1text" />
+ </LinearLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/group_list_content.xml HtcMusic.apk/res/layout-mdpi/group_list_content.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/group_list_content.xml	2012-05-26 10:17:44.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/group_list_content.xml	2012-05-26 10:08:38.000000000 +0100
+@@ -3,7 +3,7 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <include layout="@com.htc:layout/title_1" />
+     <include android:visibility="gone" layout="@com.htc:layout/title_15" />
+-    <com.htc.widget.SearchBoxView android:id="@id/search_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
++    <com.htc.widget.SearchBoxView android:id="@id/search_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="43.0px" android:layout_marginTop="3.0px" />
+     <ViewStub android:id="@id/nomusic_stub_import" android:layout="@layout/no_music" android:inflatedId="@id/nomusic_import" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+     <ViewStub android:id="@id/nosd_error_stub_import" android:layout="@layout/sd_error" android:inflatedId="@id/nosd_error_import" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+     <com.htc.music.widget.GroupListView android:id="@android:id/list" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:layout_weight="1.0" style="@style/HtcListStyle" />
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/hit_panel.xml HtcMusic.apk/res/layout-mdpi/hit_panel.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/hit_panel.xml	2012-05-26 10:17:43.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/hit_panel.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<FrameLayout android:id="@id/hint_layout_land" android:paddingBottom="50.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
++<FrameLayout android:id="@id/hint_layout_land" android:layout_width="fill_parent" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:textSize="@com.htc:dimen/title_primary_xs" android:textColor="@color/textColorPlaybackPrimary" android:layout_gravity="left" android:id="@id/hint_toast_library" android:background="@drawable/music_tooltips_left" android:paddingLeft="35.0px" android:paddingTop="20.0px" android:layout_width="165.0dip" android:layout_height="wrap_content" />
+-    <TextView android:textSize="@com.htc:dimen/title_primary_xs" android:textColor="@color/textColorPlaybackPrimary" android:layout_gravity="right" android:id="@id/hint_toast_playlisy" android:background="@drawable/music_tooltips_right" android:paddingLeft="35.0px" android:paddingTop="20.0px" android:layout_width="165.0dip" android:layout_height="wrap_content" />
++    <TextView android:textSize="14.0sp" android:textColor="@color/textColorPlaybackPrimary" android:layout_gravity="left" android:id="@id/hint_toast_library" android:background="@drawable/music_tooltips_left" android:paddingLeft="20.0px" android:paddingTop="10.0px" android:layout_width="165.0dip" android:layout_height="wrap_content" />
++    <TextView android:textSize="14.0sp" android:textColor="@color/textColorPlaybackPrimary" android:layout_gravity="right" android:id="@id/hint_toast_playlisy" android:background="@drawable/music_tooltips_right" android:paddingLeft="20.0px" android:paddingTop="10.0px" android:layout_width="165.0dip" android:layout_height="wrap_content" />
+ </FrameLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/music_picker.xml HtcMusic.apk/res/layout-mdpi/music_picker.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/music_picker.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/music_picker.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -3,13 +3,13 @@
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/progressContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <ProgressBar android:id="@android:id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+-        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/htc_text_appearance_small" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_loading" android:singleLine="true" />
++        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/htc_text_appearance_small" android:paddingTop="4.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_loading" android:singleLine="true" />
+     </LinearLayout>
+-    <LinearLayout android:orientation="vertical" android:id="@id/listContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
++    <LinearLayout android:orientation="vertical" android:id="@id/listContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+         <include layout="@com.htc:layout/title_1" />
+         <include android:visibility="gone" layout="@com.htc:layout/title_15" />
+-        <com.htc.widget.SearchBoxView android:id="@id/search_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+-        <com.htc.widget.HtcListView android:textSize="@com.htc:dimen/list_primary_m" android:id="@android:id/list" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:divider="@com.htc:drawable/list_divider" android:dividerHeight="1.0px" android:layout_weight="1.0" music:resolution="wvga" style="@style/HtcListStyle"
++        <com.htc.widget.SearchBoxView android:id="@id/search_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="43.0px" android:layout_marginTop="3.0px" />
++        <com.htc.widget.HtcListView android:textSize="13.0px" android:id="@android:id/list" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:divider="@com.htc:drawable/list_divider" android:dividerHeight="1.0px" android:layout_weight="1.0" music:resolution="qvga" style="@style/HtcListStyle"
+           xmlns:music="http://schemas.android.com/apk/res/com.htc.music" />
+         <ViewStub android:id="@id/nomusic_stub_import" android:layout="@layout/no_music" android:inflatedId="@id/nomusic_import" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+         <ViewStub android:id="@id/nosd_error_stub_import" android:layout="@layout/sd_error" android:inflatedId="@id/nosd_error_import" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/new_playlist.xml HtcMusic.apk/res/layout-mdpi/new_playlist.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/new_playlist.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/new_playlist.xml	2012-05-26 10:08:38.000000000 +0100
+@@ -4,8 +4,8 @@
+     <include android:visibility="gone" layout="@com.htc:layout/title_1" />
+     <View android:background="@drawable/topround_v1" android:layout_width="fill_parent" android:layout_height="10.0px" />
+     <LinearLayout android:orientation="vertical" android:background="@drawable/drawableActivityBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+-        <TextView android:textSize="@com.htc:dimen/list_primary_m" android:textColor="@color/black" android:ellipsize="marquee" android:id="@id/prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:singleLine="true" android:marqueeRepeatLimit="1" />
+-        <EditText android:textSize="@com.htc:dimen/list_primary_m" android:id="@id/playlist" android:paddingLeft="14.0px" android:paddingRight="14.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:singleLine="true" android:inputType="textAutoComplete">
++        <TextView android:textSize="15.0px" android:textColor="@color/black" android:ellipsize="marquee" android:id="@id/prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0px" android:layout_marginTop="6.0px" android:layout_marginRight="6.0px" android:layout_marginBottom="6.0px" android:singleLine="true" android:marqueeRepeatLimit="1" />
++        <EditText android:textSize="15.0px" android:id="@id/playlist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0px" android:layout_marginBottom="8.0px" android:singleLine="true" android:inputType="textAutoComplete">
+             <requestFocus />
+         </EditText>
+     </LinearLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/no_music.xml HtcMusic.apk/res/layout-mdpi/no_music.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/no_music.xml	2012-05-26 10:17:44.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/no_music.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -1,13 +1,13 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout android:id="@id/emptyLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+-    <TextView android:textSize="@com.htc:dimen/title_primary_m" android:textColor="@color/black" android:gravity="center" android:id="@id/emptyText" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
++    <TextView android:textSize="14.0px" android:textColor="@color/black" android:gravity="center" android:id="@id/emptyText" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+     <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+-        <View android:background="@drawable/topround_v1" android:layout_width="fill_parent" android:layout_height="10.0px" />
++        <View android:background="@drawable/topround_v1" android:layout_width="fill_parent" android:layout_height="6.0px" />
+         <View android:background="@com.htc:drawable/trans_topround" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+     </LinearLayout>
+     <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+         <View android:background="@com.htc:drawable/trans_bottomround" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+-        <View android:background="@com.htc:drawable/section_divider" android:layout_width="fill_parent" android:layout_height="10.0px" />
++        <View android:background="@com.htc:drawable/section_divider" android:layout_width="fill_parent" android:layout_height="6.0px" />
+     </LinearLayout>
+ </FrameLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/no_sd_card_expanding.xml HtcMusic.apk/res/layout-mdpi/no_sd_card_expanding.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/no_sd_card_expanding.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/no_sd_card_expanding.xml	2012-05-26 10:08:38.000000000 +0100
+@@ -2,6 +2,6 @@
+ <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <ImageView android:layout_gravity="center_horizontal" android:background="@com.htc:drawable/common_icon_glance_no_sd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+-    <TextView android:textSize="@com.htc:dimen/title_primary_m" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="11.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
++    <TextView android:textSize="14.0px" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
+     <ExpandableListView android:id="@android:id/list" android:visibility="gone" android:layout_width="0.0px" android:layout_height="0.0px" />
+ </LinearLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/no_sd_card.xml HtcMusic.apk/res/layout-mdpi/no_sd_card.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/no_sd_card.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/no_sd_card.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -2,6 +2,6 @@
+ <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <ImageView android:layout_gravity="center_horizontal" android:id="@id/sd_icon" android:background="@com.htc:drawable/common_icon_glance_no_sd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+-    <TextView android:textSize="@com.htc:dimen/title_primary_m" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="11.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
++    <TextView android:textSize="14.0px" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
+     <com.htc.widget.HtcListView android:id="@android:id/list" android:visibility="gone" android:layout_width="0.0px" android:layout_height="0.0px" />
+ </LinearLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/scanning.xml HtcMusic.apk/res/layout-mdpi/scanning.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/scanning.xml	2012-05-26 10:17:44.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/scanning.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout android:orientation="vertical" android:padding="12.0px" android:layout_width="wrap_content" android:layout_height="wrap_content"
++<LinearLayout android:orientation="vertical" android:padding="9.0px" android:layout_width="wrap_content" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <ProgressBar android:layout_gravity="center" android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge" />
+     <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scanning" />
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/sd_error.xml HtcMusic.apk/res/layout-mdpi/sd_error.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/sd_error.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/sd_error.xml	2012-05-26 10:08:38.000000000 +0100
+@@ -2,5 +2,5 @@
+ <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/sd_error" android:background="@com.htc:drawable/common_glance_bkg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <ImageView android:layout_gravity="center_horizontal" android:id="@id/sd_icon" android:background="@com.htc:drawable/common_icon_glance_no_sd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+-    <TextView android:textSize="@com.htc:dimen/title_primary_m" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
++    <TextView android:textSize="14.0px" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
+ </LinearLayout>
+diff -rupN ../original-apks/HtcMusic.apk/res/layout-mdpi/statusbar.xml HtcMusic.apk/res/layout-mdpi/statusbar.xml
+--- ../original-apks/HtcMusic.apk/res/layout-mdpi/statusbar.xml	2012-05-26 10:17:45.000000000 +0100
++++ HtcMusic.apk/res/layout-mdpi/statusbar.xml	2012-05-26 10:08:40.000000000 +0100
+@@ -8,7 +8,7 @@
+                 <ImageView android:id="@id/ref_photo" android:visibility="gone" android:layout_width="0.0px" android:layout_height="0.0px" android:scaleType="fitXY" />
+             </LinearLayout>
+         </FrameLayout>
+-        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0px" android:layout_marginTop="2.0px" android:layout_marginRight="8.0px" android:layout_weight="1.0">
++        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0px" android:layout_marginTop="2.0px" android:layout_marginRight="5.0px" android:layout_weight="1.0">
+             <TextView android:textAppearance="?android:textAppearanceMediumInverse" android:textStyle="bold" android:textColor="@com.htc:color/bright_text_dark_focused" android:ellipsize="marquee" android:gravity="bottom" android:layout_gravity="left" android:id="@id/trackname" android:focusable="true" android:layout_width="wrap_content" android:layout_height="0.0px" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="1" />
+             <TextView android:textAppearance="?android:textAppearanceSmallInverse" android:textSize="@com.htc:dimen/htc_text_appearance_small" android:textColor="@com.htc:color/bright_text_dark_focused" android:ellipsize="end" android:layout_gravity="left" android:id="@id/artistalbum" android:layout_width="wrap_content" android:layout_height="0.0px" android:maxLines="2" android:scrollHorizontally="true" android:layout_weight="1.0" />
+         </LinearLayout>

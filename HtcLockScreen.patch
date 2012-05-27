@@ -1,0 +1,504 @@
+Binary files ../original-apks/HtcLockScreen.apk/res/drawable-mdpi/lockscreen_navbar.png and HtcLockScreen.apk/res/drawable-mdpi/lockscreen_navbar.png differ
+Binary files ../original-apks/HtcLockScreen.apk/res/drawable-mdpi/lockscreen_ring_cover.png and HtcLockScreen.apk/res/drawable-mdpi/lockscreen_ring_cover.png differ
+Binary files ../original-apks/HtcLockScreen.apk/res/drawable-mdpi/lockscreen_ring_highlight.png and HtcLockScreen.apk/res/drawable-mdpi/lockscreen_ring_highlight.png differ
+Binary files ../original-apks/HtcLockScreen.apk/res/drawable-mdpi/lockscreen_ring.png and HtcLockScreen.apk/res/drawable-mdpi/lockscreen_ring.png differ
+Binary files ../original-apks/HtcLockScreen.apk/res/drawable-mdpi/navbar.png and HtcLockScreen.apk/res/drawable-mdpi/navbar.png differ
+diff -rupN ../original-apks/HtcLockScreen.apk/res/layout/simple_music_player_panel.xml HtcLockScreen.apk/res/layout/simple_music_player_panel.xml
+--- ../original-apks/HtcLockScreen.apk/res/layout/simple_music_player_panel.xml	2012-05-26 10:17:02.000000000 +0100
++++ HtcLockScreen.apk/res/layout/simple_music_player_panel.xml	2012-05-26 10:08:19.000000000 +0100
+@@ -13,15 +13,15 @@
+         <LinearLayout android:gravity="center_horizontal" android:id="@id/control_panel" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+             <RelativeLayout android:id="@id/pre_button" android:layout_width="@dimen/lockscreen_music_pre_button_width" android:layout_height="wrap_content">
+                 <ImageView android:id="@id/pre_button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+-                <ImageView android:id="@id/pre_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0px" android:layout_marginTop="@dimen/lockscreen_music_icon_marginTop" />
++                <ImageView android:id="@id/pre_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginTop="@dimen/lockscreen_music_icon_marginTop" />
+             </RelativeLayout>
+             <RelativeLayout android:id="@id/toggle_pause_button" android:layout_width="@dimen/lockscreen_music_toggle_pause_button_width" android:layout_height="wrap_content">
+                 <ImageView android:id="@id/toggle_pause_button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+-                <ImageView android:id="@id/toggle_pause_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0px" android:layout_marginTop="@dimen/lockscreen_music_icon_marginTop" />
++                <ImageView android:id="@id/toggle_pause_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0px" android:layout_marginTop="@dimen/lockscreen_music_icon_marginTop" />
+             </RelativeLayout>
+             <RelativeLayout android:id="@id/next_button" android:layout_width="@dimen/lockscreen_music_next_button_width" android:layout_height="wrap_content">
+                 <ImageView android:id="@id/next_button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+-                <ImageView android:id="@id/next_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0px" android:layout_marginTop="@dimen/lockscreen_music_icon_marginTop" />
++                <ImageView android:id="@id/next_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0px" android:layout_marginTop="@dimen/lockscreen_music_icon_marginTop" />
+             </RelativeLayout>
+         </LinearLayout>
+     </RelativeLayout>
+diff -rupN ../original-apks/HtcLockScreen.apk/res/layout/time_status.xml HtcLockScreen.apk/res/layout/time_status.xml
+--- ../original-apks/HtcLockScreen.apk/res/layout/time_status.xml	2012-05-26 10:17:02.000000000 +0100
++++ HtcLockScreen.apk/res/layout/time_status.xml	2012-05-26 10:08:20.000000000 +0100
+@@ -2,11 +2,11 @@
+ <LinearLayout android:orientation="vertical" android:id="@id/time_status" android:layout_width="@dimen/lockscreen_time_status_width" android:layout_height="wrap_content"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+     <LinearLayout android:layout_gravity="top|center" android:orientation="horizontal" android:id="@id/time_status_operator_root" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockscreen_operator_name_marginTop" android:layout_alignParentTop="true">
+-        <TextView android:textSize="@dimen/lockscreen_operator_name_textSize" android:textColor="@color/white" android:id="@id/time_status_operator_name" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+-        <TextView android:textSize="@dimen/lockscreen_operator_name_textSize" android:textColor="@color/white" android:id="@id/time_status_operator_spn" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lockscreen_operator_spn_marginLeft" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
++        <TextView android:textSize="@dimen/lockscreen_operator_name_textSize" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/time_status_operator_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
++        <TextView android:textSize="@dimen/lockscreen_operator_name_textSize" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/time_status_operator_spn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+     </LinearLayout>
+     <RelativeLayout android:layout_gravity="top|center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+-        <TextView android:textSize="@dimen/lockscreen_time_textSize" android:textColor="@color/white" android:gravity="top" android:id="@id/time_status_time" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockscreen_time_time_marginTop" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
++        <TextView android:textSize="@dimen/lockscreen_time_textSize" android:textColor="@color/white" android:layout_gravity="bottom" android:id="@id/time_status_time" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockscreen_time_time_marginTop" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_centerHorizontal="true" />
+         <TextView android:textSize="@dimen/lockscreen_ampm_textSize" android:textColor="@color/white" android:layout_gravity="bottom" android:id="@id/time_status_ampm" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lockscreen_ampm_marginLeft" android:layout_marginTop="@dimen/lockscreen_ampm_marginTop" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toRightOf="@id/time_status_time" />
+     </RelativeLayout>
+     <TextView android:textSize="@dimen/lockscreen_date_textSize" android:textColor="@color/white" android:layout_gravity="top|center" android:id="@id/time_status_date" android:paddingRight="2.0px" android:paddingBottom="2.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockscreen_date_marginTop" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+diff -rupN ../original-apks/HtcLockScreen.apk/res/values/dimens.xml HtcLockScreen.apk/res/values/dimens.xml
+--- ../original-apks/HtcLockScreen.apk/res/values/dimens.xml	2012-05-26 10:17:02.000000000 +0100
++++ HtcLockScreen.apk/res/values/dimens.xml	2012-05-26 10:08:20.000000000 +0100
+@@ -4,14 +4,14 @@
+     <dimen name="lockscreen_unlock_gap">60.0px</dimen>
+     <dimen name="lockscreen_music_album_cover_margin_top">0.0px</dimen>
+     <dimen name="alert_calendar_description2_textSize">17.0sp</dimen>
+-    <dimen name="description_maxwidth">280.0dip</dimen>
++    <dimen name="description_maxwidth">210.0dip</dimen>
+     <dimen name="description2_margin_top">9.0dip</dimen>
+     <dimen name="fading_length">60.0dip</dimen>
+-    <dimen name="lockscreen_calendar_marginTop">0.0px</dimen>
+-    <dimen name="lockscreen_sim_marginTop">0.0px</dimen>
+-    <dimen name="lockscreen_alarm_marginTop">0.0px</dimen>
++    <dimen name="lockscreen_calendar_marginTop">63.0px</dimen>
++    <dimen name="lockscreen_sim_marginTop">63.0px</dimen>
++    <dimen name="lockscreen_alarm_marginTop">63.0px</dimen>
+     <dimen name="arrow_icon_margintop">15.0px</dimen>
+-    <dimen name="lockscreen_pub_text_marginTop">236.0dip</dimen>
++    <dimen name="lockscreen_pub_text_marginTop">157.0dip</dimen>
+     <dimen name="lockscreen_spn_move">20.0px</dimen>
+     <dimen name="lockscreen_hint_margin_top">-8.0px</dimen>
+     <dimen name="lockscreen_reminder_desp_text_marginLeft">20.0dip</dimen>
+diff -rupN ../original-apks/HtcLockScreen.apk/res/values-mdpi/dimens.xml HtcLockScreen.apk/res/values-mdpi/dimens.xml
+--- ../original-apks/HtcLockScreen.apk/res/values-mdpi/dimens.xml	2012-05-26 10:17:02.000000000 +0100
++++ HtcLockScreen.apk/res/values-mdpi/dimens.xml	2012-05-26 10:08:20.000000000 +0100
+@@ -1,221 +1,221 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="lockscreen_unlock_up_gap">110.0px</dimen>
+-    <dimen name="lockscreen_unlock_gap">78.0px</dimen>
+-    <dimen name="lockscreen_sim_marginTop">100.0px</dimen>
+-    <dimen name="lockscreen_reminder_icon_marginLeft">103.0px</dimen>
+-    <dimen name="lockscreen_alarm_anime_width">153.0px</dimen>
+-    <dimen name="lockscreen_alarm_anime_height">153.0px</dimen>
++    <dimen name="lockscreen_unlock_up_gap">82.0px</dimen>
++    <dimen name="lockscreen_unlock_gap">58.0px</dimen>
++    <dimen name="lockscreen_sim_marginTop">63.0px</dimen>
++    <dimen name="lockscreen_reminder_icon_marginLeft">77.0px</dimen>
++    <dimen name="lockscreen_alarm_anime_width">114.0px</dimen>
++    <dimen name="lockscreen_alarm_anime_height">114.0px</dimen>
+     <dimen name="alarm_body_dif">0.0px</dimen>
+     <dimen name="show_message_top">166.0px</dimen>
+-    <dimen name="hide_message_top">226.0px</dimen>
+-    <dimen name="message_top_adjust">17.0px</dimen>
+-    <dimen name="panel_width">320.0px</dimen>
+-    <dimen name="move_scope">5.0px</dimen>
+-    <dimen name="screen_width">320.0px</dimen>
+-    <dimen name="screen_height">480.0px</dimen>
+-    <dimen name="dismiss_snooze_marginBottom">7.0px</dimen>
+-    <dimen name="arrow_icon_marginLeftRight">16.0px</dimen>
+-    <dimen name="dismiss_snooze_text_marginTop">15.0px</dimen>
+-    <dimen name="dismiss_snooze_text_marginBottom">37.0px</dimen>
++    <dimen name="hide_message_top">169.0px</dimen>
++    <dimen name="message_top_adjust">12.0px</dimen>
++    <dimen name="panel_width">240.0px</dimen>
++    <dimen name="move_scope">3.0px</dimen>
++    <dimen name="screen_width">240.0px</dimen>
++    <dimen name="screen_height">320.0px</dimen>
++    <dimen name="dismiss_snooze_marginBottom">5.0px</dimen>
++    <dimen name="arrow_icon_marginLeftRight">12.0px</dimen>
++    <dimen name="dismiss_snooze_text_marginTop">2.0px</dimen>
++    <dimen name="dismiss_snooze_text_marginBottom">27.0px</dimen>
+     <dimen name="dismiss_snooze_textSize">14.0sp</dimen>
+-    <dimen name="dismiss_snooze_hint_textSize">16.0px</dimen>
++    <dimen name="dismiss_snooze_hint_textSize">12.0px</dimen>
+     <dimen name="alert_description_textSize">16.0sp</dimen>
+     <dimen name="alert_description_title_textSize">20.0sp</dimen>
+-    <dimen name="lockscreen_topedge_marginTop">-18.0px</dimen>
+-    <dimen name="unlock_area_marginTop">424.0px</dimen>
+-    <dimen name="lockscreen_notifications_height">110.0px</dimen>
+-    <dimen name="lockscreen_hint_text_maxWidth">220.0px</dimen>
+-    <dimen name="lockscreen_hint_text_marginTop">56.0px</dimen>
+-    <dimen name="lockscreen_hint_text_marginBottom">18.0px</dimen>
++    <dimen name="lockscreen_topedge_marginTop">-13.0px</dimen>
++    <dimen name="unlock_area_marginTop">290.0px</dimen>
++    <dimen name="lockscreen_notifications_height">82.0px</dimen>
++    <dimen name="lockscreen_hint_text_maxWidth">165.0px</dimen>
++    <dimen name="lockscreen_hint_text_marginTop">42.0px</dimen>
++    <dimen name="lockscreen_hint_text_marginBottom">13.0px</dimen>
+     <dimen name="lockscreen_hint_textSize">14.0sp</dimen>
+     <dimen name="lockscreen_hint_animation_textSize">18.0sp</dimen>
+-    <dimen name="arrow_left_marginRight">16.0px</dimen>
+-    <dimen name="arrow_left_marginLeft">16.0px</dimen>
+-    <dimen name="lockscreen_arc_top_area_height">71.0px</dimen>
+-    <dimen name="lockscreen_arc_top_area_paddingTop">20.0px</dimen>
+-    <dimen name="lockscreen_operator_name_textSize">14.0sp</dimen>
+-    <dimen name="lockscreen_operator_name_marginTop">35.0px</dimen>
+-    <dimen name="lockscreen_operator_spn_marginTop">8.0px</dimen>
+-    <dimen name="lockscreen_operator_spn_marginLeft">8.0px</dimen>
+-    <dimen name="lockscreen_arc_paddingTop">50.0px</dimen>
+-    <dimen name="lockscreen_arc_bottom_height">77.0px</dimen>
+-    <dimen name="lockscreen_arc_bottom_marginTop">25.0px</dimen>
+-    <dimen name="lockscreen_arc_hint_paddingTop">46.0px</dimen>
+-    <dimen name="lockscreen_arc_lock_icon_marginTop">25.0px</dimen>
++    <dimen name="arrow_left_marginRight">12.0px</dimen>
++    <dimen name="arrow_left_marginLeft">12.0px</dimen>
++    <dimen name="lockscreen_arc_top_area_height">53.0px</dimen>
++    <dimen name="lockscreen_arc_top_area_paddingTop">15.0px</dimen>
++    <dimen name="lockscreen_operator_name_textSize">17.0sp</dimen>
++    <dimen name="lockscreen_operator_name_marginTop">22.0px</dimen>
++    <dimen name="lockscreen_operator_spn_marginTop">6.0px</dimen>
++    <dimen name="lockscreen_operator_spn_marginLeft">6.0px</dimen>
++    <dimen name="lockscreen_arc_paddingTop">37.0px</dimen>
++    <dimen name="lockscreen_arc_bottom_height">57.0px</dimen>
++    <dimen name="lockscreen_arc_bottom_marginTop">18.0px</dimen>
++    <dimen name="lockscreen_arc_hint_paddingTop">34.0px</dimen>
++    <dimen name="lockscreen_arc_lock_icon_marginTop">18.0px</dimen>
+     <dimen name="lockscreen_arc_screen_locked_textSize">22.0sp</dimen>
+-    <dimen name="lockscreen_arc_screen_locked_text_marginLeft">12.0px</dimen>
+-    <dimen name="lockscreen_arc_screen_locked_text_marginTop">17.0px</dimen>
++    <dimen name="lockscreen_arc_screen_locked_text_marginLeft">9.0px</dimen>
++    <dimen name="lockscreen_arc_screen_locked_text_marginTop">12.0px</dimen>
+     <dimen name="lockscreen_time_shadow_marginTop">-1.0px</dimen>
+     <dimen name="lockscreen_time_shadow_paddingRight">2.0px</dimen>
+-    <dimen name="lockscreen_time_textSize">48.0sp</dimen>
+-    <dimen name="lockscreen_ampm_textSize">20.0sp</dimen>
+-    <dimen name="lockscreen_ampm_marginTop">18.0px</dimen>
+-    <dimen name="lockscreen_ampm_marginLeft">31.0px</dimen>
+-    <dimen name="lockscreen_ampm_cht_marginLeft">46.0px</dimen>
+-    <dimen name="lockscreen_date_textSize">14.0sp</dimen>
+-    <dimen name="lockscreen_music_album_fullmode_width">86.0px</dimen>
+-    <dimen name="lockscreen_music_album_fullmode_height">82.0px</dimen>
+-    <dimen name="lockscreen_music_album_fullmode_x">194.0px</dimen>
+-    <dimen name="lockscreen_music_album_fullmode_y">58.0px</dimen>
+-    <dimen name="lockscreen_music_cover_fullmode_width">100.0px</dimen>
+-    <dimen name="lockscreen_music_cover_fullmode_height">100.0px</dimen>
+-    <dimen name="lockscreen_music_cover_fullmode_x">200.0px</dimen>
+-    <dimen name="lockscreen_music_cover_fullmode_y">107.0px</dimen>
+-    <dimen name="lockscreen_music_album_samplemode_width">107.0px</dimen>
+-    <dimen name="lockscreen_music_album_samplemode_height">102.0px</dimen>
+-    <dimen name="lockscreen_music_album_samplemode_x">186.0px</dimen>
+-    <dimen name="lockscreen_music_album_samplemode_y">56.0px</dimen>
+-    <dimen name="lockscreen_music_cover_samplemode_width">115.0px</dimen>
+-    <dimen name="lockscreen_music_cover_samplemode_height">115.0px</dimen>
+-    <dimen name="lockscreen_music_cover_samplemode_x">194.0px</dimen>
+-    <dimen name="lockscreen_music_cover_samplemode_y">134.0px</dimen>
+-    <dimen name="lockscreen_music_artist_name_fullmode_marginTop">208.0px</dimen>
+-    <dimen name="lockscreen_music_track_fullmode_marginTop">226.0px</dimen>
+-    <dimen name="lockscreen_music_artist_name_sample_marginTop">251.0px</dimen>
+-    <dimen name="lockscreen_music_track_sample_marginTop">269.0px</dimen>
+-    <dimen name="lockscreen_music_album_shadow_x">18.0px</dimen>
+-    <dimen name="lockscreen_music_album_shadow_y">8.0px</dimen>
+-    <dimen name="lockscreen_music_message_panel_height">37.0px</dimen>
+-    <dimen name="lockscreen_music_message_panel_y">250.0px</dimen>
+-    <dimen name="lockscreen_music_grip_x">142.0px</dimen>
+-    <dimen name="lockscreen_music_grip_y">5.0px</dimen>
+-    <dimen name="lockscreen_music_track_name_y">148.0px</dimen>
++    <dimen name="lockscreen_time_textSize">40.0sp</dimen>
++    <dimen name="lockscreen_ampm_textSize">24.0sp</dimen>
++    <dimen name="lockscreen_ampm_marginTop">5.0px</dimen>
++    <dimen name="lockscreen_ampm_marginLeft">23.0px</dimen>
++    <dimen name="lockscreen_ampm_cht_marginLeft">34.0px</dimen>
++    <dimen name="lockscreen_date_textSize">17.0sp</dimen>
++    <dimen name="lockscreen_music_album_fullmode_width">61.0px</dimen>
++    <dimen name="lockscreen_music_album_fullmode_height">61.0px</dimen>
++    <dimen name="lockscreen_music_album_fullmode_x">145.0px</dimen>
++    <dimen name="lockscreen_music_album_fullmode_y">72.0px</dimen>
++    <dimen name="lockscreen_music_cover_fullmode_width">64.0px</dimen>
++    <dimen name="lockscreen_music_cover_fullmode_height">61.0px</dimen>
++    <dimen name="lockscreen_music_cover_fullmode_x">145.0px</dimen>
++    <dimen name="lockscreen_music_cover_fullmode_y">72.0px</dimen>
++    <dimen name="lockscreen_music_album_samplemode_width">72.5px</dimen>
++    <dimen name="lockscreen_music_album_samplemode_height">72.5px</dimen>
++    <dimen name="lockscreen_music_album_samplemode_x">140.0px</dimen>
++    <dimen name="lockscreen_music_album_samplemode_y">82.0px</dimen>
++    <dimen name="lockscreen_music_cover_samplemode_width">76.0px</dimen>
++    <dimen name="lockscreen_music_cover_samplemode_height">72.5px</dimen>
++    <dimen name="lockscreen_music_cover_samplemode_x">140.0px</dimen>
++    <dimen name="lockscreen_music_cover_samplemode_y">82.0px</dimen>
++    <dimen name="lockscreen_music_artist_name_fullmode_marginTop">150.0px</dimen>
++    <dimen name="lockscreen_music_track_fullmode_marginTop">136.0px</dimen>
++    <dimen name="lockscreen_music_artist_name_sample_marginTop">172.0px</dimen>
++    <dimen name="lockscreen_music_track_sample_marginTop">158.0px</dimen>
++    <dimen name="lockscreen_music_album_shadow_x">13.0px</dimen>
++    <dimen name="lockscreen_music_album_shadow_y">6.0px</dimen>
++    <dimen name="lockscreen_music_message_panel_height">27.0px</dimen>
++    <dimen name="lockscreen_music_message_panel_y">178.0px</dimen>
++    <dimen name="lockscreen_music_grip_x">106.0px</dimen>
++    <dimen name="lockscreen_music_grip_y">3.0px</dimen>
++    <dimen name="lockscreen_music_track_name_y">111.0px</dimen>
+     <dimen name="lockscreen_music_track_name_textSize">16.0sp</dimen>
+-    <dimen name="lockscreen_music_track_name_maxWidth">180.0px</dimen>
+-    <dimen name="lockscreen_music_music_shuffle_repeat_width">60.0px</dimen>
+-    <dimen name="lockscreen_music_music_shuffle_repeat_height">51.0px</dimen>
+-    <dimen name="lockscreen_music_music_shuffle_repeat_y">38.0px</dimen>
+-    <dimen name="lockscreen_music_music_repeat_x">261.0px</dimen>
+-    <dimen name="lockscreen_music_control_panel_x">63.0px</dimen>
+-    <dimen name="lockscreen_music_control_panel_y">41.0px</dimen>
+-    <dimen name="lockscreen_music_y">165.0px</dimen>
+-    <dimen name="lockscreen_music_flip_fullmode_marginTop">186.0px</dimen>
+-    <dimen name="lockscreen_music_flip_samplemode_marginTop">186.0px</dimen>
+-    <dimen name="lockscreen_music_flipLeft_marginLeft">38.0px</dimen>
+-    <dimen name="lockscreen_music_flipRight_marginLeft">257.0px</dimen>
+-    <dimen name="lockscreen_alarm_text_marginTop">-35.0px</dimen>
+-    <dimen name="lockscreen_timer_desp_text_marginTop">-35.0px</dimen>
+-    <dimen name="lockscreen_calendar_desp_text_marginTop">-35.0px</dimen>
+-    <dimen name="lockscreen_calendar_desp_text_width">238.0px</dimen>
+-    <dimen name="notification_lockscreen_squarepanel_x">276.0px</dimen>
+-    <dimen name="notification_lockscreen_squarepanel_y">198.0px</dimen>
+-    <dimen name="notification_lockscreen_squarepanel_marginTop">0.0px</dimen>
+-    <dimen name="notification_icon_marginLeft">22.0px</dimen>
+-    <dimen name="notification_icon_marginTop">122.0px</dimen>
+-    <dimen name="notification_text_marginLeft">13.0px</dimen>
+-    <dimen name="notification_text_marginTop">4.0px</dimen>
++    <dimen name="lockscreen_music_track_name_maxWidth">160.0px</dimen>
++    <dimen name="lockscreen_music_music_shuffle_repeat_width">45.0px</dimen>
++    <dimen name="lockscreen_music_music_shuffle_repeat_height">38.0px</dimen>
++    <dimen name="lockscreen_music_music_shuffle_repeat_y">28.0px</dimen>
++    <dimen name="lockscreen_music_music_repeat_x">195.0px</dimen>
++    <dimen name="lockscreen_music_control_panel_x">47.0px</dimen>
++    <dimen name="lockscreen_music_control_panel_y">30.0px</dimen>
++    <dimen name="lockscreen_music_y">123.0px</dimen>
++    <dimen name="lockscreen_music_flip_fullmode_marginTop">139.0px</dimen>
++    <dimen name="lockscreen_music_flip_samplemode_marginTop">139.0px</dimen>
++    <dimen name="lockscreen_music_flipLeft_marginLeft">28.0px</dimen>
++    <dimen name="lockscreen_music_flipRight_marginLeft">192.0px</dimen>
++    <dimen name="lockscreen_alarm_text_marginTop">-26.0px</dimen>
++    <dimen name="lockscreen_timer_desp_text_marginTop">-26.0px</dimen>
++    <dimen name="lockscreen_calendar_desp_text_marginTop">-26.0px</dimen>
++    <dimen name="lockscreen_calendar_desp_text_width">178.0px</dimen>
++    <dimen name="notification_lockscreen_squarepanel_x">210.0px</dimen>
++    <dimen name="notification_lockscreen_squarepanel_y">150.0px</dimen>
++    <dimen name="notification_lockscreen_squarepanel_marginTop">6.0px</dimen>
++    <dimen name="notification_icon_marginLeft">16.0px</dimen>
++    <dimen name="notification_icon_marginTop">75.0px</dimen>
++    <dimen name="notification_text_marginLeft">9.0px</dimen>
++    <dimen name="notification_text_marginTop">8.0px</dimen>
+     <dimen name="notification_title_textSize">20.0sp</dimen>
+-    <dimen name="notification_textSize">16.0sp</dimen>
+-    <dimen name="notification_textSize2">14.0sp</dimen>
+-    <dimen name="notification_textMAX">250.0px</dimen>
+-    <dimen name="lockscreen_date_marginTop">-11.0px</dimen>
+-    <dimen name="lockscreen_phoneanime_start_y">-320.0px</dimen>
+-    <dimen name="lockscreen_phoneanime_start_v">20.0px</dimen>
+-    <dimen name="lockscreen_phoneanime_increase_v">5.0px</dimen>
+-    <dimen name="lockscreen_phoneanime_title_height">42.0px</dimen>
+-    <dimen name="lockscreen_unlock_shortcut_up_gap">60.0px</dimen>
+-    <dimen name="lockscreen_unlock_filp_gap">47.0px</dimen>
+-    <dimen name="lockscreen_time_status_height">113.0px</dimen>
+-    <dimen name="lockscreen_time_status_width">320.0px</dimen>
+-    <dimen name="lockscreen_time_marginRL">10.0px</dimen>
+-    <dimen name="lockscreen_time_Leftoff">37.0px</dimen>
+-    <dimen name="lockscreen_time_time_marginTop">-17.0px</dimen>
+-    <dimen name="lockscreen_unlock_ring_area_width">320.0px</dimen>
+-    <dimen name="lockscreen_unlock_ring_area_height">560.0px</dimen>
+-    <dimen name="lockscreen_ring_marginDwon">-25.0px</dimen>
+-    <dimen name="lockscreen_unlock_ring_wave_height">300.0px</dimen>
+-    <dimen name="lockscreen_ring_wave_marginDwon">-90.0px</dimen>
+-    <dimen name="lockscreen_reminder_layout_width">480.0px</dimen>
+-    <dimen name="lockscreen_reminder_layout_height">158.0px</dimen>
+-    <dimen name="lockscreen_ring_bar_interval">108.0px</dimen>
+-    <dimen name="lockscreen_ring_bar_leave1">17.0px</dimen>
+-    <dimen name="lockscreen_shortcut_width">320.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_layout_marginTop">157.0px</dimen>
+-    <dimen name="lockscreen_shortcut_item_width">60.0px</dimen>
+-    <dimen name="lockscreen_shortcut_item_height">74.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_panel_width">54.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_panel_height">56.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_img_width">46.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_img_height">46.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_img_marginTop">3.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item2_img_marginTop">5.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_notify_background_width">23.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_notify_background_height">23.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_notify_textSize">14.0sp</dimen>
+-    <dimen name="lockscreen_shortcuts_notify99plus_textSize">12.0sp</dimen>
+-    <dimen name="lockscreen_shortcuts_app_textSize">14.0sp</dimen>
+-    <dimen name="lockscreen_shortcuts_notify_background_marginRight">-4.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item1_marginLeft">11.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item1_marginTop">341.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item2_marginLeft">91.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item2_marginTop">334.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item3_marginLeft">170.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item3_marginTop">334.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item4_marginLeft">250.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_item4_marginTop">341.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_name_marginTop">-4.0px</dimen>
+-    <dimen name="lockscreen_shortcuts_unlock_offset">40.0px</dimen>
+-    <dimen name="lockscreen_enlarge_touch_area">5.0px</dimen>
+-    <dimen name="lockscreen_layout_width">320.0px</dimen>
+-    <dimen name="lockscreen_layout_height">480.0px</dimen>
+-    <dimen name="lockscreen_icon_background_layout_height">200.0px</dimen>
+-    <dimen name="lockscreen_icon_background_layout_width">276.0px</dimen>
+-    <dimen name="lockscreen_sim_background_marginTop">97.0px</dimen>
+-    <dimen name="lockscreen_sim_background_marginLeft">24.0px</dimen>
+-    <dimen name="lockscreen_sim_icon_marginLeft">36.0px</dimen>
+-    <dimen name="lockscreen_twoline_text_line1_marginTop">251.0px</dimen>
+-    <dimen name="lockscreen_oneline_text_marginTop">261.0px</dimen>
+-    <dimen name="lockscreen_sim_airmode_marginTop">100.0px</dimen>
+-    <dimen name="lockscreen_twoline_text_line2_marginTop">270.0px</dimen>
+-    <dimen name="lockscreen_description_title_marginTop">105.0px</dimen>
+-    <dimen name="lockscreen_threeline_text_line1_marginTop">234.0px</dimen>
+-    <dimen name="lockscreen_threeline_text_line2_marginTop">252.0px</dimen>
+-    <dimen name="lockscreen_threeline_text_line3_marginTop">268.0px</dimen>
+-    <dimen name="lockscreen_button_marginRL">85.0px</dimen>
+-    <dimen name="lockscreen_button_marginTop">330.0px</dimen>
+-    <dimen name="lockscreen_button_touch_area_width">70.0px</dimen>
+-    <dimen name="lockscreen_button_touch_area_height">87.0px</dimen>
+-    <dimen name="lockscreen_button_width">52.0px</dimen>
+-    <dimen name="lockscreen_button_height">82.0px</dimen>
+-    <dimen name="lockscreen_reminder_icon_marginTop">134.0px</dimen>
++    <dimen name="notification_textSize">18.0sp</dimen>
++    <dimen name="notification_textSize2">16.0sp</dimen>
++    <dimen name="notification_textMAX">187.0px</dimen>
++    <dimen name="lockscreen_date_marginTop">-12.0px</dimen>
++    <dimen name="lockscreen_phoneanime_start_y">-240.0px</dimen>
++    <dimen name="lockscreen_phoneanime_start_v">15.0px</dimen>
++    <dimen name="lockscreen_phoneanime_increase_v">3.0px</dimen>
++    <dimen name="lockscreen_phoneanime_title_height">31.0px</dimen>
++    <dimen name="lockscreen_unlock_shortcut_up_gap">45.0px</dimen>
++    <dimen name="lockscreen_unlock_filp_gap">35.0px</dimen>
++    <dimen name="lockscreen_time_status_height">84.0px</dimen>
++    <dimen name="lockscreen_time_status_width">240.0px</dimen>
++    <dimen name="lockscreen_time_marginRL">7.0px</dimen>
++    <dimen name="lockscreen_time_Leftoff">27.0px</dimen>
++    <dimen name="lockscreen_time_time_marginTop">-10.0px</dimen>
++    <dimen name="lockscreen_unlock_ring_area_width">240.0px</dimen>
++    <dimen name="lockscreen_unlock_ring_area_height">380.0px</dimen>
++    <dimen name="lockscreen_ring_marginDwon">-18.0px</dimen>
++    <dimen name="lockscreen_unlock_ring_wave_height">225.0px</dimen>
++    <dimen name="lockscreen_ring_wave_marginDwon">-67.0px</dimen>
++    <dimen name="lockscreen_reminder_layout_width">360.0px</dimen>
++    <dimen name="lockscreen_reminder_layout_height">118.0px</dimen>
++    <dimen name="lockscreen_ring_bar_interval">81.0px</dimen>
++    <dimen name="lockscreen_ring_bar_leave1">12.0px</dimen>
++    <dimen name="lockscreen_shortcut_width">240.0px</dimen>
++    <dimen name="lockscreen_shortcuts_layout_marginTop">117.0px</dimen>
++    <dimen name="lockscreen_shortcut_item_width">45.0px</dimen>
++    <dimen name="lockscreen_shortcut_item_height">55.0px</dimen>
++    <dimen name="lockscreen_shortcuts_panel_width">40.0px</dimen>
++    <dimen name="lockscreen_shortcuts_panel_height">42.0px</dimen>
++    <dimen name="lockscreen_shortcuts_img_width">34.0px</dimen>
++    <dimen name="lockscreen_shortcuts_img_height">34.0px</dimen>
++    <dimen name="lockscreen_shortcuts_img_marginTop">2.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item2_img_marginTop">3.0px</dimen>
++    <dimen name="lockscreen_shortcuts_notify_background_width">17.0px</dimen>
++    <dimen name="lockscreen_shortcuts_notify_background_height">17.0px</dimen>
++    <dimen name="lockscreen_shortcuts_notify_textSize">12.0sp</dimen>
++    <dimen name="lockscreen_shortcuts_notify99plus_textSize">9.0sp</dimen>
++    <dimen name="lockscreen_shortcuts_app_textSize">13.0sp</dimen>
++    <dimen name="lockscreen_shortcuts_notify_background_marginRight">-3.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item1_marginLeft">8.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item1_marginTop">234.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item2_marginLeft">68.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item2_marginTop">230.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item3_marginLeft">128.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item3_marginTop">230.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item4_marginLeft">188.0px</dimen>
++    <dimen name="lockscreen_shortcuts_item4_marginTop">234.0px</dimen>
++    <dimen name="lockscreen_shortcuts_name_marginTop">-3.0px</dimen>
++    <dimen name="lockscreen_shortcuts_unlock_offset">30.0px</dimen>
++    <dimen name="lockscreen_enlarge_touch_area">3.0px</dimen>
++    <dimen name="lockscreen_layout_width">240.0px</dimen>
++    <dimen name="lockscreen_layout_height">320.0px</dimen>
++    <dimen name="lockscreen_icon_background_layout_height">150.0px</dimen>
++    <dimen name="lockscreen_icon_background_layout_width">210.0px</dimen>
++    <dimen name="lockscreen_sim_background_marginTop">63.0px</dimen>
++    <dimen name="lockscreen_sim_background_marginLeft">18.0px</dimen>
++    <dimen name="lockscreen_sim_icon_marginLeft">27.0px</dimen>
++    <dimen name="lockscreen_twoline_text_line1_marginTop">172.0px</dimen>
++    <dimen name="lockscreen_oneline_text_marginTop">195.0px</dimen>
++    <dimen name="lockscreen_sim_airmode_marginTop">63.0px</dimen>
++    <dimen name="lockscreen_twoline_text_line2_marginTop">186.0px</dimen>
++    <dimen name="lockscreen_description_title_marginTop">63.0px</dimen>
++    <dimen name="lockscreen_threeline_text_line1_marginTop">175.0px</dimen>
++    <dimen name="lockscreen_threeline_text_line2_marginTop">189.0px</dimen>
++    <dimen name="lockscreen_threeline_text_line3_marginTop">201.0px</dimen>
++    <dimen name="lockscreen_button_marginRL">63.0px</dimen>
++    <dimen name="lockscreen_button_marginTop">226.0px</dimen>
++    <dimen name="lockscreen_button_touch_area_width">52.0px</dimen>
++    <dimen name="lockscreen_button_touch_area_height">65.0px</dimen>
++    <dimen name="lockscreen_button_width">39.0px</dimen>
++    <dimen name="lockscreen_button_height">61.0px</dimen>
++    <dimen name="lockscreen_reminder_icon_marginTop">63.0px</dimen>
+     <dimen name="lockscreen_description1_textSize">16.0sp</dimen>
+     <dimen name="lockscreen_description2_textSize">14.0sp</dimen>
+-    <dimen name="lockscreen_alarm_icon_marginTop">22.0px</dimen>
+-    <dimen name="lockscreen_button_text_marginTop">52.0px</dimen>
+-    <dimen name="lockscreen_unlockring_radius">52.0px</dimen>
+-    <dimen name="lockscreen_object_text_offset">5.0px</dimen>
+-    <dimen name="lockscreen_navbar_height">56.0px</dimen>
+-    <dimen name="lockscreen_animtion_target_centerx">160.0px</dimen>
+-    <dimen name="lockscreen_animtion_target_centery">227.0px</dimen>
+-    <dimen name="lockscreen_music_pre_button_width">58.0px</dimen>
+-    <dimen name="lockscreen_music_toggle_pause_button_width">60.0px</dimen>
+-    <dimen name="lockscreen_music_next_button_width">56.0px</dimen>
++    <dimen name="lockscreen_alarm_icon_marginTop">16.0px</dimen>
++    <dimen name="lockscreen_button_text_marginTop">39.0px</dimen>
++    <dimen name="lockscreen_unlockring_radius">30.0px</dimen>
++    <dimen name="lockscreen_object_text_offset">3.0px</dimen>
++    <dimen name="lockscreen_navbar_height">30.0px</dimen>
++    <dimen name="lockscreen_animtion_target_centerx">120.0px</dimen>
++    <dimen name="lockscreen_animtion_target_centery">170.0px</dimen>
++    <dimen name="lockscreen_music_pre_button_width">42.0px</dimen>
++    <dimen name="lockscreen_music_toggle_pause_button_width">46.0px</dimen>
++    <dimen name="lockscreen_music_next_button_width">42.0px</dimen>
+     <dimen name="lockscreen_music_icon_marginTop">5.0px</dimen>
+-    <dimen name="phone_icon_background_width">276.0px</dimen>
+-    <dimen name="phone_icon_background_marginTop">97.0px</dimen>
+-    <dimen name="phone_contect_marginLeft">103.0px</dimen>
+-    <dimen name="phone_contect_marginTop">103.0px</dimen>
+-    <dimen name="phone_contect_marginTop_status">52.0px</dimen>
+-    <dimen name="phone_contect_photo_size">115.0px</dimen>
+-    <dimen name="phone_contect_photoframe_size">117.0px</dimen>
+-    <dimen name="phone_contect_photo_size_status">276.0px</dimen>
++    <dimen name="phone_icon_background_width">210.0px</dimen>
++    <dimen name="phone_icon_background_marginTop">63.0px</dimen>
++    <dimen name="phone_contect_marginLeft">77.0px</dimen>
++    <dimen name="phone_contect_marginTop">63.0px</dimen>
++    <dimen name="phone_contect_marginTop_status">39.0px</dimen>
++    <dimen name="phone_contect_photo_size">86.0px</dimen>
++    <dimen name="phone_contect_photoframe_size">87.0px</dimen>
++    <dimen name="phone_contect_photo_size_status">207.0px</dimen>
+     <dimen name="phone_contect_padding">0.0px</dimen>
+-    <dimen name="phone_contect_padding_status">17.0px</dimen>
++    <dimen name="phone_contect_padding_status">12.0px</dimen>
+     <dimen name="phone_contect_padding_status2">0.0px</dimen>
+     <dimen name="phone_contect_name_textSize">16.0sp</dimen>
+     <dimen name="phone_contect_number_textSize">14.0sp</dimen>
+-    <dimen name="phone_event_marginTop">228.0px</dimen>
+-    <dimen name="phone_event_marginRight">102.0px</dimen>
++    <dimen name="phone_event_marginTop">171.0px</dimen>
++    <dimen name="phone_event_marginRight">76.0px</dimen>
+     <dimen name="phone_event_textSize">12.0sp</dimen>
+-    <dimen name="phone_event_text_margin">4.0px</dimen>
+-    <dimen name="phone_sn_status_width">274.0px</dimen>
+-    <dimen name="phone_sn_status_height">52.0px</dimen>
+-    <dimen name="phone_sn_status_marginLeft">23.0px</dimen>
+-    <dimen name="phone_sn_status_marginTop">97.0px</dimen>
++    <dimen name="phone_event_text_margin">3.0px</dimen>
++    <dimen name="phone_sn_status_width">205.0px</dimen>
++    <dimen name="phone_sn_status_height">39.0px</dimen>
++    <dimen name="phone_sn_status_marginLeft">17.0px</dimen>
++    <dimen name="phone_sn_status_marginTop">63.0px</dimen>
+     <dimen name="phone_sn_status_textSize">14.0sp</dimen>
+-    <dimen name="phone_sn_status_icon_Size">17.0px</dimen>
+-    <dimen name="lockscreen_hintarea_layout_height">100.0px</dimen>
+-    <dimen name="shortcut_setting_iconz_size">48.0px</dimen>
+-    <dimen name="titlebar_height">25.0px</dimen>
++    <dimen name="phone_sn_status_icon_Size">12.0px</dimen>
++    <dimen name="lockscreen_hintarea_layout_height">73.0px</dimen>
++    <dimen name="shortcut_setting_iconz_size">36.0px</dimen>
++    <dimen name="titlebar_height">18.0px</dimen>
+ </resources>
+diff -rupN ../original-apks/HtcLockScreen.apk/res/values-mdpi/integers.xml HtcLockScreen.apk/res/values-mdpi/integers.xml
+--- ../original-apks/HtcLockScreen.apk/res/values-mdpi/integers.xml	2012-05-26 10:17:02.000000000 +0100
++++ HtcLockScreen.apk/res/values-mdpi/integers.xml	2012-05-26 10:08:20.000000000 +0100
+@@ -3,8 +3,8 @@
+     <integer name="initial_velocity">1200</integer>
+     <integer name="animation_accelerate">2000</integer>
+     <integer name="animation_regulation_pixel">1</integer>
+-    <integer name="alert_width">250</integer>
+-    <integer name="alert_height">190</integer>
++    <integer name="alert_width">200</integer>
++    <integer name="alert_height">130</integer>
+     <integer name="alert_icon_month_size">17</integer>
+     <integer name="alert_icon_month_x">134</integer>
+     <integer name="alert_icon_month_y">6</integer>

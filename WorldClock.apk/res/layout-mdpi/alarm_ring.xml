@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@drawable/alerts_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/default_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/wallpaper_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/reminder_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="137.0px">
+                <ImageView android:id="@id/alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <AnalogClock android:id="@id/hand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:dial="@drawable/alarm_anim_dot" android:hand_hour="@drawable/hand_hours" android:hand_minute="@drawable/hand_hub_minutes" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/dot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/alarm_anim_dot" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="18.0px" android:textColor="@color/white" android:id="@id/alert_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:layout_marginTop="8.0px" android:layout_marginRight="8.0px" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.1" android:shadowDy="1.1" android:shadowRadius="1.2" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

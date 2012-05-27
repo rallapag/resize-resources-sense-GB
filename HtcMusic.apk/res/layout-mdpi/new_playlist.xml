@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:visibility="gone" layout="@com.htc:layout/title_1" />
+    <View android:background="@drawable/topround_v1" android:layout_width="fill_parent" android:layout_height="10.0px" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/drawableActivityBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="15.0px" android:textColor="@color/black" android:ellipsize="marquee" android:id="@id/prompt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0px" android:layout_marginTop="6.0px" android:layout_marginRight="6.0px" android:layout_marginBottom="6.0px" android:singleLine="true" android:marqueeRepeatLimit="1" />
+        <EditText android:textSize="15.0px" android:id="@id/playlist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0px" android:layout_marginBottom="8.0px" android:singleLine="true" android:inputType="textAutoComplete">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    <View android:background="@com.htc:drawable/section_divider" android:layout_width="fill_parent" android:layout_height="10.0px" />
+    <include layout="@com.htc:layout/cmd_bar_2" />
+</LinearLayout>

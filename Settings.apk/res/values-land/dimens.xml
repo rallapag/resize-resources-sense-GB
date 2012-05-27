@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="datetime_number_table_tumblers_layout_width">67.0dip</dimen>
+    <dimen name="datetime_number_table_tumblers_layout_height">124.0dip</dimen>
+    <dimen name="datetime_number_table_timer_line_layout_width">52.0dip</dimen>
+    <dimen name="datetime_number_table_table_view_layout_width">@dimen/datetime_number_table_timer_line_layout_width</dimen>
+    <dimen name="datetime_number_table_table_view_layout_height">111.0dip</dimen>
+    <dimen name="datetime_number_table_shadow_layout_width">@dimen/datetime_number_table_tumblers_layout_width</dimen>
+    <dimen name="datetime_number_table_shadow_layout_height">@dimen/datetime_number_table_tumblers_layout_height</dimen>
+    <dimen name="datetime_number_text_layout_width">@dimen/datetime_number_table_timer_line_layout_width</dimen>
+    <dimen name="datetime_number_text_layout_height">35.0dip</dimen>
+    <dimen name="datetime_number_text_text_size">32.0sp</dimen>
+    <dimen name="datetime_date_picker_title_width">@dimen/datetime_number_table_tumblers_layout_width</dimen>
+    <dimen name="datetime_date_picker_title_text_size">15.0sp</dimen>
+    <dimen name="datetime_time_picker_title_width">@dimen/datetime_number_table_tumblers_layout_width</dimen>
+    <dimen name="datetime_time_picker_title_text_size">15.0sp</dimen>
+    <dimen name="battery_bar_layout_width">300.0dip</dimen>
+    <dimen name="battery_bar_layout_height">14.0dip</dimen>
+    <dimen name="appwidget_width">280.0dip</dimen>
+    <dimen name="appwidget_height">68.0dip</dimen>
+</resources>

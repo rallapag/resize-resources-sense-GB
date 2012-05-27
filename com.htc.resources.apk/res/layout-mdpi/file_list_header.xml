@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/htc_list_item_separator" android:background="@drawable/section_divider_top" android:layout_width="wrap_content" android:layout_height="15.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0px" android:layout_gravity="center_vertical" android:id="@id/header_view_text" android:layout_width="0.0px" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" style="@style/darklist_secondary_m" />
+    <LinearLayout android:orientation="horizontal" android:paddingRight="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <com.htc.app.AnimatedImageView android:layout_gravity="left|center" android:id="@id/refresh_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <TextView android:textSize="12.0px" android:layout_gravity="center_vertical" android:id="@id/item_count" android:paddingLeft="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/darklist_secondary_m" />
+        <TextView android:textSize="12.0px" android:layout_gravity="center_vertical" android:id="@id/current_item_count" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/darklist_secondary_m" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="albumwidth">147</integer>
+    <integer name="albumheight">139</integer>
+    <integer name="albumoffset_x">10</integer>
+    <integer name="albumoffset_y">4</integer>
+    <integer name="albumscale_minus_x">15</integer>
+    <integer name="albumscale_minus_y">7</integer>
+</resources>

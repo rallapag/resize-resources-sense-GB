@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="62.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/preference_primary_text_dark" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0sp" android:layout_marginTop="5.0sp" android:singleLine="true" android:layout_alignParentLeft="true" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="?android:textColorSecondary" android:id="@id/battery_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0sp" android:layout_marginTop="5.0sp" android:singleLine="true" android:layout_toRightOf="@android:id/title" />
+    <com.android.settings.BatteryBar android:id="@id/status_progress" android:layout_width="300.0dip" android:layout_height="14.0dip" android:layout_marginLeft="14.0dip" android:layout_marginTop="3.0sp" android:layout_marginRight="14.0dip" android:layout_marginBottom="10.0sp" android:maxHeight="14.0dip" android:max="100" android:indeterminate="false" android:minWidth="50.0dip" android:layout_below="@android:id/title" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip">
+        <TextView android:id="@android:id/title" android:background="@null" android:paddingLeft="2.0dip" android:paddingTop="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@com.htc:dimen/htc_text_appearance_small" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/step_progress" android:layout_width="120.0dip" android:layout_height="12.0dip" android:maxHeight="20.0dip" android:indeterminateOnly="false" android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal" android:progressDrawable="@drawable/orange_style_progress_horizontal" android:minHeight="20.0dip" android:text="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

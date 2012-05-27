@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/sd_icon" android:background="@com.htc:drawable/common_icon_glance_no_sd" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0px" android:textColor="@color/textColorActivityTitle" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sd_message" android:padding="6.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@com.htc:string/common_string_no_SD_card" />
+    <com.htc.widget.HtcListView android:id="@android:id/list" android:visibility="gone" android:layout_width="0.0px" android:layout_height="0.0px" />
+</LinearLayout>

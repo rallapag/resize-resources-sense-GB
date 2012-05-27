@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="commonHtclistPrimary" parent="@com.htc:style/list_primary_m" />
+    <style name="commonHtclistSecondary" parent="@com.htc:style/list_secondary_m" />
+    <style name="commonButton" parent="@com.htc:style/button_primary_m" />
+    <style name="commonTimerPickerTitle" parent="@com.htc:style/info_primary_l" />
+    <style name="deskclockDate" parent="@com.htc:style/darklist_primary_s" />
+    <style name="deskclockAlarm" parent="@com.htc:style/darklist_primary_s" />
+    <style name="deskclockWeatherTemperature" parent="@com.htc:style/info_primary_m" />
+    <style name="deskclockWeatherLocation" parent="@com.htc:style/info_primary_l" />
+    <style name="deskclockWeatherInformation" parent="@com.htc:style/info_primary_m" />
+    <style name="worldclockDescription" parent="@com.htc:style/list_secondary_m" />
+    <style name="worldclockArea" parent="@com.htc:style/list_primary_l" />
+    <style name="worldclockTimezone" parent="@com.htc:style/list_secondary_m" />
+    <style name="alarmclockDescription" parent="@com.htc:style/list_primary_m" />
+    <style name="alarmclockRingtone" parent="@com.htc:style/list_primary_xs" />
+    <style name="alarmclockWeek" parent="@com.htc:style/list_secondary_s" />
+    <style name="timerAlarmSoundText" parent="@com.htc:style/darklist_primary_l" />
+    <style name="timerAlarmSoundURI" parent="@com.htc:style/darklist_primary_xs" />
+    <style name="ThemeGray">
+        <item name="android:colorForeground">@color/white</item>
+        <item name="android:colorBackground">@android:color/background_light</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:disabledAlpha">0.5</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/light_grey</item>
+        <item name="android:listPreferredItemHeight">40.0px</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:popupWindowStyle">@android:style/Widget.PopupWindow</item>
+        <item name="android:textColorTertiary">@color/light_grey</item>
+    </style>
+    <style name="ThemePreview" parent="@style/ThemeGray" />
+    <style name="ThemeDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="ListView" parent="@android:style/Widget.AbsListView" />
+    <style name="buttonTextStyle">
+        <item name="android:textAppearance">?android:textAppearanceInverse</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="timerTextStyle">
+        <item name="android:textSize">11.0px</item>
+        <item name="android:textColor">@color/timer_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="oriNavbarButtonStyle">
+        <item name="android:textSize">16.0px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@com.htc:drawable/common_b_button</item>
+        <item name="android:layout_width">93.0px</item>
+        <item name="android:layout_height">35.0px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="navbarButtonStyle">
+        <item name="android:textSize">14.0px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@com.htc:drawable/common_panel_navbar_button</item>
+        <item name="android:layout_width">112.0px</item>
+        <item name="android:layout_height">34.0px</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="startButtonStyle">
+        <item name="android:textSize">16.0px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">106.0px</item>
+        <item name="android:layout_height">47.0px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">@color/shadow1_color</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="centerLeftButtonStyle">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/btn_center_left</item>
+        <item name="android:layout_width">30.0px</item>
+        <item name="android:layout_height">47.0px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="centerRightButtonStyle">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/btn_center_right</item>
+        <item name="android:layout_width">30.0px</item>
+        <item name="android:layout_height">47.0px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="titleBarStyle">
+        <item name="android:textSize">14.0px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">26.0px</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="titleBarShadowStyle">
+        <item name="android:textSize">14.0px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">26.0px</item>
+        <item name="android:layout_marginRight">2.0px</item>
+        <item name="android:layout_marginBottom">2.0px</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="commandButtonBarStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40.0px</item>
+    </style>
+    <style name="alertTextStyle">
+        <item name="android:textSize">15.0px</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="alertUriStyle">
+        <item name="android:textSize">12.0px</item>
+        <item name="android:textColor">@color/alert_uri_color</item>
+    </style>
+    <style name="digitalClockTimeStyle">
+        <item name="android:textSize">23.0px</item>
+    </style>
+    <style name="digitalClockAmPmStyle">
+        <item name="android:textSize">10.0px</item>
+        <item name="android:layout_marginTop">1.0px</item>
+    </style>
+    <style name="digitalClockDayStyle">
+        <item name="android:textSize">9.0px</item>
+    </style>
+    <style name="shadowStyle">
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">1.1</item>
+        <item name="android:shadowDy">1.1</item>
+        <item name="android:shadowRadius">1.2</item>
+    </style>
+    <style name="setAlarmStyle">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="firstTextStyle">
+        <item name="android:textColor">@color/dark_text_bright_focused</item>
+    </style>
+    <style name="secondTextStyle">
+        <item name="android:textColor">@color/second_text_bright_focused</item>
+    </style>
+</resources>

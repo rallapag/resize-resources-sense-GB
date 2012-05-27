@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@com.htc:drawable/common_glance_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_bar" layout="@com.htc:layout/title_1" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/led_pannel" android:background="@drawable/common_led_bg" android:layout_width="210.0px" android:layout_height="78.0px" android:layout_marginLeft="@dimen/led_pannel_marginLeft" android:layout_marginTop="@dimen/led_pannel_marginTop" android:layout_marginBottom="@dimen/led_pannel_marginBottom" android:layout_centerHorizontal="@string/led_pannel_centerHorizontal">
+            <ImageView android:layout_gravity="center" android:id="@id/minute_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+            <ImageView android:layout_gravity="center" android:id="@id/minute_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+            <ImageView android:layout_gravity="center" android:id="@id/digit_colon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" android:src="@com.htc:drawable/common_digit_colon" />
+            <ImageView android:layout_gravity="center" android:id="@id/second_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+            <ImageView android:layout_gravity="center" android:id="@id/second_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" />
+            <ImageView android:layout_gravity="center" android:id="@id/dot" android:paddingTop="36.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/led_pannel_time_marginRight" android:src="@drawable/common_dot" />
+            <ImageView android:layout_gravity="center" android:id="@id/millisecond" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/navbar_button" android:layout_width="@dimen/navbar_button_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/navbar_button_marginTop" android:layout_alignParentRight="true">
+            <Button android:id="@id/btn1" android:background="@drawable/btn_green" android:layout_width="@dimen/btn1_width" android:layout_height="@dimen/btn1_height" android:layout_marginLeft="@dimen/btn1_marginLeft" android:layout_marginTop="@dimen/btn1_marginTop" android:text="@string/start" style="@style/commonButton" />
+            <Button android:id="@id/btn2" android:layout_width="@dimen/btn2_width" android:layout_height="@dimen/btn2_height" android:layout_marginTop="@dimen/btn2_marginTop" android:layout_marginRight="@dimen/btn2_marginRight" android:text="@string/reset" android:layout_alignParentRight="@string/btn2_alignParentRight" style="@style/commonButton" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

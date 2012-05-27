@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="60.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/time_layout" android:layout_width="fill_parent" android:layout_height="60.0px">
+        <com.htc.android.worldclock.DigitalClock android:orientation="horizontal" android:id="@id/digitalClock" android:layout_width="93.0px" android:layout_height="42.0px" android:layout_marginLeft="8.0px" android:layout_centerVertical="true">
+            <LinearLayout android:layout_gravity="right|center" android:layout_width="67.0px" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/black" android:gravity="right|center" android:id="@id/timeDisplay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/digitalClockTimeStyle" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/detail" android:layout_width="wrap_content" android:layout_height="26.0px" android:layout_marginLeft="2.0px" android:layout_marginTop="10.0px">
+                <TextView android:textColor="@color/light_grey" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am" android:includeFontPadding="false" android:layout_alignParentTop="true" style="@style/digitalClockAmPmStyle" />
+                <TextView android:textColor="@color/light_grey" android:id="@id/day" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_below="@id/am_pm" android:layout_alignParentBottom="true" style="@style/digitalClockDayStyle" />
+            </RelativeLayout>
+        </com.htc.android.worldclock.DigitalClock>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0px" android:layout_marginTop="1.0px" android:layout_weight="1.0">
+            <TextView android:textSize="15.0px" android:ellipsize="marquee" android:id="@id/description" android:layout_width="107.0px" android:layout_height="wrap_content" android:singleLine="true" style="@style/alarmclockDescription" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0px">
+                <TextView android:textSize="11.0px" android:id="@id/sun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
+                <TextView android:textSize="11.0px" android:id="@id/mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
+                <TextView android:textSize="11.0px" android:id="@id/tue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
+                <TextView android:textSize="11.0px" android:id="@id/wed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
+                <TextView android:textSize="11.0px" android:id="@id/thu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
+                <TextView android:textSize="11.0px" android:id="@id/fri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0px" style="@style/alarmclockWeek" />
+                <TextView android:textSize="11.0px" android:id="@id/sat" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/alarmclockWeek" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center" android:layout_gravity="center_vertical" android:id="@id/function_layout" android:paddingBottom="10.0px" android:layout_width="35.0px" android:layout_height="60.0px" android:layout_weight="0.0" android:layout_alignParentRight="true">
+        <CheckBox android:id="@id/function_delete" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0px" android:layout_marginRight="5.0px" />
+    </LinearLayout>
+</RelativeLayout>

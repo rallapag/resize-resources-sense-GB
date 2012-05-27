@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/effectViewLayout0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0px" android:layout_marginTop="0.0px">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/effectViewLayoutBackground" android:background="@drawable/screen_on" android:layout_width="228.0px" android:layout_height="145.0px" />
+        <RelativeLayout android:id="@id/effectViewLayout" android:layout_width="228.0px" android:layout_height="145.0px">
+            <RelativeLayout android:orientation="horizontal" android:id="@id/stateMessage2Layout" android:layout_width="fill_parent" android:layout_height="20.0px" android:layout_marginTop="5.0px" android:baselineAligned="false" android:layout_centerHorizontal="true" style="@style/voiceRecordTextStytleB">
+                <TextView android:textSize="12.0px" android:layout_gravity="left|center" android:id="@id/stateMessage2" android:layout_width="140.0px" android:layout_height="wrap_content" android:layout_marginLeft="25.0px" />
+                <ImageView android:layout_gravity="right|center" android:id="@id/icon_storage_indicate" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:layout_alignParentRight="true" />
+                <TextView android:textSize="12.0px" android:ellipsize="end" android:gravity="right|center" android:id="@id/stateFileIndex" android:layout_width="100.0px" android:layout_height="wrap_content" android:text="@string/default_file_pos_of_all" android:singleLine="true" android:layout_toLeftOf="@id/icon_storage_indicate" />
+            </RelativeLayout>
+            <com.htc.soundrecorder.VUMeter android:layout_gravity="center_horizontal" android:id="@id/uvMeter" android:layout_width="184.0px" android:layout_height="100.0px" android:layout_marginLeft="33.0px" android:layout_marginTop="-20.0px" android:layout_below="@id/stateMessage2Layout" />
+            <com.htc.soundrecorder.TimeView android:textSize="50.0px" android:id="@id/timerView" android:layout_width="fill_parent" android:layout_height="100.0px" android:layout_marginLeft="5.0px" android:layout_marginTop="85.0px" style="@android:style/TextAppearance.Large" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/playViewLayout" android:background="@drawable/screen_playback" android:visibility="gone" android:layout_width="228.0px" android:layout_height="145.0px">
+            <TextView android:textSize="22.0px" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/playstaus" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/htc_man_playstaus_margin_top" android:text="@string/htc_playing" android:singleLine="true" style="@style/voiceRecordTextStytleB" />
+            <RelativeLayout android:id="@id/seekbarlayout" android:layout_width="220.0px" android:layout_height="@dimen/htc_man_seekbarlayout_layout_height" android:layout_marginBottom="5.0px" android:layout_below="@id/playstaus">
+                <include layout="@layout/main_seekbar" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/palypostextlayout" android:layout_width="fill_parent" android:layout_height="@dimen/htc_man_palypostextlayout_layout_height" android:layout_below="@id/seekbarlayout">
+                <TextView android:ellipsize="end" android:gravity="left|center" android:id="@id/cur_pos_l" android:layout_width="40.0px" android:layout_height="wrap_content" android:layout_marginLeft="8.0px" android:text="@string/default_file_timepos" android:singleLine="true" style="@style/voiceRecordTextStytleC" />
+                <TextView android:ellipsize="end" android:gravity="right|center" android:id="@id/dur_remain_r" android:layout_width="40.0px" android:layout_height="wrap_content" android:layout_marginRight="8.0px" android:text="@string/default_file_timepos" android:singleLine="true" android:layout_alignParentRight="true" style="@style/voiceRecordTextStytleC" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

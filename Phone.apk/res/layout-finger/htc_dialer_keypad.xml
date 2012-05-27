@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="right" android:id="@id/keypad" android:background="@com.htc:drawable/phone_keypad_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dtmf_display"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/htc_keypad" />
+</FrameLayout>

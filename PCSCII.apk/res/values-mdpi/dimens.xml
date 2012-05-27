@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="global_margin_left">10.0px</dimen>
+    <dimen name="global_margin_right">10.0px</dimen>
+    <dimen name="global_toolbar_margin">3.0px</dimen>
+    <dimen name="readscreen_subject_label_fontsize">14.0px</dimen>
+    <dimen name="readscreen_date_label_fontsize">12.0px</dimen>
+    <dimen name="readscreen_attachment_filename_fontsize">14.0px</dimen>
+    <dimen name="readscreen_attachment_subname_fontsize">12.0px</dimen>
+    <dimen name="ask_me_text_high">60.0px</dimen>
+</resources>

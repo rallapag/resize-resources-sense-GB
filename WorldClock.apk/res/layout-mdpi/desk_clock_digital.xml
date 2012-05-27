@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.android.worldclock.DeskDigitalClock android:id="@id/time" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/digit_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/hour_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+        <ImageView android:id="@id/hour_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+        <ImageView android:id="@id/digit_colon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+        <ImageView android:id="@id/minute_ten" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+        <ImageView android:layout_gravity="center" android:id="@id/minute_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0px" />
+    </LinearLayout>
+    <TextView android:textSize="14.0px" android:textColor="#ffffffff" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0px" android:singleLine="true" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" android:layout_toRightOf="@id/digit_time" />
+</com.htc.android.worldclock.DeskDigitalClock>

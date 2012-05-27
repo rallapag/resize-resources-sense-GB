@@ -1,0 +1,510 @@
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/layout/today_condition.xml com.htc.WeatherWidget.apk/res/layout/today_condition.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/layout/today_condition.xml	2012-05-26 10:15:44.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/layout/today_condition.xml	2012-05-26 10:07:20.000000000 +0100
+@@ -7,7 +7,7 @@
+         <TextView android:textSize="@dimen/large_widget_hilo_text_size" android:textColor="@color/widget_text_color" android:id="@id/today_low_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/shadow_0" />
+     </LinearLayout>
+     <LinearLayout android:orientation="vertical" android:id="@id/info_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/large_widget_info_area_margin_left" android:layout_marginTop="@dimen/large_widget_info_area_margin_top" style="@style/info_area">
+-        <TextView android:textSize="@dimen/large_widget_city_text_size" android:textColor="@color/widget_text_color" android:ellipsize="marquee" android:id="@id/city_name" android:layout_width="@dimen/large_widget_city_name_width" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="0" style="@style/shadow_0_gravity" />
++        <TextView android:textSize="@dimen/large_widget_city_text_size" android:textColor="@color/widget_text_color" android:ellipsize="marquee" android:id="@id/city_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="0" style="@style/shadow_0_gravity" />
+         <ImageView android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/weather_p_divider" />
+         <TextView android:textSize="@dimen/large_widget_condition_text_size" android:textColor="@color/widget_text_color" android:id="@id/condition_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/large_widget_condition_text_margin_top" android:singleLine="true" style="@style/large_widget_condition_text" />
+     </LinearLayout>
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/values-land-mdpi/dimens.xml com.htc.WeatherWidget.apk/res/values-land-mdpi/dimens.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/values-land-mdpi/dimens.xml	2012-05-26 10:15:45.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/values-land-mdpi/dimens.xml	2012-05-26 10:07:21.000000000 +0100
+@@ -1,107 +1,107 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="large_widget_panel_width">364.0px</dimen>
+-    <dimen name="large_widget_panel_height">245.0px</dimen>
+-    <dimen name="large_widget_panel_margin_top">35.0px</dimen>
+-    <dimen name="large_widget_panel_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_background_width">364.0px</dimen>
+-    <dimen name="large_widget_background_height">235.0px</dimen>
+-    <dimen name="large_widget_background_margin_top">35.0px</dimen>
+-    <dimen name="large_widget_background_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_message_width">364.0px</dimen>
++    <dimen name="large_widget_panel_width">302.0px</dimen>
++    <dimen name="large_widget_panel_height">188.0px</dimen>
++    <dimen name="large_widget_panel_margin_top">24.0px</dimen>
++    <dimen name="large_widget_panel_margin_left">28.0px</dimen>
++    <dimen name="large_widget_background_width">302.0px</dimen>
++    <dimen name="large_widget_background_height">188.0px</dimen>
++    <dimen name="large_widget_background_margin_top">24.0px</dimen>
++    <dimen name="large_widget_background_margin_left">28.0px</dimen>
++    <dimen name="large_widget_message_width">196.0px</dimen>
+     <dimen name="large_widget_message_margin_top">13.0px</dimen>
+-    <dimen name="large_widget_message_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_message_padding_top">125.0px</dimen>
+-    <dimen name="large_widget_message_padding_left">30.0px</dimen>
+-    <dimen name="large_widget_message_padding_right">30.0px</dimen>
+-    <dimen name="large_widget_forecast_height">85.0px</dimen>
+-    <dimen name="large_widget_forecast_detail_width">90.0px</dimen>
+-    <dimen name="large_widget_forecast_margin_top">149.0px</dimen>
++    <dimen name="large_widget_message_margin_left">20.0px</dimen>
++    <dimen name="large_widget_message_padding_top">85.0px</dimen>
++    <dimen name="large_widget_message_padding_left">20.0px</dimen>
++    <dimen name="large_widget_message_padding_right">20.0px</dimen>
++    <dimen name="large_widget_forecast_height">64.0px</dimen>
++    <dimen name="large_widget_forecast_detail_width">74.0px</dimen>
++    <dimen name="large_widget_forecast_margin_top">110.0px</dimen>
+     <dimen name="large_widget_current_temp_margin_top">5.0px</dimen>
+-    <dimen name="large_widget_current_temp_margin_left">15.0px</dimen>
+-    <dimen name="large_widget_current_high_low_temp_margin_top">53.0px</dimen>
+-    <dimen name="large_widget_current_high_low_temp_margin_left">15.0px</dimen>
+-    <dimen name="large_widget_info_area_margin_top">96.0px</dimen>
+-    <dimen name="large_widget_info_area_margin_left">14.0px</dimen>
+-    <dimen name="large_widget_index_width">58.0px</dimen>
+-    <dimen name="large_widget_condition_text_margin_top">-3.0px</dimen>
+-    <dimen name="large_widget_arrow_margin_top">4.0px</dimen>
+-    <dimen name="large_widget_arrow_margin_left">336.0px</dimen>
+-    <dimen name="large_widget_index_text_margin_top">10.0px</dimen>
+-    <dimen name="large_widget_index_text_margin_left">321.0px</dimen>
+-    <dimen name="large_widget_index_item_width">14.0px</dimen>
++    <dimen name="large_widget_current_temp_margin_left">9.0px</dimen>
++    <dimen name="large_widget_current_high_low_temp_margin_top">42.0px</dimen>
++    <dimen name="large_widget_current_high_low_temp_margin_left">12.0px</dimen>
++    <dimen name="large_widget_info_area_margin_top">69.0px</dimen>
++    <dimen name="large_widget_info_area_margin_left">12.0px</dimen>
++    <dimen name="large_widget_index_width">35.0px</dimen>
++    <dimen name="large_widget_condition_text_margin_top">-2.0px</dimen>
++    <dimen name="large_widget_arrow_margin_top">6.0px</dimen>
++    <dimen name="large_widget_arrow_margin_left">277.0px</dimen>
++    <dimen name="large_widget_index_text_margin_top">11.0px</dimen>
++    <dimen name="large_widget_index_text_margin_left">263.0px</dimen>
++    <dimen name="large_widget_index_item_width">13.0px</dimen>
+     <dimen name="large_widget_forecast_weekday_margin_top">1.0px</dimen>
+-    <dimen name="large_widget_forecast_weekday_height">30.0px</dimen>
++    <dimen name="large_widget_forecast_weekday_height">0.0px</dimen>
+     <dimen name="large_widget_forecast_icon_top">0.0px</dimen>
+-    <dimen name="large_widget_forecast_icon_height">49.0px</dimen>
+-    <dimen name="large_widget_forecast_temp_top">66.0px</dimen>
+-    <dimen name="large_widget_forecast_temp_height">30.0px</dimen>
+-    <dimen name="large_widget_footbar_width">364.0px</dimen>
+-    <dimen name="large_widget_footbar_height">20.0px</dimen>
+-    <dimen name="large_widget_footbar_margin_top">269.0px</dimen>
+-    <dimen name="large_widget_footbar_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_footbar_select_width">364.0px</dimen>
+-    <dimen name="large_widget_footbar_select_height">25.0px</dimen>
+-    <dimen name="large_widget_footbar_select_margin_top">265.0px</dimen>
+-    <dimen name="large_widget_footbar_select_padding_top">0.0px</dimen>
++    <dimen name="large_widget_forecast_icon_height">44.0px</dimen>
++    <dimen name="large_widget_forecast_temp_top">45.0px</dimen>
++    <dimen name="large_widget_forecast_temp_height">0.0px</dimen>
++    <dimen name="large_widget_footbar_width">302.0px</dimen>
++    <dimen name="large_widget_footbar_height">15.0px</dimen>
++    <dimen name="large_widget_footbar_margin_top">197.0px</dimen>
++    <dimen name="large_widget_footbar_margin_left">28.0px</dimen>
++    <dimen name="large_widget_footbar_select_width">302.0px</dimen>
++    <dimen name="large_widget_footbar_select_height">30.0px</dimen>
++    <dimen name="large_widget_footbar_select_margin_top">182.0px</dimen>
++    <dimen name="large_widget_footbar_select_padding_top">15.0px</dimen>
+     <dimen name="large_widget_footbar_select_padding_bottom">0.0px</dimen>
+-    <dimen name="large_widget_footbar_select_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_touch_margin_top">50.0px</dimen>
+-    <dimen name="large_widget_touch_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_touch_margin_right">33.0px</dimen>
+-    <dimen name="large_widget_touch_margin_bottom">33.0px</dimen>
+-    <dimen name="large_widget_current_temp_text_size">45.0px</dimen>
+-    <dimen name="large_widget_hilo_text_size">16.0px</dimen>
+-    <dimen name="large_widget_city_text_size">16.0px</dimen>
+-    <dimen name="large_widget_condition_text_size">14.0px</dimen>
+-    <dimen name="large_widget_forecast_text_size">15.0px</dimen>
+-    <dimen name="large_widget_index_text_size">12.0px</dimen>
+-    <dimen name="large_widget_footbar_text_size">14.0px</dimen>
+-    <dimen name="large_widget_message_text_size">16.0px</dimen>
+-    <dimen name="small_widget_padding_top">8.0px</dimen>
+-    <dimen name="small_widget_padding_left">15.0px</dimen>
+-    <dimen name="small_widget_padding_right">0.0px</dimen>
++    <dimen name="large_widget_footbar_select_margin_left">28.0px</dimen>
++    <dimen name="large_widget_touch_margin_top">24.0px</dimen>
++    <dimen name="large_widget_touch_margin_left">28.0px</dimen>
++    <dimen name="large_widget_touch_margin_right">25.0px</dimen>
++    <dimen name="large_widget_touch_margin_bottom">25.0px</dimen>
++    <dimen name="large_widget_current_temp_text_size">32.0px</dimen>
++    <dimen name="large_widget_hilo_text_size">11.0px</dimen>
++    <dimen name="large_widget_city_text_size">13.0px</dimen>
++    <dimen name="large_widget_condition_text_size">11.0px</dimen>
++    <dimen name="large_widget_forecast_text_size">11.0px</dimen>
++    <dimen name="large_widget_index_text_size">8.0px</dimen>
++    <dimen name="large_widget_footbar_text_size">16.0sp</dimen>
++    <dimen name="large_widget_message_text_size">13.0px</dimen>
++    <dimen name="small_widget_padding_top">11.0px</dimen>
++    <dimen name="small_widget_padding_left">6.0px</dimen>
++    <dimen name="small_widget_padding_right">16.0px</dimen>
+     <dimen name="small_widget_padding_bottom">0.0px</dimen>
+-    <dimen name="small_widget_divider_width">182.0px</dimen>
+-    <dimen name="small_widget_divider_margin_top">42.0px</dimen>
+-    <dimen name="small_widget_divider_margin_left">0.0px</dimen>
+-    <dimen name="small_widget_cityname_margin_top">42.0px</dimen>
+-    <dimen name="small_widget_cityname_margin_left">5.0px</dimen>
+-    <dimen name="small_widget_alert_message_height">43.0px</dimen>
+-    <dimen name="small_widget_image_margin_top">-18.0px</dimen>
+-    <dimen name="small_widget_image_margin_left">92.0px</dimen>
+-    <dimen name="small_widget_image_width">88.0px</dimen>
+-    <dimen name="small_widget_image_height">86.0px</dimen>
+-    <dimen name="small_widget_today_view_margin_top">-4.0px</dimen>
+-    <dimen name="small_widget_today_view_margin_left">5.0px</dimen>
+-    <dimen name="small_widget_temperature_textsize">32.0sp</dimen>
+-    <dimen name="small_widget_highlow_margin_top">-1.0px</dimen>
+-    <dimen name="small_widget_highlow_margin_left">2.0px</dimen>
++    <dimen name="small_widget_divider_width">147.0px</dimen>
++    <dimen name="small_widget_divider_margin_top">32.0px</dimen>
++    <dimen name="small_widget_divider_margin_left">1.0px</dimen>
++    <dimen name="small_widget_cityname_margin_top">31.0px</dimen>
++    <dimen name="small_widget_cityname_margin_left">6.0px</dimen>
++    <dimen name="small_widget_alert_message_height">32.0px</dimen>
++    <dimen name="small_widget_image_margin_top">-13.0px</dimen>
++    <dimen name="small_widget_image_margin_left">80.0px</dimen>
++    <dimen name="small_widget_image_width">75.0px</dimen>
++    <dimen name="small_widget_image_height">73.0px</dimen>
++    <dimen name="small_widget_today_view_margin_top">-2.0px</dimen>
++    <dimen name="small_widget_today_view_margin_left">7.0px</dimen>
++    <dimen name="small_widget_temperature_textsize">31.0sp</dimen>
++    <dimen name="small_widget_highlow_margin_top">-2.0px</dimen>
++    <dimen name="small_widget_highlow_margin_left">0.0px</dimen>
+     <dimen name="med_widget_padding_top">14.0px</dimen>
+-    <dimen name="med_widget_padding_left">15.0px</dimen>
+-    <dimen name="med_widget_padding_right">0.0px</dimen>
+-    <dimen name="med_widget_padding_bottom">0.0px</dimen>
+-    <dimen name="med_widget_image_height">140.0px</dimen>
+-    <dimen name="med_widget_image_margin_left">54.0px</dimen>
+-    <dimen name="med_widget_image_margin_top">-13.0px</dimen>
++    <dimen name="med_widget_padding_left">7.0px</dimen>
++    <dimen name="med_widget_padding_right">15.0px</dimen>
++    <dimen name="med_widget_padding_bottom">3.0px</dimen>
++    <dimen name="med_widget_image_height">100.0px</dimen>
++    <dimen name="med_widget_image_margin_left">27.0px</dimen>
++    <dimen name="med_widget_image_margin_top">-6.0px</dimen>
+     <dimen name="med_widget_today_view_margin_left">7.0px</dimen>
+-    <dimen name="med_widget_today_view_margin_top">47.0px</dimen>
+-    <dimen name="med_widget_today_view_high_low_temp_margin_left">1.0px</dimen>
+-    <dimen name="med_widget_today_view_high_low_temp_margin_top">4.0px</dimen>
+-    <dimen name="med_widget_todayinfo_margin_top">92.0px</dimen>
+-    <dimen name="med_widget_todayinfo_margin_left">42.0px</dimen>
+-    <dimen name="med_widget_condition_info_margin_top">21.0px</dimen>
++    <dimen name="med_widget_today_view_margin_top">22.0px</dimen>
++    <dimen name="med_widget_today_view_high_low_temp_margin_left">0.0px</dimen>
++    <dimen name="med_widget_today_view_high_low_temp_margin_top">0.0px</dimen>
++    <dimen name="med_widget_todayinfo_margin_top">60.0px</dimen>
++    <dimen name="med_widget_todayinfo_margin_left">0.0px</dimen>
++    <dimen name="med_widget_condition_info_margin_top">16.0px</dimen>
+     <dimen name="med_widget_condition_info_text_size">12.0sp</dimen>
+-    <dimen name="med_widget_todayinfo_divider_width">108.0px</dimen>
+-    <dimen name="med_widget_todayinfo_divider_margin_top">20.0px</dimen>
+-    <dimen name="med_widget_todayinfo_divider_margin_left">16.0px</dimen>
+-    <dimen name="med_widget_today_view_alert_msg_height">114.0px</dimen>
+-    <dimen name="no_weather_data_view_margin_top">-5.0px</dimen>
+-    <dimen name="large_widget_no_weather_data_height">123.0px</dimen>
+-    <dimen name="city_list_item_height">50.0px</dimen>
+-    <dimen name="city_list_item_text_size">18.0px</dimen>
+-    <dimen name="city_list_item_margin_left">12.0px</dimen>
++    <dimen name="med_widget_todayinfo_divider_width">139.0px</dimen>
++    <dimen name="med_widget_todayinfo_divider_margin_top">15.0px</dimen>
++    <dimen name="med_widget_todayinfo_divider_margin_left">5.0px</dimen>
++    <dimen name="med_widget_today_view_alert_msg_height">77.0px</dimen>
++    <dimen name="no_weather_data_view_margin_top">0.0px</dimen>
++    <dimen name="large_widget_no_weather_data_height">85.0px</dimen>
++    <dimen name="city_list_item_height">40.0px</dimen>
++    <dimen name="city_list_item_text_size">16.0px</dimen>
++    <dimen name="city_list_item_margin_left">7.0px</dimen>
+     <dimen name="weather_icon_margin_left">0.0px</dimen>
+     <dimen name="weather_icon_margin_top">0.0px</dimen>
+-    <dimen name="sub_title_bar_height">35.0px</dimen>
++    <dimen name="sub_title_bar_height">26.0px</dimen>
+ </resources>
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/values-land-mdpi/integers.xml com.htc.WeatherWidget.apk/res/values-land-mdpi/integers.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/values-land-mdpi/integers.xml	2012-05-26 10:15:45.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/values-land-mdpi/integers.xml	2012-05-26 10:07:21.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <integer name="anim_scale">100</integer>
+-    <integer name="glance_width">480</integer>
+-    <integer name="glance_height">320</integer>
+-    <integer name="glance_offsetx">119</integer>
+-    <integer name="glance_offsety">0</integer>
++    <integer name="anim_scale">83</integer>
++    <integer name="glance_width">400</integer>
++    <integer name="glance_height">240</integer>
++    <integer name="glance_offsetx">125</integer>
++    <integer name="glance_offsety">-13</integer>
+ </resources>
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/values-land-mdpi/styles.xml com.htc.WeatherWidget.apk/res/values-land-mdpi/styles.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/values-land-mdpi/styles.xml	2012-05-26 10:15:45.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/values-land-mdpi/styles.xml	2012-05-26 10:07:21.000000000 +0100
+@@ -38,20 +38,20 @@
+         <item name="android:shadowRadius">1.2</item>
+     </style>
+     <style name="titleBarStyle">
+-        <item name="android:textSize">16.0px</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">@color/white</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_height">26.0px</item>
+     </style>
+     <style name="titleBarStyleShadow">
+-        <item name="android:textSize">16.0px</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">#7f000000</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_height">26.0px</item>
+         <item name="android:layout_marginLeft">-2.0px</item>
+         <item name="android:layout_marginTop">-2.0px</item>
+     </style>
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/values-port-mdpi/dimens.xml com.htc.WeatherWidget.apk/res/values-port-mdpi/dimens.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/values-port-mdpi/dimens.xml	2012-05-26 10:15:45.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/values-port-mdpi/dimens.xml	2012-05-26 10:07:21.000000000 +0100
+@@ -1,108 +1,108 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <dimen name="large_widget_panel_width">260.0px</dimen>
+-    <dimen name="large_widget_panel_height">299.0px</dimen>
+-    <dimen name="large_widget_panel_margin_top">60.0px</dimen>
+-    <dimen name="large_widget_panel_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_background_width">260.0px</dimen>
+-    <dimen name="large_widget_background_height">330.0px</dimen>
+-    <dimen name="large_widget_background_margin_top">13.0px</dimen>
+-    <dimen name="large_widget_background_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_message_width">260.0px</dimen>
++    <dimen name="large_widget_panel_width">195.0px</dimen>
++    <dimen name="large_widget_panel_height">217.0px</dimen>
++    <dimen name="large_widget_panel_margin_top">36.0px</dimen>
++    <dimen name="large_widget_panel_margin_left">22.0px</dimen>
++    <dimen name="large_widget_background_width">196.0px</dimen>
++    <dimen name="large_widget_background_height">217.0px</dimen>
++    <dimen name="large_widget_background_margin_top">25.0px</dimen>
++    <dimen name="large_widget_background_margin_left">22.0px</dimen>
++    <dimen name="large_widget_message_width">196.0px</dimen>
+     <dimen name="large_widget_message_margin_top">13.0px</dimen>
+-    <dimen name="large_widget_message_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_message_padding_top">125.0px</dimen>
+-    <dimen name="large_widget_message_padding_left">30.0px</dimen>
+-    <dimen name="large_widget_message_padding_right">30.0px</dimen>
+-    <dimen name="large_widget_forecast_height">85.0px</dimen>
+-    <dimen name="large_widget_forecast_detail_width">64.0px</dimen>
+-    <dimen name="large_widget_forecast_margin_top">241.0px</dimen>
+-    <dimen name="large_widget_current_temp_margin_top">127.0px</dimen>
+-    <dimen name="large_widget_current_temp_margin_left">18.0px</dimen>
+-    <dimen name="large_widget_current_high_low_temp_margin_top">181.0px</dimen>
+-    <dimen name="large_widget_current_high_low_temp_margin_left">18.0px</dimen>
+-    <dimen name="large_widget_info_area_margin_top">198.0px</dimen>
++    <dimen name="large_widget_message_margin_left">20.0px</dimen>
++    <dimen name="large_widget_message_padding_top">120.0px</dimen>
++    <dimen name="large_widget_message_padding_left">20.0px</dimen>
++    <dimen name="large_widget_message_padding_right">20.0px</dimen>
++    <dimen name="large_widget_forecast_height">64.0px</dimen>
++    <dimen name="large_widget_forecast_detail_width">48.0px</dimen>
++    <dimen name="large_widget_forecast_margin_top">149.0px</dimen>
++    <dimen name="large_widget_current_temp_margin_top">61.0px</dimen>
++    <dimen name="large_widget_current_temp_margin_left">6.0px</dimen>
++    <dimen name="large_widget_current_high_low_temp_margin_top">95.0px</dimen>
++    <dimen name="large_widget_current_high_low_temp_margin_left">7.0px</dimen>
++    <dimen name="large_widget_info_area_margin_top">112.0px</dimen>
+     <dimen name="large_widget_info_area_margin_left">0.0px</dimen>
+-    <dimen name="large_widget_index_width">58.0px</dimen>
+-    <dimen name="large_widget_condition_text_margin_top">-3.0px</dimen>
+-    <dimen name="large_widget_arrow_margin_top">204.0px</dimen>
+-    <dimen name="large_widget_arrow_margin_left">232.0px</dimen>
+-    <dimen name="large_widget_index_text_margin_top">210.0px</dimen>
+-    <dimen name="large_widget_index_text_margin_left">217.0px</dimen>
+-    <dimen name="large_widget_index_item_width">14.0px</dimen>
+-    <dimen name="large_widget_forecast_weekday_margin_top">1.0px</dimen>
++    <dimen name="large_widget_index_width">35.0px</dimen>
++    <dimen name="large_widget_condition_text_margin_top">-2.0px</dimen>
++    <dimen name="large_widget_arrow_margin_top">88.0px</dimen>
++    <dimen name="large_widget_arrow_margin_left">174.0px</dimen>
++    <dimen name="large_widget_index_text_margin_top">93.0px</dimen>
++    <dimen name="large_widget_index_text_margin_left">159.0px</dimen>
++    <dimen name="large_widget_index_item_width">13.0px</dimen>
++    <dimen name="large_widget_forecast_weekday_margin_top">0.0px</dimen>
+     <dimen name="large_widget_forecast_weekday_height">0.0px</dimen>
+     <dimen name="large_widget_forecast_icon_top">0.0px</dimen>
+-    <dimen name="large_widget_forecast_icon_height">49.0px</dimen>
+-    <dimen name="large_widget_forecast_temp_top">61.0px</dimen>
++    <dimen name="large_widget_forecast_icon_height">33.0px</dimen>
++    <dimen name="large_widget_forecast_temp_top">45.0px</dimen>
+     <dimen name="large_widget_forecast_temp_height">0.0px</dimen>
+-    <dimen name="large_widget_footbar_width">260.0px</dimen>
+-    <dimen name="large_widget_footbar_height">20.0px</dimen>
+-    <dimen name="large_widget_footbar_margin_top">339.0px</dimen>
+-    <dimen name="large_widget_footbar_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_footbar_select_width">260.0px</dimen>
+-    <dimen name="large_widget_footbar_select_height">20.0px</dimen>
+-    <dimen name="large_widget_footbar_select_margin_top">339.0px</dimen>
+-    <dimen name="large_widget_footbar_select_padding_top">0.0px</dimen>
++    <dimen name="large_widget_footbar_width">196.0px</dimen>
++    <dimen name="large_widget_footbar_height">15.0px</dimen>
++    <dimen name="large_widget_footbar_margin_top">238.0px</dimen>
++    <dimen name="large_widget_footbar_margin_left">22.0px</dimen>
++    <dimen name="large_widget_footbar_select_width">196.0px</dimen>
++    <dimen name="large_widget_footbar_select_height">30.0px</dimen>
++    <dimen name="large_widget_footbar_select_margin_top">223.0px</dimen>
++    <dimen name="large_widget_footbar_select_padding_top">15.0px</dimen>
+     <dimen name="large_widget_footbar_select_padding_bottom">0.0px</dimen>
+-    <dimen name="large_widget_footbar_select_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_touch_margin_top">60.0px</dimen>
+-    <dimen name="large_widget_touch_margin_left">29.0px</dimen>
+-    <dimen name="large_widget_touch_margin_right">31.0px</dimen>
+-    <dimen name="large_widget_touch_margin_bottom">62.0px</dimen>
+-    <dimen name="large_widget_current_temp_text_size">45.0px</dimen>
+-    <dimen name="large_widget_hilo_text_size">16.0px</dimen>
+-    <dimen name="large_widget_city_text_size">16.0px</dimen>
+-    <dimen name="large_widget_condition_text_size">14.0px</dimen>
+-    <dimen name="large_widget_forecast_text_size">15.0px</dimen>
+-    <dimen name="large_widget_index_text_size">12.0px</dimen>
+-    <dimen name="large_widget_footbar_text_size">14.0px</dimen>
+-    <dimen name="large_widget_message_text_size">16.0px</dimen>
+-    <dimen name="small_widget_padding_top">26.0px</dimen>
+-    <dimen name="small_widget_padding_left">10.0px</dimen>
+-    <dimen name="small_widget_padding_right">10.0px</dimen>
+-    <dimen name="small_widget_padding_bottom">8.0px</dimen>
+-    <dimen name="small_widget_divider_width">152.0px</dimen>
+-    <dimen name="small_widget_divider_margin_top">46.0px</dimen>
+-    <dimen name="small_widget_divider_margin_left">0.0px</dimen>
+-    <dimen name="small_widget_cityname_margin_top">47.0px</dimen>
++    <dimen name="large_widget_footbar_select_margin_left">22.0px</dimen>
++    <dimen name="large_widget_touch_margin_top">10.0px</dimen>
++    <dimen name="large_widget_touch_margin_left">6.0px</dimen>
++    <dimen name="large_widget_touch_margin_right">6.0px</dimen>
++    <dimen name="large_widget_touch_margin_bottom">10.0px</dimen>
++    <dimen name="large_widget_current_temp_text_size">32.0px</dimen>
++    <dimen name="large_widget_hilo_text_size">11.0px</dimen>
++    <dimen name="large_widget_city_text_size">14.0px</dimen>
++    <dimen name="large_widget_condition_text_size">12.0px</dimen>
++    <dimen name="large_widget_forecast_text_size">12.0px</dimen>
++    <dimen name="large_widget_index_text_size">8.0px</dimen>
++    <dimen name="large_widget_footbar_text_size">11.0px</dimen>
++    <dimen name="large_widget_message_text_size">13.0px</dimen>
++    <dimen name="small_widget_padding_top">12.0px</dimen>
++    <dimen name="small_widget_padding_left">6.0px</dimen>
++    <dimen name="small_widget_padding_right">6.0px</dimen>
++    <dimen name="small_widget_padding_bottom">3.0px</dimen>
++    <dimen name="small_widget_divider_width">106.0px</dimen>
++    <dimen name="small_widget_divider_margin_top">36.0px</dimen>
++    <dimen name="small_widget_divider_margin_left">1.0px</dimen>
++    <dimen name="small_widget_cityname_margin_top">36.0px</dimen>
+     <dimen name="small_widget_cityname_margin_left">0.0px</dimen>
+-    <dimen name="small_widget_alert_message_height">50.0px</dimen>
+-    <dimen name="small_widget_image_margin_top">-15.0px</dimen>
+-    <dimen name="small_widget_image_margin_left">62.0px</dimen>
+-    <dimen name="small_widget_image_width">88.0px</dimen>
+-    <dimen name="small_widget_image_height">86.0px</dimen>
++    <dimen name="small_widget_alert_message_height">40.0px</dimen>
++    <dimen name="small_widget_image_margin_top">-12.0px</dimen>
++    <dimen name="small_widget_image_margin_left">50.0px</dimen>
++    <dimen name="small_widget_image_width">75.0px</dimen>
++    <dimen name="small_widget_image_height">65.0px</dimen>
+     <dimen name="small_widget_today_view_margin_top">-1.0px</dimen>
+-    <dimen name="small_widget_today_view_margin_left">3.0px</dimen>
+-    <dimen name="small_widget_temperature_textsize">32.0sp</dimen>
+-    <dimen name="small_widget_highlow_margin_top">1.0px</dimen>
+-    <dimen name="small_widget_highlow_margin_left">2.0px</dimen>
+-    <dimen name="med_widget_padding_top">25.0px</dimen>
+-    <dimen name="med_widget_padding_left">10.0px</dimen>
+-    <dimen name="med_widget_padding_right">10.0px</dimen>
+-    <dimen name="med_widget_padding_bottom">8.0px</dimen>
+-    <dimen name="med_widget_image_height">160.0px</dimen>
+-    <dimen name="med_widget_image_margin_left">9.0px</dimen>
+-    <dimen name="med_widget_image_margin_top">-14.0px</dimen>
+-    <dimen name="med_widget_today_view_margin_left">8.0px</dimen>
+-    <dimen name="med_widget_today_view_margin_top">70.0px</dimen>
++    <dimen name="small_widget_today_view_margin_left">4.0px</dimen>
++    <dimen name="small_widget_temperature_textsize">31.0sp</dimen>
++    <dimen name="small_widget_highlow_margin_top">-1.0px</dimen>
++    <dimen name="small_widget_highlow_margin_left">0.0px</dimen>
++    <dimen name="med_widget_padding_top">12.0px</dimen>
++    <dimen name="med_widget_padding_left">6.0px</dimen>
++    <dimen name="med_widget_padding_right">6.0px</dimen>
++    <dimen name="med_widget_padding_bottom">3.0px</dimen>
++    <dimen name="med_widget_image_height">121.0px</dimen>
++    <dimen name="med_widget_image_margin_left">2.0px</dimen>
++    <dimen name="med_widget_image_margin_top">-13.0px</dimen>
++    <dimen name="med_widget_today_view_margin_left">3.0px</dimen>
++    <dimen name="med_widget_today_view_margin_top">46.0px</dimen>
+     <dimen name="med_widget_today_view_high_low_temp_margin_left">1.0px</dimen>
+-    <dimen name="med_widget_today_view_high_low_temp_margin_top">4.0px</dimen>
+-    <dimen name="med_widget_todayinfo_margin_top">122.0px</dimen>
++    <dimen name="med_widget_today_view_high_low_temp_margin_top">0.0px</dimen>
++    <dimen name="med_widget_todayinfo_margin_top">80.0px</dimen>
+     <dimen name="med_widget_todayinfo_margin_left">0.0px</dimen>
+-    <dimen name="med_widget_condition_info_margin_top">21.0px</dimen>
+-    <dimen name="med_widget_condition_info_text_size">12.0sp</dimen>
+-    <dimen name="med_widget_todayinfo_divider_width">120.0px</dimen>
+-    <dimen name="med_widget_todayinfo_divider_margin_top">20.0px</dimen>
+-    <dimen name="med_widget_todayinfo_divider_margin_left">10.0px</dimen>
+-    <dimen name="med_widget_today_view_alert_msg_height">144.0px</dimen>
+-    <dimen name="no_weather_data_view_margin_top">44.0px</dimen>
+-    <dimen name="large_widget_no_weather_data_height">176.0px</dimen>
+-    <dimen name="city_list_item_height">50.0px</dimen>
+-    <dimen name="city_list_item_text_size">18.0px</dimen>
+-    <dimen name="city_list_item_margin_left">12.0px</dimen>
++    <dimen name="med_widget_condition_info_margin_top">16.0px</dimen>
++    <dimen name="med_widget_condition_info_text_size">13.0sp</dimen>
++    <dimen name="med_widget_todayinfo_divider_width">90.0px</dimen>
++    <dimen name="med_widget_todayinfo_divider_margin_top">16.0px</dimen>
++    <dimen name="med_widget_todayinfo_divider_margin_left">7.0px</dimen>
++    <dimen name="med_widget_today_view_alert_msg_height">85.0px</dimen>
++    <dimen name="no_weather_data_view_margin_top">12.0px</dimen>
++    <dimen name="large_widget_no_weather_data_height">171.0px</dimen>
++    <dimen name="city_list_item_height">40.0px</dimen>
++    <dimen name="city_list_item_text_size">16.0px</dimen>
++    <dimen name="city_list_item_margin_left">7.0px</dimen>
+     <dimen name="weather_icon_margin_left">0.0px</dimen>
+     <dimen name="weather_icon_margin_top">0.0px</dimen>
+-    <dimen name="sub_title_bar_height">35.0px</dimen>
+-    <dimen name="large_widget_today_info_top">281.0px</dimen>
++    <dimen name="sub_title_bar_height">26.0px</dimen>
++    <dimen name="large_widget_today_info_top">188.0px</dimen>
+ </resources>
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/values-port-mdpi/integers.xml com.htc.WeatherWidget.apk/res/values-port-mdpi/integers.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/values-port-mdpi/integers.xml	2012-05-26 10:15:45.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/values-port-mdpi/integers.xml	2012-05-26 10:07:21.000000000 +0100
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <integer name="anim_scale">100</integer>
+-    <integer name="glance_width">320</integer>
+-    <integer name="glance_height">480</integer>
++    <integer name="anim_scale">75</integer>
++    <integer name="glance_width">240</integer>
++    <integer name="glance_height">320</integer>
+     <integer name="glance_offsetx">0</integer>
+-    <integer name="glance_offsety">0</integer>
++    <integer name="glance_offsety">-12</integer>
+ </resources>
+diff -rupN ../original-apks/com.htc.WeatherWidget.apk/res/values-port-mdpi/styles.xml com.htc.WeatherWidget.apk/res/values-port-mdpi/styles.xml
+--- ../original-apks/com.htc.WeatherWidget.apk/res/values-port-mdpi/styles.xml	2012-05-26 10:15:45.000000000 +0100
++++ com.htc.WeatherWidget.apk/res/values-port-mdpi/styles.xml	2012-05-26 10:07:21.000000000 +0100
+@@ -38,20 +38,20 @@
+         <item name="android:shadowRadius">1.2</item>
+     </style>
+     <style name="titleBarStyle">
+-        <item name="android:textSize">16.0px</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">@color/white</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_height">26.0px</item>
+     </style>
+     <style name="titleBarStyleShadow">
+-        <item name="android:textSize">16.0px</item>
++        <item name="android:textSize">14.0px</item>
+         <item name="android:textColor">#7f000000</item>
+         <item name="android:gravity">center</item>
+         <item name="android:layout_gravity">center</item>
+         <item name="android:layout_width">fill_parent</item>
+-        <item name="android:layout_height">35.0px</item>
++        <item name="android:layout_height">26.0px</item>
+         <item name="android:layout_marginLeft">-2.0px</item>
+         <item name="android:layout_marginTop">-2.0px</item>
+     </style>
